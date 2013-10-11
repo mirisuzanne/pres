@@ -7,12 +7,10 @@
 $font-file-types: 'ttf';
 
 // Sans
-@include font('SourceSansPro' 'sans/SourceSansPro-Regular');
-@include font('SourceSansPro' 'sans/SourceSansPro-Italic' italic);
+@include font('SourceSansPro' 'sans/SourceSansPro-Light');
+@include font('SourceSansPro' 'sans/SourceSansPro-LightItalic' italic);
 @include font('SourceSansPro' 'sans/SourceSansPro-Bold' bold);
 @include font('SourceSansPro' 'sans/SourceSansPro-BoldItalic' bold italic);
-@include font('SourceSansPro' 'sans/SourceSansPro-Light' 200);
-@include font('SourceSansPro' 'sans/SourceSansPro-LightItalic' 200 italic);
 
 // Code
 @include font('SourceCodePro' 'code/SourceCodePro-Regular');

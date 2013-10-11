@@ -56,70 +56,56 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "BaskervilleAmp";
-  src: url('../fonts/amp/Baskerville-amp-webfont.woff?1381515052') format("woff"), url('../fonts/amp/Baskerville-amp-webfont.ttf?1381515052') format("truetype");
+  src: url('../fonts/amp/Baskerville-amp-webfont.woff?1381528855') format("woff"), url('../fonts/amp/Baskerville-amp-webfont.ttf?1381528855') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-Regular.ttf?1381516506') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-Light.ttf?1381528855') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-Italic.ttf?1381516506') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-LightItalic.ttf?1381528855') format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-Bold.ttf?1381516506') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-Bold.ttf?1381528855') format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-BoldItalic.ttf?1381516506') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-BoldItalic.ttf?1381528855') format("truetype");
   font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-Light.ttf?1381516506') format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-LightItalic.ttf?1381516506') format("truetype");
-  font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/SourceCodePro-Regular.ttf?1381516594') format("truetype");
+  src: url('../fonts/code/SourceCodePro-Regular.ttf?1381528855') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/SourceCodePro-Bold.ttf?1381516594') format("truetype");
+  src: url('../fonts/code/SourceCodePro-Bold.ttf?1381528855') format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/SourceCodePro-Light.ttf?1381516594') format("truetype");
+  src: url('../fonts/code/SourceCodePro-Light.ttf?1381528855') format("truetype");
   font-weight: 200;
   font-style: normal;
 }
@@ -137,7 +123,7 @@ html {
 
 html {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 4vmin;
+  font-size: 2vw;
   line-height: 1.3em;
   background: #fcfcfc;
   color: #4c4c4c;
@@ -150,7 +136,7 @@ html, body {
 
 @font-face {
   font-family: "pres";
-  src: url('../fonts/icons/pres.ttf?1381515052') format("truetype");
+  src: url('../fonts/icons/pres.ttf?1381528855') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -246,7 +232,7 @@ a:hover, a:focus, a:active {
   font-style: normal;
 }
 
-.slidehead .head {
+.slidehead .title {
   font-size: 2.84375rem;
   line-height: 3.28125rem;
 }
@@ -719,7 +705,7 @@ label {
   position: relative;
   font-size: 5.25rem;
   display: inline-block;
-  margin: 0 -.15em 0 -.15em;
+  margin: 0 -.25em 0 -.25em;
   vertical-align: middle;
   z-index: -1;
 }
