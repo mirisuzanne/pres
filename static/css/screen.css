@@ -1,0 +1,662 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "BaskervilleAmp";
+  src: url('../fonts/amp/Baskerville-amp-webfont.woff?1381515052') format("woff"), url('../fonts/amp/Baskerville-amp-webfont.ttf?1381515052') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 200%;
+  line-height: 1.3125em;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4vmin;
+  line-height: 1.3em;
+  background: #fcfcfc;
+  color: #4c4c4c;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "pres";
+  src: url('../fonts/icons/pres.woff?1381515052') format("woff"), url('../fonts/icons/pres.ttf?1381515052') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font-family: "pres";
+  font-style: normal;
+  speak: none;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+[data-icon="pencil"]:before {
+  content: "\f071";
+}
+
+[data-icon="tag"]:before {
+  content: "\e004";
+}
+
+[data-icon="remove"]:before {
+  content: "\e000";
+}
+
+[data-icon="plus"]:before {
+  content: "\e001";
+}
+
+[data-icon="checkmark"]:before {
+  content: "\e006";
+}
+
+[data-icon="close"]:before {
+  content: "\e008";
+}
+
+[data-icon="warning"]:before {
+  content: "\e009";
+}
+
+[data-icon="info"]:before {
+  content: "\e00a";
+}
+
+[data-icon="cancel"]:before {
+  content: "\e002";
+}
+
+[data-icon="move"]:before {
+  content: "\e00b";
+}
+
+[data-icon="twitter"]:before {
+  content: "\e00c";
+}
+
+[data-icon="github"]:before {
+  content: "\e00d";
+}
+
+[data-icon="bubble"]:before {
+  content: "\e003";
+}
+
+[data-icon="user"]:before {
+  content: "\e005";
+}
+
+a:link, a:visited {
+  color: #0098cc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:focus, a:active {
+  color: #ff0080;
+}
+
+.alt-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.amp {
+  font-family: "BaskervilleAmp", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slidehead .head {
+  font-size: 2.84375rem;
+  line-height: 3.28125rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+[id^="toggle-slide-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.code {
+  background-color: #fdf6e3;
+}
+
+.c {
+  color: #586e75;
+}
+
+/* Comment */
+.err {
+  color: #93a1a1;
+}
+
+/* Error */
+.g {
+  color: #93a1a1;
+}
+
+/* Generic */
+.k {
+  color: #859900;
+}
+
+/* Keyword */
+.l {
+  color: #586e75;
+}
+
+/* Literal */
+.n {
+  color: #586e75;
+}
+
+/* Name */
+.o {
+  color: #859900;
+}
+
+/* Operator */
+.x {
+  color: #cb4b16;
+}
+
+/* Other */
+.p {
+  color: #93a1a1;
+}
+
+/* Punctuation */
+.cm {
+  color: #93a1a1;
+}
+
+/* Comment.Multiline */
+.cp {
+  color: #859900;
+}
+
+/* Comment.Preproc */
+.c1 {
+  color: #93a1a1;
+}
+
+/* Comment.Single */
+.cs {
+  color: #859900;
+}
+
+/* Comment.Special */
+.gd {
+  color: #2aa198;
+}
+
+/* Generic.Deleted */
+.ge {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.gr {
+  color: #dc322f;
+}
+
+/* Generic.Error */
+.gh {
+  color: #cb4b16;
+}
+
+/* Generic.Heading */
+.gi {
+  color: #859900;
+}
+
+/* Generic.Inserted */
+.go {
+  color: #93a1a1;
+}
+
+/* Generic.Output */
+.gp {
+  color: #93a1a1;
+}
+
+/* Generic.Prompt */
+.gs {
+  color: #93a1a1;
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.gu {
+  color: #cb4b16;
+}
+
+/* Generic.Subheading */
+.gt {
+  color: #93a1a1;
+}
+
+/* Generic.Traceback */
+.kc {
+  color: #cb4b16;
+}
+
+/* Keyword.Constant */
+.kd {
+  color: #268bd2;
+}
+
+/* Keyword.Declaration */
+.kn {
+  color: #859900;
+}
+
+/* Keyword.Namespace */
+.kp {
+  color: #859900;
+}
+
+/* Keyword.Pseudo */
+.kr {
+  color: #268bd2;
+}
+
+/* Keyword.Reserved */
+.kt {
+  color: #dc322f;
+}
+
+/* Keyword.Type */
+.ld {
+  color: #93a1a1;
+}
+
+/* Literal.Date */
+.m {
+  color: #2aa198;
+}
+
+/* Literal.Number */
+.s {
+  color: #2aa198;
+}
+
+/* Literal.String */
+.na {
+  color: #586e75;
+}
+
+/* Name.Attribute */
+.nb {
+  color: #b58900;
+}
+
+/* Name.Builtin */
+.nc {
+  color: #268bd2;
+}
+
+/* Name.Class */
+.no {
+  color: #cb4b16;
+}
+
+/* Name.Constant */
+.nd {
+  color: #268bd2;
+}
+
+/* Name.Decorator */
+.ni {
+  color: #cb4b16;
+}
+
+/* Name.Entity */
+.ne {
+  color: #cb4b16;
+}
+
+/* Name.Exception */
+.nf {
+  color: #268bd2;
+}
+
+/* Name.Function */
+.nl {
+  color: #93a1a1;
+}
+
+/* Name.Label */
+.nn {
+  color: #93a1a1;
+}
+
+/* Name.Namespace */
+.nx {
+  color: #93a1a1;
+}
+
+/* Name.Other */
+.py {
+  color: #93a1a1;
+}
+
+/* Name.Property */
+.nt {
+  color: #268bd2;
+}
+
+/* Name.Tag */
+.nv {
+  color: #cb4b16;
+}
+
+/* Name.Variable */
+.ow {
+  color: #859900;
+}
+
+/* Operator.Word */
+.w {
+  color: #93a1a1;
+}
+
+/* Text.Whitespace */
+.mf {
+  color: #2aa198;
+}
+
+/* Literal.Number.Float */
+.mh {
+  color: #2aa198;
+}
+
+/* Literal.Number.Hex */
+.mi {
+  color: #2aa198;
+}
+
+/* Literal.Number.Integer */
+.mo {
+  color: #2aa198;
+}
+
+/* Literal.Number.Oct */
+.sb {
+  color: #586e75;
+}
+
+/* Literal.String.Backtick */
+.sc {
+  color: #2aa198;
+}
+
+/* Literal.String.Char */
+.sd {
+  color: #93a1a1;
+}
+
+/* Literal.String.Doc */
+.s2 {
+  color: #2aa198;
+}
+
+/* Literal.String.Double */
+.se {
+  color: #cb4b16;
+}
+
+/* Literal.String.Escape */
+.sh {
+  color: #93a1a1;
+}
+
+/* Literal.String.Heredoc */
+.si {
+  color: #2aa198;
+}
+
+/* Literal.String.Interpol */
+.sx {
+  color: #2aa198;
+}
+
+/* Literal.String.Other */
+.sr {
+  color: #dc322f;
+}
+
+/* Literal.String.Regex */
+.s1 {
+  color: #2aa198;
+}
+
+/* Literal.String.Single */
+.ss {
+  color: #2aa198;
+}
+
+/* Literal.String.Symbol */
+.bp {
+  color: #268bd2;
+}
+
+/* Name.Builtin.Pseudo */
+.vc {
+  color: #268bd2;
+}
+
+/* Name.Variable.Class */
+.vg {
+  color: #268bd2;
+}
+
+/* Name.Variable.Global */
+.vi {
+  color: #268bd2;
+}
+
+/* Name.Variable.Instance */
+.il {
+  color: #2aa198;
+}
+
+/* Literal.Number.Integer.Long */
+.section-toggle-focus {
+  position: fixed;
+  bottom: 0;
+  right: 0.65625rem;
+  color: #dc322f;
+  z-index: 800;
+}
+
+.slide {
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+  counter-increment: slide;
+  opacity: 0;
+  z-index: -1;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin-right: -1000%;
+  padding: 1.3125rem;
+  overflow-y: scroll;
+}
+
+[id^="toggle-slide-"]:checked + [data-toggle] {
+  opacity: 1;
+  z-index: 100;
+}
+[id^="toggle-slide-"]:focus ~ .section-toggle-focus {
+  color: #b2b2b2;
+}
+
+.prev, .next {
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -ms-flexbox;
+  display: flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -moz-flex-align: center;
+  -ms-flex-align: center;
+  flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 4.8125rem;
+  line-height: 5.25rem;
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  transition: opacity 300ms;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 0.32813rem;
+  background: rgba(255, 0, 128, 0.25);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 500;
+}
+.prev:hover, .prev:focus, .prev:active, .next:hover, .next:focus, .next:active {
+  opacity: .5;
+}
+
+.prev {
+  left: 0;
+}
+.prev:before {
+  content: "«";
+}
+
+.next {
+  right: 0;
+}
+.next:before {
+  content: "»";
+}
+
+.this {
+  font-size: 0.59375rem;
+  line-height: 1.3125rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 2.29688rem;
+  padding: 0 0.65625rem;
+  color: rgba(178, 178, 178, 0.5);
+  text-align: left;
+  z-index: 800;
+}
+.this:before {
+  content: counter(slide);
+}
+.this:hover {
+  color: #999999;
+}
+
+.slidehead {
+  margin-bottom: 1.3125rem;
+  text-align: center;
+}
+.slidehead b {
+  color: #ff0080;
+}
+.slidehead .amp {
+  position: relative;
+  font-size: 5.25rem;
+  display: inline-block;
+  margin: 0 -.15em 0 -.15em;
+  vertical-align: middle;
+  z-index: -1;
+}

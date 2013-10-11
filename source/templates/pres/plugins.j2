@@ -1,11 +1,11 @@
 {% extends "pres.j2" %}
 
 {% block styles %}
-  {{ static.css('../static/css/', 'sample.css') }}
+  {{ static.css('../static/css/', 'plugins.css') }}
 {% endblock %}
 
 {% block pres %}
-  {% set preso='sample' %}
+  {% set preso='plugins' %}
   {% set slides = ['title', 'text', 'code'] %}
   {% include "slides/_loop.j2" %}
 {% endblock %}

@@ -2,13 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  {% block htmlhead %}
+
+  {% import '_static.j2' as static %}
 
   <!-- Page Info -->
-  <title>{% block fulltitle %}{% block title %}Home{% endblock %} | Pres{% endblock %}</title>
+  <title>{% block title %}Pres{% endblock %}</title>
 
-  <!-- Site Info -->
-  {% block robots %}<meta name="robots" content="index, follow" />{% endblock %}
   <meta name="author" content="Eric A. Meyer" />
   <meta name="language" content="en-us" />
 
@@ -22,13 +21,8 @@
 
   <!-- Styles -->
   {% block styles %}
-  <link rel="stylesheet" href="/static/css/screen.css" />
+  {{ static.css() }}
   {% endblock styles %}
-
-  <!-- Page-Specific Head -->
-  {% block extrahead %}{% endblock %}
-
-  {% endblock htmlhead %}
 </head>
 
 <body class="{% block bodyclasses %}{% endblock %}">
@@ -37,8 +31,7 @@
 
 <!-- JavaScript -->
 {% block js %}
-<script src="/static/js/vendor/jquery.min.js"></script>
-<script src="/static/js/init.js"></script>
+{{ static.js() }}
 {% endblock js %}
 
 </body>

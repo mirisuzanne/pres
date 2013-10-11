@@ -9,17 +9,17 @@
       {% set prev=this %}
       {% set this=next %}
       {% set next=slide %}
-      {% include "pres/sample/_" ~ this ~ ".j2" %}
+      {% include "pres/" ~ preso ~ "/_" ~ this ~ ".j2" %}
       {% set first=False %}
       {% set prev=this %}
       {% set this=next %}
       {% set next=False %}
-      {% include "pres/sample/_" ~ this ~ ".j2" %}
+      {% include "pres/" ~ preso ~ "/_" ~ this ~ ".j2" %}
     {% else %}
       {% set prev=this %}
       {% set this=next %}
       {% set next=slide %}
-      {% include "pres/sample/_" ~ this ~ ".j2" %}
+      {% include "pres/" ~ preso ~ "/_" ~ this ~ ".j2" %}
       {% set first=False %}
     {% endif %}
   {% endif %}
