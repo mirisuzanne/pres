@@ -4,6 +4,21 @@
 // Amp
 @include font('BaskervilleAmp' 'amp/Baskerville-amp-webfont');
 
+$font-file-types: 'ttf';
+
+// Sans
+@include font('SourceSansPro' 'sans/SourceSansPro-Regular');
+@include font('SourceSansPro' 'sans/SourceSansPro-Italic' italic);
+@include font('SourceSansPro' 'sans/SourceSansPro-Bold' bold);
+@include font('SourceSansPro' 'sans/SourceSansPro-BoldItalic' bold italic);
+@include font('SourceSansPro' 'sans/SourceSansPro-Light' 200);
+@include font('SourceSansPro' 'sans/SourceSansPro-LightItalic' 200 italic);
+
+// Code
+@include font('SourceCodePro' 'code/SourceCodePro-Regular');
+@include font('SourceCodePro' 'code/SourceCodePro-Bold' bold);
+@include font('SourceCodePro' 'code/SourceCodePro-Light' 200);
+
 // ----------------------------------------------------------------------------
 // Font Stacks
 
@@ -14,9 +29,9 @@ $mono-stack   : Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "D
 // ----------------------------------------------------------------------------
 // Font Mixins
 
-@mixin sans { font-family: $sans-stack; }
-@mixin serif { font-family: $serif-stack; }
-@mixin mono { font-family: $mono-stack; }
+@mixin sans { font-family: 'SourceSansPro', $sans-stack; }
+@mixin mono { font-family: 'SourceCodePro', $mono-stack; }
+@mixin light { font-weight: 200; }
 @mixin amp {
   font-family: 'BaskervilleAmp', $serif-stack;
   font-weight: normal;

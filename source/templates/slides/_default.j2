@@ -1,0 +1,15 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<header class="slidehead">
+  {% block slidehead -%}
+  <h1 class="title">{% block h1 %}{% endblock %}</h1>
+  {% block subtitle -%}
+  <h2 class="subtitle">{% block h2 %}{% endblock %}</h2>
+  {%- endblock %}
+{%- endblock %}
+</header>
+<div class="slidebody">
+  {% block slidebody -%}{%- endblock %}
+</div>
+{% endblock %}
