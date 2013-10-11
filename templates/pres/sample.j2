@@ -1,0 +1,6 @@
+{% extends "pres.html" %}
+
+{% block pres %}
+  {% set slides = ['title', 'text', 'code'] %}
+  {% include "slides/_loop.j2" %}
+{% endblock %}

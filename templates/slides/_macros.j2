@@ -1,0 +1,28 @@
+{# Slide #}
+
+{% macro pre(name, first=False) -%}
+  <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if first %}checked autofocus{% endif %} />
+  <section class="slide" data-toggle="{{ name }}">
+{%- endmacro %}
+
+{% macro post(name, prev=False, next=False) -%}
+<nav class="slidenav">
+  {% if prev %}
+  <label class="prev" for="toggle-slide-{{ prev }}">
+    <span class="alt-text">previous</span>
+  </label>
+  {% endif %}
+  {% if name %}
+  <label class="this" for="toggle-slide-{{ name }}">
+    <span class="alt-text">this</span>
+  </label>
+  {% endif %}
+  {% if next %}
+  <label class="next" for="toggle-slide-{{ next }}">
+    <span class="alt-text">next</span>
+  </label>
+  {% endif %}
+</nav>
+</section>
+{%- endmacro %}
+

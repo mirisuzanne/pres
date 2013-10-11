@@ -1,0 +1,17 @@
+// Sidehead
+// ========
+
+.slidehead {
+  @include trailer;
+  text-align: center;
+  b { color: $accent; }
+  .head { @extend %h1; }
+  .amp {
+    position: relative;
+    font-size: rhythm(4);
+    display: inline-block;
+    margin: 0 -.15em 0 -.15em;
+    vertical-align: middle;
+    z-index: -1;
+  }
+}

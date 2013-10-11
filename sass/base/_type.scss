@@ -1,0 +1,17 @@
+// Typography
+// ==========
+
+$base-font-size             : $base-size;
+$base-line-height           : $medpx;
+
+$rhythm-unit                : rem;
+$rem-with-px-fallback       : false;
+
+$relative-font-sizing       : true;
+$round-to-nearest-half-line : true;
+
+$grid-background-baseline-height: $base-line-height;
+$grid-background-baseline-color: color($red, .25);
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';

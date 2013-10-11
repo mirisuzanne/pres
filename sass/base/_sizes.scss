@@ -1,0 +1,32 @@
+// Sizes
+// =====
+
+$base-size    : 32px;
+$ratio        : 1.3;
+
+// Scale
+// -----
+
+$xxxsmallpx   : ms(-4);
+$xxsmallpx    : ms(-2);
+$xsmallpx     : ms(-1);
+$smallpx      : $base-size - ms(-8);
+
+$normpx       : $base-size;
+$medpx        : ms(1);
+
+$largepx      : ms(2);
+$xlargepx     : ms(3);
+$xxlargepx    : ms(4);
+$xxxlargepx   : ms(6);
+
+$sizes: 'xxxsmallpx' $xxxsmallpx,
+        'xxsmallpx' $xxsmallpx,
+        'xsmallpx' $xsmallpx,
+        'smallpx' $smallpx,
+        'normpx' $normpx,
+        'medpx' $medpx,
+        'largepx' $largepx,
+        'xlargepx' $xlargepx,
+        'xxlargepx' $xxlargepx,
+        'xxxlargepx' $xxxlargepx;

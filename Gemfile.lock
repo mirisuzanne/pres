@@ -1,0 +1,41 @@
+GIT
+  remote: git://github.com/ericam/accoutrement
+  revision: c9265399900c619191bc79cc5987a34ade747b50
+  branch: master
+  specs:
+    accoutrement (0.0.5)
+      compass (>= 0.12.2)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    breakpoint (2.0.7)
+      compass (>= 0.12.1)
+      sass (>= 3.2.0)
+    chunky_png (1.2.8)
+    compass (0.13.alpha.4)
+      chunky_png (~> 1.2)
+      listen (<= 0.9.9)
+      sass (~> 3.2.5)
+    listen (0.7.3)
+    modular-scale (1.0.6)
+      compass (>= 0.12.1)
+      sass (>= 3.2.0)
+      sassy-math (>= 1.5)
+    sass (3.2.12)
+    sassy-math (1.5)
+      compass (~> 0.11)
+    susy (2.0.0.alpha.4)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  accoutrement!
+  breakpoint (~> 2.0.7)
+  compass (= 0.13.alpha.4)
+  modular-scale (~> 1.0.6)
+  sass (~> 3.2.12)
+  susy (~> 2.0.0.alpha.4)

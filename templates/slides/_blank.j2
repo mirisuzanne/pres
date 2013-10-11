@@ -1,0 +1,7 @@
+{% import 'slides/_macros.j2' as slide %}
+
+{% block pre %}{{ slide.pre(this, first) }}{% endblock %}
+
+{% block slide %}{% endblock %}
+
+{% block post %}{{ slide.post(this, prev, next) }}{% endblock %}

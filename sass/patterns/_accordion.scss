@@ -1,0 +1,36 @@
+// Accordion
+// =========
+
+%accordion-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+%accordion-hide { display: none; }
+%accordion-show { display: block; }
+
+@mixin toggle {
+  @extend %accordion-toggle;
+  &:checked { @content; }
+}
+
+@mixin accordion(
+  $name
+) {
+  [id^="#{$name}"] {
+    ~ [data-toggle^="#{$name}"] { @extend %accordion-hide; }
+    @include toggle {
+      ~ [for^="#{$name}"] { @content; }
+      ~ [data-toggle^="#{$name}"] { @extend %accordion-show; }
+    }
+  }
+}
+
+@mixin toggle-delete(
+  $field
+) {
+  @include toggle { + #{$field} { @extend %accordion-hide; } }
+}

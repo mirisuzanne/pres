@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  {% block htmlhead %}
+
+  <!-- Page Info -->
+  <title>{% block fulltitle %}{% block title %}Home{% endblock %} | Pres{% endblock %}</title>
+
+  <!-- Site Info -->
+  {% block robots %}<meta name="robots" content="index, follow" />{% endblock %}
+  <meta name="author" content="Eric A. Meyer" />
+  <meta name="language" content="en-us" />
+
+  <!-- Microformat Profiles -->
+  <!-- hCard, hCalendar, rel-license, rel-tag, XOXO, XFN, VoteLinks -->
+  <link rel="profile" href="http://microformats.org/profile/specs/" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+
+  <!-- Styles -->
+  {% block styles %}
+  <link rel="stylesheet" href="/static/css/screen.css" />
+  {% endblock styles %}
+
+  <!-- Page-Specific Head -->
+  {% block extrahead %}{% endblock %}
+
+  {% endblock htmlhead %}
+</head>
+
+<body class="{% block bodyclasses %}{% endblock %}">
+
+{% block template %}{% endblock template %}
+
+{% block extrajs %}{% endblock extrajs %}
+
+</body>
+</html>
