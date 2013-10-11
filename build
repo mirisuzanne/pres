@@ -17,9 +17,12 @@ if __name__ == '__main__':
     name = sys.argv[1]
     tpl_name = "%s.j2" % name
     output_path = os.path.join(OUTPUT, "%s.html" % name)
+    # name might be like foo/bar, so then this would be OUTPUT/foo/
+    output_dir = os.path.dirname(output_path)
     env = Environment(
         extensions=[HighlightExtension], loader=FileSystemLoader(TEMPLATES))
     tpl = env.get_template(tpl_name)
     html = tpl.render()
+    os.makedirs(output_dir)
     with open(output_path, 'w') as fh:
         fh.write(html.encode('utf-8'))
