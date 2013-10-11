@@ -11,13 +11,14 @@ Python projects on your system, create a virtualenv and activate it.  Then run
 ``pip install -r requirements.txt`` to install the dependencies for this
 project into your Python environment.
 
-The site templates are in ``templates/``, and static files are in ``static/``.
+The site templates are in ``source/templates/``, and static files are in
+``static/``.
 
-To view the site live locally, run ``make serve`` and visit
-``http://localhost:5000`` in your browser.
-
-To regenerate the site as static HTML files,
-run ``make build``.
+To build a template, ``cd`` into the ``source/`` directory and run ``./build
+somename``; this will render ``source/templates/somename.j2`` to
+``somename.html``. The given name can also include slashes; so ``./build
+some/name`` will render ``source/templates/some/name.j2`` to
+``some/name.html``.
 
 .. _virtualenv: http://www.virtualenv.org
 
