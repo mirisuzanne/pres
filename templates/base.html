@@ -35,7 +35,11 @@
 
 {% block template %}{% endblock template %}
 
-{% block extrajs %}{% endblock extrajs %}
+<!-- JavaScript -->
+{% block js %}
+<script src="/static/js/vendor/jquery.min.js"></script>
+<script src="/static/js/init.js"></script>
+{% endblock js %}
 
 </body>
 </html>
