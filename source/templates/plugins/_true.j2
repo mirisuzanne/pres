@@ -3,19 +3,15 @@
 {% block slide %}
 {% highlight 'scss' %}
 @include test('[function] column-count()') {
-  $sym: 12;
-  $asym: 1 2 4 1 2 1;
-
   // A symmetrical grid is equal to its column count.
-  $s-count: column-count($sym);
-  @include assert-equal($s-count, $sym,
+  @include assert-equal(
+    column-count(12), 12,
     'Symmetrical grid-count should equal $columns setting.');
 
-  // An asymmetrical grid has a column-count equal to its length.
-  $a-count: column-count($asym);
-  $a-length: length($asym);
-  @include assert-equal($a-count, $a-length,
-    'Asymmetrical grid-count should equal $columns length.');
+  // Asymmetrical grid is equal to the list length.
+  @include assert-equal(
+    column-count(1 2 3), 3,
+    'Asymmetrical grid-count should equal the list-length of $columns setting.');
 }
 {% endhighlight %}
 {% endblock %}

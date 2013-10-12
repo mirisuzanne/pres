@@ -121,6 +121,10 @@
   @extend %simple-slide;
 }
 
+[data-toggle="true"] {
+  @extend %simple-slide;
+}
+
 [data-toggle="public"] {
   @extend %simple-slide;
 }

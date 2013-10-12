@@ -1527,19 +1527,15 @@
 <div class="slidewrap">
   
 <div class="highlight"><pre><span class="k">@include</span><span class="nd"> test</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">[function] column-count()&#39;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nv">$sym</span><span class="o">:</span> <span class="mi">12</span><span class="p">;</span>
-  <span class="nv">$asym</span><span class="o">:</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span><span class="p">;</span>
-
   <span class="c1">// A symmetrical grid is equal to its column count.</span>
-  <span class="nv">$s-count</span><span class="o">:</span> <span class="nf">column-count</span><span class="p">(</span><span class="nv">$sym</span><span class="p">);</span>
-  <span class="k">@include</span><span class="nd"> assert-equal</span><span class="p">(</span><span class="nv">$s-count</span><span class="o">,</span> <span class="nv">$sym</span><span class="o">,</span>
+  <span class="k">@include</span><span class="nd"> assert-equal</span><span class="p">(</span>
+    <span class="nf">column-count</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">,</span> <span class="mi">12</span><span class="o">,</span>
     <span class="s1">&#39;</span><span class="s2">Symmetrical grid-count should equal $columns setting.&#39;</span><span class="p">);</span>
 
-  <span class="c1">// An asymmetrical grid has a column-count equal to its length.</span>
-  <span class="nv">$a-count</span><span class="o">:</span> <span class="nf">column-count</span><span class="p">(</span><span class="nv">$asym</span><span class="p">);</span>
-  <span class="nv">$a-length</span><span class="o">:</span> <span class="nf">length</span><span class="p">(</span><span class="nv">$asym</span><span class="p">);</span>
-  <span class="k">@include</span><span class="nd"> assert-equal</span><span class="p">(</span><span class="nv">$a-count</span><span class="o">,</span> <span class="nv">$a-length</span><span class="o">,</span>
-    <span class="s1">&#39;</span><span class="s2">Asymmetrical grid-count should equal $columns length.&#39;</span><span class="p">);</span>
+  <span class="c1">// Asymmetrical grid is equal to the list length.</span>
+  <span class="k">@include</span><span class="nd"> assert-equal</span><span class="p">(</span>
+    <span class="nf">column-count</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span>
+    <span class="s1">&#39;</span><span class="s2">Asymmetrical grid-count should equal the list-length of $columns setting.&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
