@@ -1,0 +1,8 @@
+// Multiplier Slide
+// ================
+
+[data-toggle="multiplier"] {
+  @extend %simple-slide;
+  @include adjust-font-size-to($xlargepx);
+  text-align: center;
+}

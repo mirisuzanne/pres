@@ -1,8 +1,40 @@
 // Title Slide
 // ===========
 
-[data-talk="plugins"] {
-  [data-toggle="title"] {
-    .head { @include adjust-font-size-to($xlargepx); }
+[data-toggle="title"] {
+  @include background(image-url('eric.svg') no-repeat scroll rhythm(-5));
+  @include background-size(contain);
+
+  .slidewrap {
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    height: 100%;
   }
+  .head { @include adjust-font-size-to($xlargepx); }
 }
+
+.vcard {
+  @include rhythm-padding(.5);
+  text-align: right;
+
+  .fn, .title { display: block; }
+  .fn { font-weight: bold; }
+  [rel="me"] {
+    display: inline-block;
+    margin-left: rhythm(.5);
+  }
+  [data-icon] { @include adjust-font-size-to($smallpx); }
+  .link-text { color: $base; }
+}
+
+.talk-info {
+  @include adjust-font-size-to($xsmallpx,.75);
+  @include rhythm-padding(.5);
+  @include bleed(rhythm(10));
+  background: color($accent 85%,.9);
+
+  [rel="slides"] { font-weight: bold; }
+}
+
+.colophon, .copyright { display: inline; }

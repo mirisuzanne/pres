@@ -1,0 +1,69 @@
+// Tab Slides
+// ==========
+
+%hide-tab-toggle { display: none; }
+
+%hide-tab-content {
+  @include transition(opacity 300ms);
+  opacity: 0;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+}
+%show-tab-content {
+  opacity: 1;
+  position: relative;
+  z-index: 10;
+}
+
+[data-toggle="tabs"] {
+  @extend %simple-slide;
+
+  %active-tab-title {
+    background: none;
+    border-bottom-color: rgba(black, 0);
+  }
+
+  .tabs-demo {
+    @include tabs(one two three, ".tabs" ".content");
+    @include box-shadow(rgba(black,.5) 0 0 .5em);
+    max-width: rhythm(25);
+    margin: 0 auto;
+    background: color(lightest $pink);
+  }
+
+  .tabs [for] {
+    @include rhythm-borders(1px,.25);
+    float: left;
+    width: percentage(1/3);
+    text-align: center;
+    background: color(lightest $alt);
+    font-weight: bold;
+    text-transform: capitalize;
+    ~ [for] { border-left: 0 }
+    &:last-child { float: right; }
+  }
+
+  .content {
+    @include clearfix;
+    @include rhythm-borders(1px,1);
+    clear: both;
+    border-top: 0;
+    ul {
+      list-style: disc;
+      padding-left: rhythm(1);
+    }
+  }
+}
+
+[data-toggle="tabs-nostyle"] {
+  @extend %simple-slide;
+
+  %active-tab-title {
+    font-weight: bold;
+  }
+
+  .tabs-nostyle-demo {
+    @include tabs(one1 two1 three1, ".tabs" ".content");
+  }
+}

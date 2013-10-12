@@ -1,6 +1,9 @@
-{% extends "slides/_blank.j2" %}
+{% extends "slides/_default.j2" %}
 
-{% block slide %}
+{% block h1 %}<b>VS.</b>{% endblock %}
+{% block subhead %}{% endblock %}
+
+{% block slidebody %}
 <div class="tab-code">
 {% highlight 'scss' %}
 @mixin tabs(
@@ -23,11 +26,11 @@
     #{$content} { @extend %hide-tab-content; }
     #{$toggle} {
       @extend %hide-tab-toggle;
-      &#{$checked} {
-        & ~ #{$nested-tabs} #{$title} {
+      &#38;#{$checked} {
+        &#38; ~ #{$nested-tabs} #{$title} {
           @extend %active-tab-title !optional;
         }
-        & ~ #{$nested-content} #{$content} {
+        &#38; ~ #{$nested-content} #{$content} {
           @extend %show-tab-content;
         }
       }
@@ -39,8 +42,8 @@
 <div class="toggle-code">
 {% highlight 'scss' %}
 @mixin toggle {
-  @extend %hide-toggle;
-  &:checked { @content; }
+  @extend %hide;
+  &#38;:checked { @content; }
 }
 {% endhighlight %}
 </div>

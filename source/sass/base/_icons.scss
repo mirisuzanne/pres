@@ -15,19 +15,21 @@ $icon-twitter                   : "\e00c";
 $icon-github                    : "\e00d";
 $icon-bubble                    : "\e003";
 $icon-user                      : "\e005";
+$icon-arrow-down-right          : "\e007";
 
-$icons: 'pencil'                $icon-pencil,
-        'tag'                   $icon-tag,
-        'remove'                $icon-remove,
-        'plus'                  $icon-plus,
-        'checkmark'             $icon-checkmark,
-        'close'                 $icon-close,
-        'warning'               $icon-warning,
-        'info'                  $icon-info,
-        'cancel'                $icon-cancel-circle,
-        'move'                  $icon-move-horizontal,
-        'twitter'               $icon-twitter,
-        'github'                $icon-github,
-        'bubble'                $icon-bubble,
-        'user'                  $icon-user
+$icons: 'pencil'                        $icon-pencil,
+        'tag'                           $icon-tag,
+        'remove'                        $icon-remove,
+        'plus'                          $icon-plus,
+        'checkmark'                     $icon-checkmark,
+        'close'                         $icon-close,
+        'warning'                       $icon-warning,
+        'info'                          $icon-info,
+        'cancel'                        $icon-cancel-circle,
+        'move'                          $icon-move-horizontal,
+        'twitter'                       $icon-twitter,
+        'github'                        $icon-github,
+        'bubble'                        $icon-bubble,
+        'user'                          $icon-user,
+        'icon-arrow-down-right'         $icon-arrow-down-right
         ;

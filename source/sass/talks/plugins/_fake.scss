@@ -1,0 +1,27 @@
+// Fake About Slide
+// ================
+
+@include keyframes(xeric) {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+[data-toggle="fake"] {
+  @extend %vertical-center;
+  @extend %invert-colors;
+  @include background(image-url('othereric.jpg') no-repeat scroll center);
+  @include background-size(cover);
+
+  @include after($icon-close) {
+    @extend %icon-content;
+    @include stretch(rhythm(-2));
+    @include adjust-font-size-to(1000px);
+    opacity: 0;
+    text-align: center;
+    text-shadow: none;
+  }
+
+  [id="toggle-slide-fake"]:checked + &:after {
+    @include animation(xeric 1s 5s steps(1,end) infinite);
+  }
+}

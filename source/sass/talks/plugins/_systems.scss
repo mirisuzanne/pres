@@ -1,0 +1,17 @@
+// Systems Slide
+// =============
+
+[data-toggle="systems"] {
+  @extend %simple-slide;
+  @extend %invert-colors;
+  @include background(image-url('systems.png') no-repeat scroll bottom);
+  @include background-size(cover);
+
+  @include after(' ') {
+    @include replace-text-with-dimensions('nataliedowne.png');
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+

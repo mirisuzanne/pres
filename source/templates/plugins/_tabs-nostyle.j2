@@ -1,19 +1,22 @@
-{% extends "slides/_blank.j2" %}
+{% extends "slides/_default.j2" %}
 
-{% block slide %}
+{% block h1 %}Just the <b>Tabs</b>{% endblock %}
+{% block h2 %}Without the paint{% endblock %}
+
+{% block slidebody %}
 <div class="tabs-nostyle-demo">
-  <input type="radio" name="toggle1" id="one-toggle" checked/>
-  <input type="radio" name="toggle1" id="two-toggle" />
-  <input type="radio" name="toggle1" id="three-toggle" />
+  <input type="radio" name="toggle1" id="one1-toggle" checked/>
+  <input type="radio" name="toggle1" id="two1-toggle" />
+  <input type="radio" name="toggle1" id="three1-toggle" />
 
   <div class="tabs">
-    <label for="one-toggle">one</label>
-    <label for="two-toggle">two</label>
-    <label for="three-toggle">three</label>
+    <label for="one1-toggle">one</label>
+    <label for="two1-toggle">two</label>
+    <label for="three1-toggle">three</label>
   </div>
 
   <div class="content">
-    <div class="one-content">
+    <div class="one1-content">
       Responsive CSS Tabs in Sass,
       with help from the float isolation method.
       <ul>
@@ -23,10 +26,10 @@
         <li>The entire thing is responsive</li>
       </ul>
     </div>
-    <div class="two-content">
+    <div class="two1-content">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     </div>
-    <div class="three-content">
+    <div class="three1-content">
       Illum, deserunt, nihil excepturi eius quisquam aspernatur aperiam error ut reiciendis numquam quasi accusantium rerum nesciunt tempore expedita velit laborum architecto quod?
     </div>
   </div>

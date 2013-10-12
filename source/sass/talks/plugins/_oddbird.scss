@@ -1,0 +1,9 @@
+// OddBird Slide
+// =============
+
+[data-toggle="oddbird"] {
+  @extend %simple-slide;
+  @extend %invert-colors;
+  @include background(image-url('oddbird.jpg') no-repeat scroll);
+  @include background-size(cover);
+}
