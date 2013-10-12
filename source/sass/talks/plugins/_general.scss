@@ -125,6 +125,10 @@
   @extend %simple-slide;
 }
 
+[data-toggle="document"] {
+  @extend %simple-slide;
+}
+
 [data-toggle="respond"] {
   @extend %simple-slide;
 }
