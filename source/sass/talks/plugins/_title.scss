@@ -1,0 +1,8 @@
+// Title Slide
+// ===========
+
+[data-talk="plugins"] {
+  [data-toggle="title"] {
+    .head { @include adjust-font-size-to($xlargepx); }
+  }
+}

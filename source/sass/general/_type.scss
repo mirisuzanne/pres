@@ -3,15 +3,22 @@
 
 .alt-text { @include gone; }
 .amp { @include amp; }
+pre, code { @include mono; }
+b { color: $accent; }
 
 // Headers
 // -------
 
-%h1 { @include adjust-font-size-to($xlargepx); }
-%h2 { @include adjust-font-size-to($largepx); }
-%h3 { @include adjust-font-size-to($medpx); }
+%h1 {
+  @include adjust-font-size-to($xxlargepx);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+%h2 { @include adjust-font-size-to($xlargepx); }
+%h3 { @include adjust-font-size-to($largepx); }
+%h4 { @include adjust-font-size-to($medpx); }
 
-%h4, %h5, %h6 { font-weight: bold; }
+%h5, %h6 { font-weight: bold; }
 
 %headers {
   h1 { @extend %h1; }

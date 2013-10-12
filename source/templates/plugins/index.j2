@@ -4,9 +4,23 @@
   {{ static.css('../static/css/', 'plugins.css') }}
 {% endblock %}
 
+{% block data_talk %}plugins{% endblock %}
+
 {% block pres %}
   {% set talk='plugins' %}
-  {% set slides = ['title', 'text', 'code'] %}
+  {%
+    set slides = [
+      'title', 'fake', 'about', 'plugins',
+      'show',
+      'no-ruby', 'no-idea', 'no-plan', 'no-experience', 'no-name',
+      'oddbird', 'systems', 'multiplier', 'grids',
+      'chris', 'susy01', 'github', 'docs01', 'wtf',
+      'community', 'wild',
+      'share', 'dry', 'small', 'tools', 'tabs', 'tabs-nostyle', 'toggle',
+      'test', 'public', 'respond', 'bigger', 'new',
+      'title'
+    ]
+  %}
   {% include "slides/_loop.j2" %}
 {% endblock %}
 

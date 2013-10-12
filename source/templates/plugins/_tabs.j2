@@ -1,0 +1,34 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<div class="tabs-demo">
+  <input type="radio" name="toggle" id="one-toggle" checked/>
+  <input type="radio" name="toggle" id="two-toggle" />
+  <input type="radio" name="toggle" id="three-toggle" />
+
+  <div class="tabs">
+    <label for="one-toggle">one</label>
+    <label for="two-toggle">two</label>
+    <label for="three-toggle">three</label>
+  </div>
+
+  <div class="content">
+    <div class="one-content">
+      Responsive CSS Tabs in Sass,
+      with help from the float isolation method.
+      <ul>
+        <li>Container wraps all tabs dynamically</li>
+        <li>Container remains equal-height</li>
+        <li>No JS Height calculations</li>
+        <li>The entire thing is responsive</li>
+      </ul>
+    </div>
+    <div class="two-content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <div class="three-content">
+      Illum, deserunt, nihil excepturi eius quisquam aspernatur aperiam error ut reiciendis numquam quasi accusantium rerum nesciunt tempore expedita velit laborum architecto quod?
+    </div>
+  </div>
+</div>
+{% endblock %}

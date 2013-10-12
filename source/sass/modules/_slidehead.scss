@@ -4,11 +4,14 @@
 .slidehead {
   @include trailer;
   text-align: center;
-  b { color: $accent; }
-  .title { @extend %h1; }
+}
+
+.head {
+  @extend %h1;
   .amp {
     position: relative;
-    font-size: rhythm(3);
+    font-size: rhythm(4);
+    line-height: rhythm(2);
     display: inline-block;
     margin: 0 -.25em 0 -.25em;
     vertical-align: middle;

@@ -1,0 +1,47 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<div class="tab-code">
+{% highlight 'scss' %}
+@mixin tabs(
+  $slugs,
+  $nested: $default-nested-selectors,
+  $checked: $default-checked-selector
+) {
+  $nested-tabs: $nested;
+  $nested-content: $nested;
+  @if length($nested) > 1 {
+    $nested-tabs: nth($nested, 1);
+    $nested-content: nth($nested, 2);
+  }
+
+  @each $slug in $slugs {
+    $toggle   : '[#{$toggle-attribute}*="#{$slug}"]';
+    $title    : '[#{$title-attribute}*="#{$slug}"]';
+    $content  : '[#{$content-attribute}*="#{$slug}"]';
+
+    #{$content} { @extend %hide-tab-content; }
+    #{$toggle} {
+      @extend %hide-tab-toggle;
+      &#{$checked} {
+        & ~ #{$nested-tabs} #{$title} {
+          @extend %active-tab-title !optional;
+        }
+        & ~ #{$nested-content} #{$content} {
+          @extend %show-tab-content;
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+</div>
+<div class="toggle-code">
+{% highlight 'scss' %}
+@mixin toggle {
+  @extend %hide-toggle;
+  &:checked { @content; }
+}
+{% endhighlight %}
+</div>
+{% endblock %}

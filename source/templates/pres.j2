@@ -1,5 +1,7 @@
 {% extends "layout.j2" %}
 
+{% block pres_data %}data-talk="{% block data_talk %}{% endblock %}"{% endblock %}
+
 {% block template %}
   {% block pres %}{% endblock %}
 {% endblock %}

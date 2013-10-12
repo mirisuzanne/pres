@@ -1,0 +1,14 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+{% highlight 'sass' %}
+// Example:
+#page
+  +grid-container
+  #left-nav
+    +grid-col(3)
+  #main-content
+    +grid-prefix(1)
+    +grid-col(4, 10, true)
+{% endhighlight %}
+{% endblock %}
