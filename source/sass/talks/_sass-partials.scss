@@ -1,0 +1,10 @@
+// Sass Partials
+// -------------
+
+[data-talk='sass-partials'] {
+  .slide { @extend %vertical-center; }
+  pre {
+    max-width: 20em;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,21 @@
+{% extends "pres.j2" %}
+
+{% block styles %}
+  {{ static.css('../static/css/', 'sass-partials.css') }}
+{% endblock %}
+
+{% block data_talk %}sass-partials{% endblock %}
+
+{% block pres %}
+  {% set talk='sass-partials' %}
+  {% set slides = ['title', 'rules', 'structure',
+    'base-title', 'base', 'general-title', 'general',
+    'layout-title', 'layout', 'patterns-title', 'patterns',
+    'modules-title', 'modules', 'structure',
+    'atomic', 'rules', 'title' ] %}
+  {% include "slides/_loop.j2" %}
+{% endblock %}
+
+{% block js %}
+  {{ static.js('../static/js/') }}
+{% endblock %}

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+
+  
+
+  <!-- Page Info -->
+  <title>Pres</title>
+
+  <meta name="author" content="Eric A. Meyer" />
+  <meta name="language" content="en-us" />
+
+  <!-- Microformat Profiles -->
+  <!-- hCard, hCalendar, rel-license, rel-tag, XOXO, XFN, VoteLinks -->
+  <link rel="profile" href="http://microformats.org/profile/specs/" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+
+  <!-- Styles -->
+  
+  <link rel="stylesheet" href="../static/css/screen.css" />
+
+
+<link rel="stylesheet" href="../static/css/s" />
+
+<link rel="stylesheet" href="../static/css/a" />
+
+<link rel="stylesheet" href="../static/css/s" />
+
+<link rel="stylesheet" href="../static/css/s" />
+
+<link rel="stylesheet" href="../static/css/-" />
+
+<link rel="stylesheet" href="../static/css/p" />
+
+<link rel="stylesheet" href="../static/css/a" />
+
+<link rel="stylesheet" href="../static/css/r" />
+
+<link rel="stylesheet" href="../static/css/t" />
+
+<link rel="stylesheet" href="../static/css/i" />
+
+<link rel="stylesheet" href="../static/css/a" />
+
+<link rel="stylesheet" href="../static/css/l" />
+
+<link rel="stylesheet" href="../static/css/s" />
+
+<link rel="stylesheet" href="../static/css/." />
+
+<link rel="stylesheet" href="../static/css/c" />
+
+<link rel="stylesheet" href="../static/css/s" />
+
+<link rel="stylesheet" href="../static/css/s" />
+
+
+
+</head>
+
+<body class="" data-talk="sass-partials">
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-title" name="slide-toggles" checked autofocus />
+  <section class="slide" data-toggle="title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Organizing</b> Sass Partials</h1>
+  <h2 class="subhead">NYCSass Meetup, 11.19.13</h2>
+</header>
+<div class="slidebody">
+  
+<div class="vcard eric">
+  <strong class="fn">Eric A. Meyer | <b>OddBird</b></strong>
+  <a href="http://oddbird.net/" class="url" rel="me">
+    <span data-icon="bubble"> </span>
+    <span class="link-text">oddbird.net</span>
+  </a>
+  <a href="http://twitter.com/eriiicam/" rel="me">
+    <span data-icon="twitter"> </span>
+    <span class="link-text">eriiicam</span>
+  </a>
+  <a href="http://github.com/ericam/" rel="me">
+    <span data-icon="github"> </span>
+    <span class="link-text">ericam</span>
+  </a>
+</div>
+
+<footer class="talk-info">
+  <p class="colophon">
+    Built on plain old semantic
+    <a href="http://www.w3.org/TR/html5/">HTML5</a>
+    and <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
+    with help from
+    <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
+    <a href="http://github.com/Team-Sass/modular-scale">Modular-Scale</a>,
+    <a href="http://compass-style.org/">Compass</a>,
+    <a href="http://sass-lang.com/">Sass</a>,
+    and a tiny touch of <a href="http://jquery.com">jQuery</a>.
+    Slides available at
+    <a href="http://eric.andmeyer.com/pres/sass-partials/" rel="slides">eric.andmeyer.com/pres/sass-partials/</a>,
+    source available on
+    <a href="https://github.com/ericam/pres">Github</a>.
+  </p>
+
+  <p class="copyright">
+    Copyright &copy; 2013 <strong>Eric A. Meyer</strong>.
+    <a href="https://github.com/ericam/pres/LICENSE">Some rights reserved</a>.
+  </p>
+</footer>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  
+  <label class="this" for="toggle-slide-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-rules">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-rules" name="slide-toggles"  />
+  <section class="slide" data-toggle="rules">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Never Fight The <b>Cascade</b></h1>
+  <h2 class="subhead">General <b>-></b> Specific</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-rules">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-structure">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-structure" name="slide-toggles"  />
+  <section class="slide" data-toggle="structure">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">Sass</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Base</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">General</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Layout</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Patterns</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-rules">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-structure">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-base-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-base-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="base-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Base Partials</h1>
+  <h2 class="subhead">No CSS Output</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-structure">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-base-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-base">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-base" name="slide-toggles"  />
+  <section class="slide" data-toggle="base">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">Base</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">colors</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">grids</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">rhythm</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">requirements</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">icons</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-base-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-base">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-general-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-general-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="general-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">General Partials</h1>
+  <h2 class="subhead">Resets <b>+</b> Defaults</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-base">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-general-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-general">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-general" name="slide-toggles"  />
+  <section class="slide" data-toggle="general">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">General</span>
+<span class="l-Scalar-Plain">- fonts</span>
+<span class="l-Scalar-Plain">- forms</span>
+<span class="l-Scalar-Plain">- icons</span>
+<span class="l-Scalar-Plain">- type</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-general-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-general">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-layout-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-layout-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="layout-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Layout Partials</h1>
+  <h2 class="subhead">Sitewide Structure</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-general">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-layout-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-layout">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-layout" name="slide-toggles"  />
+  <section class="slide" data-toggle="layout">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">Layout</span>
+<span class="l-Scalar-Plain">- banner</span>
+<span class="l-Scalar-Plain">- main</span>
+<span class="l-Scalar-Plain">- nav</span>
+<span class="l-Scalar-Plain">- contentinfo</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-layout-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-layout">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-patterns-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-patterns-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="patterns-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Pattern Partials</h1>
+  <h2 class="subhead">Re-usable Structures</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-layout">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-patterns-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-patterns">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-patterns" name="slide-toggles"  />
+  <section class="slide" data-toggle="patterns">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">Patterns</span>
+<span class="l-Scalar-Plain">- tooltips</span>
+<span class="l-Scalar-Plain">- accordion</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-patterns-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-patterns">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-modules-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-modules-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="modules-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Module Partials</h1>
+  <h2 class="subhead">The Details</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-patterns">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-modules-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-modules">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-modules" name="slide-toggles"  />
+  <section class="slide" data-toggle="modules">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">Modules</span>
+<span class="l-Scalar-Plain">- intro</span>
+<span class="l-Scalar-Plain">- about</span>
+<span class="l-Scalar-Plain">- checkout</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-modules-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-modules">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-structure">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-structure" name="slide-toggles"  />
+  <section class="slide" data-toggle="structure">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="l-Scalar-Plain">Sass</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Base</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">General</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Layout</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Patterns</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-modules">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-structure">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-atomic">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-atomic" name="slide-toggles"  />
+  <section class="slide" data-toggle="atomic">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Atomic</b> Design?</h1>
+  <h2 class="subhead">
+  Brad Frost —
+  <a href="http://pattern-lab.info/">http://pattern-lab.info/</a>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-structure">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-atomic">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-rules">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+    
+  
+
+  
+    
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-rules" name="slide-toggles"  />
+  <section class="slide" data-toggle="rules">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Never Fight The <b>Cascade</b></h1>
+  <h2 class="subhead">General <b>-></b> Specific</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-atomic">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-rules">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+      
+      
+      
+      
+      
+
+<input type="radio" id="toggle-slide-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Organizing</b> Sass Partials</h1>
+  <h2 class="subhead">NYCSass Meetup, 11.19.13</h2>
+</header>
+<div class="slidebody">
+  
+<div class="vcard eric">
+  <strong class="fn">Eric A. Meyer | <b>OddBird</b></strong>
+  <a href="http://oddbird.net/" class="url" rel="me">
+    <span data-icon="bubble"> </span>
+    <span class="link-text">oddbird.net</span>
+  </a>
+  <a href="http://twitter.com/eriiicam/" rel="me">
+    <span data-icon="twitter"> </span>
+    <span class="link-text">eriiicam</span>
+  </a>
+  <a href="http://github.com/ericam/" rel="me">
+    <span data-icon="github"> </span>
+    <span class="link-text">ericam</span>
+  </a>
+</div>
+
+<footer class="talk-info">
+  <p class="colophon">
+    Built on plain old semantic
+    <a href="http://www.w3.org/TR/html5/">HTML5</a>
+    and <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
+    with help from
+    <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
+    <a href="http://github.com/Team-Sass/modular-scale">Modular-Scale</a>,
+    <a href="http://compass-style.org/">Compass</a>,
+    <a href="http://sass-lang.com/">Sass</a>,
+    and a tiny touch of <a href="http://jquery.com">jQuery</a>.
+    Slides available at
+    <a href="http://eric.andmeyer.com/pres/sass-partials/" rel="slides">eric.andmeyer.com/pres/sass-partials/</a>,
+    source available on
+    <a href="https://github.com/ericam/pres">Github</a>.
+  </p>
+
+  <p class="copyright">
+    Copyright &copy; 2013 <strong>Eric A. Meyer</strong>.
+    <a href="https://github.com/ericam/pres/LICENSE">Some rights reserved</a>.
+  </p>
+</footer>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-rules">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+</nav>
+</section>
+    
+  
+
+
+
+
+<!-- JavaScript -->
+
+  <script src="../static/js/vendor/jquery.min.js"></script>
+
+<script src="../static/js/s"></script>
+
+<script src="../static/js/t"></script>
+
+<script src="../static/js/a"></script>
+
+<script src="../static/js/t"></script>
+
+<script src="../static/js/i"></script>
+
+<script src="../static/js/c"></script>
+
+<script src="../static/js//"></script>
+
+<script src="../static/js/j"></script>
+
+<script src="../static/js/s"></script>
+
+<script src="../static/js//"></script>
+
+<script src="../static/js/init.js"></script>
+
+
+</body>
+</html>

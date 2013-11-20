@@ -1,3 +1,4 @@
+@charset "UTF-8";
 [data-toggle="tabs"] .tabs-demo [id*="one"], [data-toggle="tabs"] .tabs-demo [id*="two"], [data-toggle="tabs"] .tabs-demo [id*="three"], [data-toggle="tabs-nostyle"] .tabs-nostyle-demo [id*="one1"], [data-toggle="tabs-nostyle"] .tabs-nostyle-demo [id*="two1"], [data-toggle="tabs-nostyle"] .tabs-nostyle-demo [id*="three1"] {
   position: absolute;
   left: -9999px;
@@ -62,56 +63,56 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "BaskervilleAmp";
-  src: url('../fonts/amp/Baskerville-amp-webfont.woff?1381528855') format("woff"), url('../fonts/amp/Baskerville-amp-webfont.ttf?1381528855') format("truetype");
+  src: url('../fonts/amp/Baskerville-amp-webfont.woff?1383119448') format("woff"), url('../fonts/amp/Baskerville-amp-webfont.ttf?1383119448') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-Light.ttf?1381528855') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-Light.ttf?1383119448') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-LightItalic.ttf?1381528855') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-LightItalic.ttf?1383119448') format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-Bold.ttf?1381528855') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-Bold.ttf?1383119448') format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url('../fonts/sans/SourceSansPro-BoldItalic.ttf?1381528855') format("truetype");
+  src: url('../fonts/sans/SourceSansPro-BoldItalic.ttf?1383119448') format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/SourceCodePro-Regular.ttf?1381528855') format("truetype");
+  src: url('../fonts/code/SourceCodePro-Regular.ttf?1383119448') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/SourceCodePro-Bold.ttf?1381528855') format("truetype");
+  src: url('../fonts/code/SourceCodePro-Bold.ttf?1383119448') format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/SourceCodePro-Light.ttf?1381528855') format("truetype");
+  src: url('../fonts/code/SourceCodePro-Light.ttf?1383119448') format("truetype");
   font-weight: 200;
   font-style: normal;
 }
@@ -141,7 +142,7 @@ html, body {
 
 @font-face {
   font-family: "pres";
-  src: url('../fonts/icons/pres.ttf?1381610398') format("truetype");
+  src: url('../fonts/icons/pres.ttf?1383119448') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -611,7 +612,7 @@ label {
 
 /* Literal.Number.Integer.Long */
 [data-toggle="about"], [data-toggle="show"], [data-toggle="no-ruby"], [data-toggle="no-idea"],
-[data-toggle="no-plan"], [data-toggle="no-experience"], [data-toggle="no-name"], [data-toggle="oddbird"], [data-toggle="systems"], [data-toggle="multiplier"], [data-toggle="grids"], [data-toggle="chris"], [data-toggle="susy01"], [data-toggle="github"], [data-toggle="community"], [data-toggle="wild"], [data-toggle="share"], [data-toggle="dry"], [data-toggle="small"], [data-toggle="sass"], [data-toggle="tools"], [data-toggle="toggle"], [data-toggle="test"], [data-toggle="true"], [data-toggle="public"], [data-toggle="document"], [data-toggle="respond"], [data-toggle="bigger"], [data-toggle="new"], [data-toggle="tabs"], [data-toggle="tabs-nostyle"], [data-toggle="fake"], [data-toggle="docs01"], [data-toggle="wtf"] {
+[data-toggle="no-plan"], [data-toggle="no-experience"], [data-toggle="no-name"], [data-toggle="oddbird"], [data-toggle="systems"], [data-toggle="multiplier"], [data-toggle="grids"], [data-toggle="chris"], [data-toggle="susy01"], [data-toggle="github"], [data-toggle="community"], [data-toggle="wild"], [data-toggle="share"], [data-toggle="dry"], [data-toggle="small"], [data-toggle="sass"], [data-toggle="tools"], [data-toggle="toggle"], [data-toggle="test"], [data-toggle="true"], [data-toggle="public"], [data-toggle="document"], [data-toggle="respond"], [data-toggle="bigger"], [data-toggle="new"], [data-toggle="tabs"], [data-toggle="tabs-nostyle"], [data-toggle="fake"], [data-toggle="docs01"], [data-toggle="wtf"], [data-talk='sass-partials'] .slide {
   display: -webkit-flexbox;
   display: -moz-flexbox;
   display: -ms-flexbox;
@@ -626,13 +627,13 @@ label {
   align-items: center;
 }
 [data-toggle="about"] .slidewrap, [data-toggle="show"] .slidewrap, [data-toggle="no-ruby"] .slidewrap, [data-toggle="no-idea"] .slidewrap,
-[data-toggle="no-plan"] .slidewrap, [data-toggle="no-experience"] .slidewrap, [data-toggle="no-name"] .slidewrap, [data-toggle="oddbird"] .slidewrap, [data-toggle="systems"] .slidewrap, [data-toggle="multiplier"] .slidewrap, [data-toggle="grids"] .slidewrap, [data-toggle="chris"] .slidewrap, [data-toggle="susy01"] .slidewrap, [data-toggle="github"] .slidewrap, [data-toggle="community"] .slidewrap, [data-toggle="wild"] .slidewrap, [data-toggle="share"] .slidewrap, [data-toggle="dry"] .slidewrap, [data-toggle="small"] .slidewrap, [data-toggle="sass"] .slidewrap, [data-toggle="tools"] .slidewrap, [data-toggle="toggle"] .slidewrap, [data-toggle="test"] .slidewrap, [data-toggle="true"] .slidewrap, [data-toggle="public"] .slidewrap, [data-toggle="document"] .slidewrap, [data-toggle="respond"] .slidewrap, [data-toggle="bigger"] .slidewrap, [data-toggle="new"] .slidewrap, [data-toggle="tabs"] .slidewrap, [data-toggle="tabs-nostyle"] .slidewrap, [data-toggle="fake"] .slidewrap, [data-toggle="docs01"] .slidewrap, [data-toggle="wtf"] .slidewrap {
+[data-toggle="no-plan"] .slidewrap, [data-toggle="no-experience"] .slidewrap, [data-toggle="no-name"] .slidewrap, [data-toggle="oddbird"] .slidewrap, [data-toggle="systems"] .slidewrap, [data-toggle="multiplier"] .slidewrap, [data-toggle="grids"] .slidewrap, [data-toggle="chris"] .slidewrap, [data-toggle="susy01"] .slidewrap, [data-toggle="github"] .slidewrap, [data-toggle="community"] .slidewrap, [data-toggle="wild"] .slidewrap, [data-toggle="share"] .slidewrap, [data-toggle="dry"] .slidewrap, [data-toggle="small"] .slidewrap, [data-toggle="sass"] .slidewrap, [data-toggle="tools"] .slidewrap, [data-toggle="toggle"] .slidewrap, [data-toggle="test"] .slidewrap, [data-toggle="true"] .slidewrap, [data-toggle="public"] .slidewrap, [data-toggle="document"] .slidewrap, [data-toggle="respond"] .slidewrap, [data-toggle="bigger"] .slidewrap, [data-toggle="new"] .slidewrap, [data-toggle="tabs"] .slidewrap, [data-toggle="tabs-nostyle"] .slidewrap, [data-toggle="fake"] .slidewrap, [data-toggle="docs01"] .slidewrap, [data-toggle="wtf"] .slidewrap, [data-talk='sass-partials'] .slide .slidewrap {
   width: 100%;
 }
 
 [data-toggle="about"], [data-toggle="show"], [data-toggle="no-ruby"], [data-toggle="no-idea"],
 [data-toggle="no-plan"], [data-toggle="no-experience"], [data-toggle="no-name"], [data-toggle="oddbird"], [data-toggle="systems"], [data-toggle="multiplier"], [data-toggle="grids"], [data-toggle="chris"], [data-toggle="susy01"], [data-toggle="github"], [data-toggle="community"], [data-toggle="wild"], [data-toggle="share"], [data-toggle="dry"], [data-toggle="small"], [data-toggle="sass"], [data-toggle="tools"], [data-toggle="toggle"], [data-toggle="test"], [data-toggle="true"], [data-toggle="public"], [data-toggle="document"], [data-toggle="respond"], [data-toggle="bigger"], [data-toggle="new"], [data-toggle="tabs"], [data-toggle="tabs-nostyle"] {
-  background: url('../images/rainish.svg?1381082893') no-repeat scroll 150% 250%;
+  background: url('../images/rainish.svg?1383119448') no-repeat scroll 150% 250%;
   -webkit-background-size: 50% auto;
   -moz-background-size: 50% auto;
   -o-background-size: 50% auto;
@@ -772,7 +773,7 @@ label {
 }
 
 [data-toggle="title"] {
-  background: url('../images/eric.svg?1381050883') no-repeat scroll -6.25rem;
+  background: url('../images/eric.svg?1383119448') no-repeat scroll -6.25rem;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -885,7 +886,7 @@ label {
 }
 
 [data-toggle="fake"] {
-  background: url('../images/othereric.jpg?1381583513') no-repeat scroll center;
+  background: url('../images/othereric.jpg?1383119448') no-repeat scroll center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -978,17 +979,17 @@ label {
   border-left: 2px solid #0098cc;
 }
 [data-toggle="plugins"] .plugin-history li.susy {
-  background-image: url('../images/litter/susy.png?1381587800');
+  background-image: url('../images/litter/susy.png?1383119448');
 }
 [data-toggle="plugins"] .plugin-history li.true {
-  background-image: url('../images/litter/true.png?1381050883');
+  background-image: url('../images/litter/true.png?1383119448');
 }
 [data-toggle="plugins"] .plugin-history li.accoutrement {
-  background-image: url('../images/litter/accoutrement.png?1381588283');
+  background-image: url('../images/litter/accoutrement.png?1383119448');
 }
 
 [data-toggle="oddbird"] {
-  background: url('../images/oddbird.jpg?1381590442') no-repeat scroll;
+  background: url('../images/oddbird.jpg?1383119448') no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -996,7 +997,7 @@ label {
 }
 
 [data-toggle="systems"] {
-  background: url('../images/systems.png?1381549063') no-repeat scroll bottom;
+  background: url('../images/systems.png?1383119448') no-repeat scroll bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1007,7 +1008,7 @@ label {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/nataliedowne.png?1381549084');
+  background-image: url('../images/nataliedowne.png?1383119448');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 316px;
@@ -1024,7 +1025,7 @@ label {
 }
 
 [data-toggle="chris"] {
-  background: url('../images/chris.jpg?1381592824') no-repeat scroll center;
+  background: url('../images/chris.jpg?1383119448') no-repeat scroll center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1038,7 +1039,7 @@ label {
   flex-align: end;
   -webkit-align-items: flex-end;
   align-items: flex-end;
-  background: url('../images/susy1.png?1381553349') no-repeat scroll top center;
+  background: url('../images/susy1.png?1383119448') no-repeat scroll top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1109,7 +1110,7 @@ label {
 }
 
 [data-toggle="dry"] {
-  background: url('../images/trash.jpg?1381598626') no-repeat scroll center;
+  background: url('../images/trash.jpg?1383119448') no-repeat scroll center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1236,4 +1237,9 @@ label {
 
 [data-toggle="tabs-nostyle"] [data-toggle="tabs"] .tabs-demo [id*="one"]:checked ~ .tabs [for*="one"], [data-toggle="tabs"] .tabs-demo [id*="one"]:checked ~ .tabs [data-toggle="tabs-nostyle"] [for*="one"], [data-toggle="tabs-nostyle"] [data-toggle="tabs"] .tabs-demo [id*="two"]:checked ~ .tabs [for*="two"], [data-toggle="tabs"] .tabs-demo [id*="two"]:checked ~ .tabs [data-toggle="tabs-nostyle"] [for*="two"], [data-toggle="tabs-nostyle"] [data-toggle="tabs"] .tabs-demo [id*="three"]:checked ~ .tabs [for*="three"], [data-toggle="tabs"] .tabs-demo [id*="three"]:checked ~ .tabs [data-toggle="tabs-nostyle"] [for*="three"], [data-toggle="tabs-nostyle"] .tabs-nostyle-demo [id*="one1"]:checked ~ .tabs [for*="one1"], [data-toggle="tabs-nostyle"] .tabs-nostyle-demo [id*="two1"]:checked ~ .tabs [for*="two1"], [data-toggle="tabs-nostyle"] .tabs-nostyle-demo [id*="three1"]:checked ~ .tabs [for*="three1"] {
   font-weight: bold;
+}
+
+[data-talk='sass-partials'] pre {
+  max-width: 20em;
+  margin: 0 auto;
 }
