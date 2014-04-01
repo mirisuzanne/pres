@@ -24,27 +24,24 @@ var PRES = (function (PRES, $) {
     };
 
     $(function () {
-        var radios = $('input[type="radio"][name="slide-toggles"]');
-
         $(document).on('keydown', function (e) {
-            if (e.keyCode === PRES.keycodes.PAGE_UP) {
-                e.keyCode = PRES.keycodes.LEFT;
-            }
-            if (e.keyCode === PRES.keycodes.PAGE_DOWN) {
-                e.keyCode = PRES.keycodes.RIGHT;
-            }
-            if (e.keyCode === PRES.keycodes.LEFT || e.keyCode === PRES.keycodes.RIGHT) {
+            var pageUp = e.keyCode === PRES.keycodes.PAGE_UP;
+            var pageDown = e.keyCode === PRES.keycodes.PAGE_DOWN;
+            var left = e.keyCode === PRES.keycodes.LEFT;
+            var right = e.keyCode === PRES.keycodes.RIGHT;
+            if (left || right || pageUp || pageDown) {
+                var radios = $('input[type="radio"][name="slide-toggles"]');
                 var selected = radios.filter(':checked');
                 var selectedIndex = radios.index(selected);
                 var newRadio;
-                if (e.keyCode === PRES.keycodes.LEFT && selectedIndex > 0) {
+                if ((left || pageUp) && selectedIndex > 0) {
                     newRadio = radios.eq(selectedIndex - 1);
                     if (newRadio.length) {
                         newRadio.prop('checked', true);
                         e.preventDefault();
                     }
                 }
-                if (e.keyCode === PRES.keycodes.RIGHT && selectedIndex !== -1) {
+                if ((right || pageDown) && selectedIndex !== -1) {
                     newRadio = radios.eq(selectedIndex + 1);
                     if (newRadio.length) {
                         newRadio.prop('checked', true);
