@@ -7,7 +7,7 @@
 {% endif %}
 {%- endmacro %}
 
-{% macro js(js_path="static/js/", extra_js) -%}
+{% macro js(js_path="static/js/", extra_js=[]) -%}
 <script src="{{ js_path }}vendor/jquery.min.js"></script>
 {% for js in extra_js %}
 <script src="{{ js_path }}{{ js }}"></script>
