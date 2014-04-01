@@ -1,13 +1,13 @@
 {% extends "pres.j2" %}
 
 {% block styles %}
-  {{ static.css('../static/css/', 'plugins.css') }}
+  {{ static.css('../static/css/', ['show-yr-work.css']) }}
 {% endblock %}
 
-{% block data_talk %}plugins{% endblock %}
+{% block data_talk %}show-yr-work{% endblock %}
 
 {% block pres %}
-  {% set talk='plugins' %}
+  {% set talk='show-yr-work' %}
   {%
     set slides = [
       'title', 'fake', 'about', 'plugins',
