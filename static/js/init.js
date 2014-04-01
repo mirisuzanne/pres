@@ -13,6 +13,9 @@ var PRES = (function (PRES, $) {
         CTRL: 17,
         ALT: 18,
         CAPS: 20,
+        PERIOD: 190,
+        PAGE_UP: 33,
+        PAGE_DOWN: 34,
         LEFT: 37,
         UP: 38,
         RIGHT: 39,
@@ -24,7 +27,13 @@ var PRES = (function (PRES, $) {
         var radios = $('input[type="radio"][name="slide-toggles"]');
 
         $(document).on('keydown', function (e) {
-            if (!radios.filter(':focus').length && (e.keyCode === PRES.keycodes.LEFT || e.keyCode === PRES.keycodes.RIGHT)) {
+            if (e.keyCode === PRES.keycodes.PAGE_UP) {
+                e.keyCode = PRES.keycodes.LEFT;
+            }
+            if (e.keyCode === PRES.keycodes.PAGE_DOWN) {
+                e.keyCode = PRES.keycodes.RIGHT;
+            }
+            if (e.keyCode === PRES.keycodes.LEFT || e.keyCode === PRES.keycodes.RIGHT) {
                 var selected = radios.filter(':checked');
                 var selectedIndex = radios.index(selected);
                 var newRadio;
