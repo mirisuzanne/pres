@@ -1,10 +1,8 @@
-{% macro css(css_path="static/css/", extra_styles=False) -%}
+{% macro css(css_path="../static/css/", extra_styles=[]) -%}
 <link rel="stylesheet" href="{{ css_path }}screen.css" />
-{% if extra_styles %}
 {% for file in extra_styles %}
 <link rel="stylesheet" href="{{ css_path }}{{ file }}" />
 {% endfor %}
-{% endif %}
 {%- endmacro %}
 
 {% macro js(js_path="static/js/", extra_js=[]) -%}

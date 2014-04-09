@@ -26,3 +26,29 @@
 </section>
 {%- endmacro %}
 
+{% macro show(talk, this, prev, next, first) %}
+  {% include "%s/_%s.j2" % (talk, this) %}
+{% endmacro %}
+
+{% macro loop(talk, slides) %}
+{% set first=True %}
+{% for slide in slides %}
+  {% set prev=none if loop.first else this %}
+  {% set this=none if loop.first else next %}
+  {% set next=slide %}
+
+  {% if this %}
+    {{ show(talk, this, prev, next, first) }}
+    {% set first=False %}
+  {% endif %}
+
+  {% if loop.last %}
+    {% set prev=this %}
+    {% set this=next %}
+    {% set next=none %}
+
+    {{ show(talk, this, prev, next, first) }}
+  {% endif %}
+
+{% endfor %}
+{% endmacro %}

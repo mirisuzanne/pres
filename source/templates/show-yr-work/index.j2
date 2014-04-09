@@ -1,4 +1,5 @@
 {% extends "pres.j2" %}
+{% import "slides/_macros.j2" as pres %}
 
 {% block styles %}
   {{ static.css('../static/css/', ['show-yr-work.css']) }}
@@ -7,23 +8,19 @@
 {% block data_talk %}show-yr-work{% endblock %}
 
 {% block pres %}
-  {% set talk='show-yr-work' %}
-  {%
-    set slides = [
-      'title', 'fake', 'about', 'plugins',
-      'show',
-      'no-ruby', 'no-idea', 'no-plan', 'no-experience', 'no-name',
-      'oddbird', 'systems', 'multiplier', 'grids',
-      'chris', 'susy01', 'github', 'docs01', 'wtf',
-      'community', 'wild',
-      'share', 'dry', 'small', 'sass', 'tools', 'tabs', 'tabs-nostyle', 'toggle',
-      'test', 'true', 'public', 'document', 'respond', 'bigger', 'new',
-      'title'
-    ]
-  %}
-  {% include "slides/_loop.j2" %}
-{% endblock %}
-
-{% block js %}
-  {{ static.js('../static/js/') }}
+  {{
+    pres.loop(
+      talk='show-yr-work',
+      slides = [
+        'title', 'fake', 'about', 'plugins',
+        'show',
+        'no-ruby', 'no-idea', 'no-plan', 'no-experience', 'no-name',
+        'oddbird', 'systems', 'multiplier', 'grids',
+        'chris', 'susy01', 'github', 'docs01', 'wtf',
+        'community', 'wild',
+        'share', 'dry', 'small', 'sass', 'tools', 'tabs', 'tabs-nostyle', 'toggle',
+        'test', 'true', 'public', 'document', 'respond', 'bigger', 'new',
+        'title'
+      ]
+    ) }}
 {% endblock %}
