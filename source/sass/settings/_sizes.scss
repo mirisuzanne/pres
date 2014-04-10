@@ -1,0 +1,17 @@
+// Sizes
+// =====
+
+@include set(ratio, 1.25);
+
+@include set(scale, (
+  xxxlarge  : 6,
+  xxlarge   : 5,
+  xlarge    : 3,
+  large     : 2,
+  medium    : 1,
+  normal    : 0,
+  small     : -.5,
+  xsmall    : -2,
+  xxsmall   : -3,
+  xxxsmall  : -4,
+));

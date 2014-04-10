@@ -48,7 +48,7 @@
 [data-toggle="community"] {
   @extend %simple-slide;
   .contributors {
-    @include adjust-font-size-to($xlargepx);
+    @include font-size(xlarge);
     @include inline-list;
     @include stretch;
     @include transform(translateY(rhythm(1)) rotate(-5deg));
@@ -139,7 +139,7 @@
 
 [data-toggle="bigger"] {
   @extend %simple-slide;
-  .head { @include adjust-font-size-to($xlargepx); }
+  .head { @include font-size(xlarge); }
 }
 
 [data-toggle="new"] {

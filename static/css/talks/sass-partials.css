@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-light-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-light-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-lightitalic-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-lightitalic-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-bold-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-bold-webfont.ttf?1383119448') format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-bolditalic-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-bolditalic-webfont.ttf?1383119448') format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../../fonts/code/sourcecodepro-regular-webfont.woff?1383119483') format("woff"), url('../../fonts/code/sourcecodepro-regular-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../../fonts/code/sourcecodepro-bold-webfont.woff?1383119483') format("woff"), url('../../fonts/code/sourcecodepro-bold-webfont.ttf?1383119448') format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BaskervilleAmp";
+  src: url('../../fonts/amp/Baskerville-amp-webfont.woff?1383119448') format("woff"), url('../../fonts/amp/Baskerville-amp-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pres";
+  src: url('../../fonts/icons/pres.woff?1397164882') format("woff"), url('../../fonts/icons/pres.ttf?1397164882') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon] {
+  font-family: "pres";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]::before {
+  content: attr(data-icon);
+}
+
+[data-icon='oddbird']:before {
+  content: "\e600";
+}
+
+[data-icon='warning']:before {
+  content: "\e243";
+}
+
+[data-icon='cancel']:before {
+  content: "\e252";
+}
+
+[data-icon='close']:before {
+  content: "\e257";
+}
+
+[data-icon='checkmark']:before {
+  content: "\e258";
+}
+
+[data-icon='minus']:before {
+  content: "\e25d";
+}
+
+[data-icon='plus']:before {
+  content: "\e25e";
+}
+
+[data-icon='twitter']:before {
+  content: "\e32f";
+}
+
+[data-icon='github']:before {
+  content: "\e34a";
+}
+
+[data-talk='sass-partials'] .slide {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+[data-talk='sass-partials'] .slide .slidewrap {
+  width: 100%;
+}
+
+[data-talk='sass-partials'] pre {
+  max-width: 20em;
+  margin: 0 auto;
+}

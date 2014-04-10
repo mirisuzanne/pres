@@ -1,6 +1,9 @@
 // Sass Partials
 // -------------
 
+@import "helpers";
+@import "title";
+
 [data-talk='sass-partials'] {
   .slide { @extend %vertical-center; }
   pre {

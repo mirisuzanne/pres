@@ -2,13 +2,13 @@
 // ===========
 
 @include establish-baseline;
-* { @include box-sizing(border-box); }
+@include border-box-sizing;
 
 html {
-  @include sans;
+  @extend %sans;
   background: color(98%);
   color: $base;
-  text-shadow: color(white,.5) 0 1px 0;
+  text-shadow: color(white, .5) 0 1px 0;
 }
 
 html, body {

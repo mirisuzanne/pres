@@ -1,6 +1,55 @@
 // Tab Slides
 // ==========
 
+
+// CSS Tabs
+// --------
+
+$default-checked-selector : ':checked'      !default;
+$default-nested-selectors : null            !default;
+
+$toggle-attribute   : id      !default;
+$title-attribute    : for     !default;
+$content-attribute  : class   !default;
+
+@mixin tab-defaults {
+  %hide-tab-content { display: none; }
+  %show-tab-content { display: block; }
+  %active-tab-title { font-weight: bold; }
+}
+
+@mixin tabs(
+  $slugs,
+  $nested: $default-nested-selectors,
+  $checked: $default-checked-selector
+) {
+  $nested-tabs: $nested;
+  $nested-content: $nested;
+  @if length($nested) > 1 {
+    $nested-tabs: nth($nested, 1);
+    $nested-content: nth($nested, 2);
+  }
+
+  @each $slug in $slugs {
+    $toggle   : '[#{$toggle-attribute}*="#{$slug}"]';
+    $title    : '[#{$title-attribute}*="#{$slug}"]';
+    $content  : '[#{$content-attribute}*="#{$slug}"]';
+
+    #{$content} { @extend %hide-tab-content; }
+    #{$toggle} {
+      @extend %hide-tab-toggle;
+      &#{$checked} {
+        & ~ #{$nested-tabs} #{$title} {
+          @extend %active-tab-title !optional;
+        }
+        & ~ #{$nested-content} #{$content} {
+          @extend %show-tab-content;
+        }
+      }
+    }
+  }
+}
+
 %hide-tab-toggle { display: none; }
 
 %hide-tab-content {
@@ -15,6 +64,10 @@
   position: relative;
   z-index: 10;
 }
+
+
+// Slides
+// ------
 
 [data-toggle="tabs"] {
   @extend %simple-slide;

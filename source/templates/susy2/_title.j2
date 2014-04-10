@@ -3,21 +3,35 @@
 
 {% block h1 %}Your Own Damn <b>[Susy]</b> System{% endblock %}
 {% block h2 %}
-  Eric M Suzanne |
+  Eric M<del>eyer</del> Suzanne |
   <a href="http://twitter.com/ericmsuzanne">
     @ericmsuzanne
   </a>
 {% endblock %}
 
 {% block slidebody %}
-<div class="bio-links">
-  <a href="http://oddbird.net">
-    {{ utility.icon("bubble") }}
-    oddbird.net
-  </a>
-  <a href="http://github.com/ericam/">
-    {{ utility.icon("github") }}
-    ericam
-  </a>
+<a href="http://oddbird.net" class="logo">
+  {{ utility.icon("oddbird") }}
+  <span class="alt-text">OddBird</span>
+</a>
+
+<div class="info">
+  <p class="bio">
+    <a href="http://oddbird.net" class="bio-link">
+      <span>oddbird.net</span>
+    </a>
+    |
+    <a href="http://github.com/ericam/" class="bio-link">
+      github.com/ericam
+    </a>
+  </p>
+  <p class="source">
+    <a href="http://ericsuzanne.com/pres/susy2/">http://ericsuzanne.com/pres/susy2/</a>
+  </p>
+  <p class="license">
+    Copyright &copy; 2014 <strong>Eric M. Suzanne</strong> |
+    <a href="https://github.com/ericam/pres/LICENSE">some rights reserved</a>
+  </p>
 </div>
+
 {% endblock %}

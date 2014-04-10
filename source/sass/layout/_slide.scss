@@ -1,28 +1,6 @@
 // Sections
 // ========
 
-%vertical-center {
-  @include display-flex;
-  @include align-items(center);
-  .slidewrap { width: 100%; }
-}
-
-%simple-slide {
-  @extend %vertical-center;
-  @include background(image-url('rainish.svg') no-repeat scroll 150% 250%);
-  @include background-size(50% auto);
-}
-
-%invert-colors {
-  color: white;
-  text-shadow: $base 0 1px 0, $base 0 0 1rem;
-  .head b { color: color($accent lighter); }
-  a {
-    #{$link} { color: color($alt lightest); }
-    #{$focus} { color: color($accent lightest); }
-  }
-}
-
 .section-toggle-focus {
   position: fixed;
   bottom: 0;

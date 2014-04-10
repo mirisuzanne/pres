@@ -11,7 +11,7 @@
     @include justify-content(space-around);
     height: 100%;
   }
-  .head { @include adjust-font-size-to($xlargepx); }
+  .head { @include font-size(xlarge); }
 }
 
 .vcard {
@@ -24,14 +24,14 @@
     display: inline-block;
     margin-left: rhythm(.5);
   }
-  [data-icon] { @include adjust-font-size-to($smallpx); }
+  [data-icon] { @include font-size(small); }
   .link-text { color: $base; }
 }
 
 .talk-info {
-  @include adjust-font-size-to($xsmallpx,.75);
+  @include font-size(xsmall, .75);
   @include rhythm-padding(.5);
-  @include bleed(rhythm(10));
+  @include bleed-x(rhythm(10));
   background: color($accent 85%,.9);
 
   [rel="slides"] { font-weight: bold; }

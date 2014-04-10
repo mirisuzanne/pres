@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-light-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-light-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-lightitalic-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-lightitalic-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-bold-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-bold-webfont.ttf?1383119448') format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../../fonts/sans/sourcesanspro-bolditalic-webfont.woff?1383119483') format("woff"), url('../../fonts/sans/sourcesanspro-bolditalic-webfont.ttf?1383119448') format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../../fonts/code/sourcecodepro-regular-webfont.woff?1383119483') format("woff"), url('../../fonts/code/sourcecodepro-regular-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../../fonts/code/sourcecodepro-bold-webfont.woff?1383119483') format("woff"), url('../../fonts/code/sourcecodepro-bold-webfont.ttf?1383119448') format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BaskervilleAmp";
+  src: url('../../fonts/amp/Baskerville-amp-webfont.woff?1383119448') format("woff"), url('../../fonts/amp/Baskerville-amp-webfont.ttf?1383119448') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pres";
+  src: url('../../fonts/icons/pres.woff?1397164882') format("woff"), url('../../fonts/icons/pres.ttf?1397164882') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon] {
+  font-family: "pres";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]::before {
+  content: attr(data-icon);
+}
+
+[data-icon='oddbird']:before {
+  content: "\e600";
+}
+
+[data-icon='warning']:before {
+  content: "\e243";
+}
+
+[data-icon='cancel']:before {
+  content: "\e252";
+}
+
+[data-icon='close']:before {
+  content: "\e257";
+}
+
+[data-icon='checkmark']:before {
+  content: "\e258";
+}
+
+[data-icon='minus']:before {
+  content: "\e25d";
+}
+
+[data-icon='plus']:before {
+  content: "\e25e";
+}
+
+[data-icon='twitter']:before {
+  content: "\e32f";
+}
+
+[data-icon='github']:before {
+  content: "\e34a";
+}
+
+[data-toggle='title'] {
+  background: url('../../images/eric.svg?1383119448') no-repeat scroll -6.25rem;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+[data-toggle='title'] .slidewrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  height: 100%;
+}
+[data-toggle='title'] .head {
+  font-size: 1.96875rem;
+  line-height: 2.5rem;
+}
+
+[data-toggle='title'] .slidewrap {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+[data-toggle='title'] .slidehead {
+  margin-top: 2.5rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 2.5rem;
+}
+[data-toggle='title'] .slidebody {
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+}
+[data-toggle='title'] .slidebody::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+[data-toggle='title'] .logo:link, [data-toggle='title'] .logo:visited {
+  font-size: 3.0625rem;
+  line-height: 3.75rem;
+  margin-top: -0.3125rem;
+  float: left;
+  margin-right: 0.625rem;
+}
+[data-toggle='title'] .info {
+  float: right;
+  white-space: nowrap;
+  text-align: right;
+}
+[data-toggle='title'] .license {
+  font-size: 0.5rem;
+  line-height: 0.9375rem;
+}
+[data-toggle='title'] .license strong {
+  font-weight: bold;
+}
+[data-toggle='title'] .license a {
+  font-style: italic;
+}

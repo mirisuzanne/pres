@@ -1,0 +1,15 @@
+// Title Slide
+// ===========
+
+%title-slide {
+  @include background(image-url('eric.svg') no-repeat scroll rhythm(-5));
+  @include background-size(contain);
+
+  .slidewrap {
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    height: 100%;
+  }
+  .head { @include font-size(xlarge); }
+}

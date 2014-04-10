@@ -1,11 +1,11 @@
 {% macro css(css_path="../static/css/", extra_styles=[]) -%}
 <link rel="stylesheet" href="{{ css_path }}screen.css" />
 {% for file in extra_styles %}
-<link rel="stylesheet" href="{{ css_path }}{{ file }}" />
+<link rel="stylesheet" href="{{ css_path }}talks/{{ file }}" />
 {% endfor %}
 {%- endmacro %}
 
-{% macro js(js_path="static/js/", extra_js=[]) -%}
+{% macro js(js_path="../static/js/", extra_js=[]) -%}
 <script src="{{ js_path }}vendor/jquery.min.js"></script>
 {% for js in extra_js %}
 <script src="{{ js_path }}{{ js }}"></script>

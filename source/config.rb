@@ -1,7 +1,6 @@
 # Compass CSS framework config file
 
 require 'susy'
-require 'modular-scale'
 require 'breakpoint'
 require 'accoutrement'
 

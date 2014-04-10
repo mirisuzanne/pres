@@ -1,0 +1,16 @@
+// Icons
+// =====
+
+@include set(icon-font, 'pres');
+
+@include set(icons, (
+  oddbird: "\e600",
+  warning: "\e243",
+  cancel: "\e252",
+  close: "\e257",
+  checkmark: "\e258",
+  minus: "\e25d",
+  plus: "\e25e",
+  twitter: "\e32f",
+  github: "\e34a",
+));

@@ -2,11 +2,7 @@
 // =========
 
 %accordion-toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
+  @extend %is-hidden;
 }
 
 %accordion-hide { display: none; }

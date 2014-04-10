@@ -12,10 +12,10 @@
   @include background(image-url('othereric.jpg') no-repeat scroll center);
   @include background-size(cover);
 
-  @include after($icon-close) {
-    @extend %icon-content;
+  @include after(icon(close)) {
+    @extend %icon;
     @include stretch(rhythm(-2));
-    @include adjust-font-size-to(1000px);
+    @include font-size(1000px);
     opacity: 0;
     text-align: center;
     text-shadow: none;

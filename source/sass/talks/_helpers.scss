@@ -1,0 +1,50 @@
+// Talk Helpers
+// ============
+
+@import "../settings";
+@import "../placeholders/type";
+@import "../placeholders/icons";
+
+
+// Slides
+// ------
+
+%vertical-center {
+  @include display-flex;
+  @include align-items(center);
+  .slidewrap { width: 100%; }
+}
+
+%simple-slide {
+  @extend %vertical-center;
+  @include background(image-url('rainish.svg') no-repeat scroll 150% 250%);
+  @include background-size(50% auto);
+}
+
+%title-slide {
+  @include background(image-url('eric.svg') no-repeat scroll rhythm(-5));
+  @include background-size(contain);
+
+  .slidewrap {
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    height: 100%;
+  }
+
+  .head { @include font-size(xlarge); }
+}
+
+
+// Colors
+// ------
+
+%invert-colors {
+  color: white;
+  text-shadow: $base 0 1px 0, $base 0 0 1rem;
+  .head b { color: color($accent lighter); }
+  a {
+    #{$link} { color: color($alt lightest); }
+    #{$focus} { color: color($accent lightest); }
+  }
+}

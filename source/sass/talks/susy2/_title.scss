@@ -1,0 +1,42 @@
+// Title
+// =====
+
+[data-toggle='title'] {
+  @extend %title-slide;
+
+  .slidewrap {
+    @include justify-content(space-between);
+  }
+
+  .slidehead {
+    @include rhythm(2);
+  }
+
+  .slidebody {
+    @include font-size(xsmall, .75);
+    @include susy-clearfix;
+  }
+
+  .logo {
+    #{$link} {
+      @include font-size(xxlarge);
+      @include leader(-.25);
+      float: left;
+      margin-right: rhythm(.5);
+    }
+  }
+
+  .info {
+    float: right;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .license {
+    @include font-size(xxsmall, .75);
+
+    strong { font-weight: bold; }
+    a { font-style: italic; }
+  }
+
+}

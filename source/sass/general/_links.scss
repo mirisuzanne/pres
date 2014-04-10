@@ -1,16 +1,6 @@
 // Links
 // =====
 
-%link {
-  color: $alt;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-%link-focus {
-  color: $accent;
-}
-
 a {
   #{$link} { @extend %link; }
   #{$focus} { @extend %link-focus; }

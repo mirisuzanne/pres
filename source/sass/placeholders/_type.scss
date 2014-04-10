@@ -1,0 +1,66 @@
+// Type Placeholders
+// =================
+
+@include fonts;
+
+
+// Links
+// -----
+
+%link {
+  color: $alt;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%link-focus {
+  color: $accent;
+}
+
+
+// Headers
+// -------
+
+%h1 {
+  @include font-size(xxlarge);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+%h2 { @include font-size(xlarge); }
+%h3 { @include font-size(large); }
+%h4 { @include font-size(medium); }
+
+%h5, %h6 { font-weight: bold; }
+
+%headers {
+  h1 { @extend %h1; }
+  h2 { @extend %h2; }
+  h3 { @extend %h3; }
+  h4 { @extend %h4; }
+}
+
+// Body
+// ----
+
+%body {
+  p, ol, ul {
+    @include trailer;
+  }
+
+  ol, ul {
+    ol, ul {
+      margin-left: rhythm(1);
+    }
+  }
+
+  ol { list-style: decimal; }
+  ul { list-style: disc; }
+}
+
+// Type
+// ----
+
+%type {
+  @extend %headers;
+  @extend %body;
+}
