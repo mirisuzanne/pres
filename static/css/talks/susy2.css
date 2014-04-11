@@ -99,6 +99,24 @@
   content: "\e34a";
 }
 
+[data-toggle='bio'], [data-toggle='intro'] {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+[data-toggle='bio'] .slidewrap, [data-toggle='intro'] .slidewrap {
+  width: 100%;
+}
+
+[data-toggle='bio'], [data-toggle='intro'] {
+  background: url('../../images/rainish.svg?1383119448') no-repeat scroll 150% 250%;
+  -moz-background-size: 50% auto;
+  -o-background-size: 50% auto;
+  -webkit-background-size: 50% auto;
+  background-size: 50% auto;
+}
+
 [data-toggle='title'] {
   background: url('../../images/eric.svg?1383119448') no-repeat scroll -6.25rem;
   -moz-background-size: contain;

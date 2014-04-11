@@ -7,4 +7,14 @@
 // Slides
 // ------
 
+$simple-slides: bio, intro;
+
+@each $slide in $simple-slides {
+  [data-toggle='#{$slide}'] { @extend %simple-slide; }
+}
+
+
+// Slide Details
+// -------------
+
 @import "susy2/title";
