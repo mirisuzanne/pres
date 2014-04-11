@@ -24,13 +24,18 @@ var PRES = (function (PRES, $) {
     };
 
     $(function () {
+        var radios = $('input[type="radio"][name="slide-toggles"]');
+
         $(document).on('keydown', function (e) {
             var pageUp = e.keyCode === PRES.keycodes.PAGE_UP;
             var pageDown = e.keyCode === PRES.keycodes.PAGE_DOWN;
-            var left = e.keyCode === PRES.keycodes.LEFT;
-            var right = e.keyCode === PRES.keycodes.RIGHT;
+            var left = (e.keyCode === PRES.keycodes.LEFT ||
+                e.keyCode === PRES.keycodes.UP) &&
+                !radios.filter(':focus').length;
+            var right = (e.keyCode === PRES.keycodes.RIGHT ||
+                e.keyCode === PRES.keycodes.DOWN) &&
+                !radios.filter(':focus').length;
             if (left || right || pageUp || pageDown) {
-                var radios = $('input[type="radio"][name="slide-toggles"]');
                 var selected = radios.filter(':checked');
                 var selectedIndex = radios.index(selected);
                 var newRadio;
