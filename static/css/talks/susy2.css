@@ -42,7 +42,7 @@
 }
 @font-face {
   font-family: "pres";
-  src: url('../../fonts/icons/pres.woff?1397164882') format("woff"), url('../../fonts/icons/pres.ttf?1397164882') format("truetype");
+  src: url('../../fonts/icons/pres.woff?1397332052') format("woff"), url('../../fonts/icons/pres.ttf?1397332052') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -61,6 +61,14 @@
 
 [data-icon]::before {
   content: attr(data-icon);
+}
+
+[data-icon='compass']:before {
+  content: "\e602";
+}
+
+[data-icon='susy']:before {
+  content: "\e601";
 }
 
 [data-icon='oddbird']:before {
@@ -99,17 +107,17 @@
   content: "\e34a";
 }
 
-[data-toggle='bio'], [data-toggle='intro'] {
+[data-toggle='bio-oddbird'], [data-toggle='bio-compass'], [data-toggle='bio-true'], [data-toggle='bio-art'], [data-toggle='bio-susy'], [data-toggle='tldr-no-system'], [data-toggle='tldr-no-framework'], [data-toggle='tldr-toolkit'], [data-toggle='tldr-diy'], [data-toggle='overview-features'], [data-toggle='overview-classes'], [data-toggle='overview-sass'], [data-toggle='half-assed'], [data-toggle='rapid'], [data-toggle='agile-tools'], [data-toggle='math-equation'], [data-toggle='math-old'], [data-toggle='math-new'], [data-toggle='systems'] {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
 }
-[data-toggle='bio'] .slidewrap, [data-toggle='intro'] .slidewrap {
+[data-toggle='bio-oddbird'] .slidewrap, [data-toggle='bio-compass'] .slidewrap, [data-toggle='bio-true'] .slidewrap, [data-toggle='bio-art'] .slidewrap, [data-toggle='bio-susy'] .slidewrap, [data-toggle='tldr-no-system'] .slidewrap, [data-toggle='tldr-no-framework'] .slidewrap, [data-toggle='tldr-toolkit'] .slidewrap, [data-toggle='tldr-diy'] .slidewrap, [data-toggle='overview-features'] .slidewrap, [data-toggle='overview-classes'] .slidewrap, [data-toggle='overview-sass'] .slidewrap, [data-toggle='half-assed'] .slidewrap, [data-toggle='rapid'] .slidewrap, [data-toggle='agile-tools'] .slidewrap, [data-toggle='math-equation'] .slidewrap, [data-toggle='math-old'] .slidewrap, [data-toggle='math-new'] .slidewrap, [data-toggle='systems'] .slidewrap {
   width: 100%;
 }
 
-[data-toggle='bio'], [data-toggle='intro'] {
+[data-toggle='bio-oddbird'], [data-toggle='bio-compass'], [data-toggle='bio-true'], [data-toggle='bio-art'], [data-toggle='bio-susy'], [data-toggle='tldr-no-system'], [data-toggle='tldr-no-framework'], [data-toggle='tldr-toolkit'], [data-toggle='tldr-diy'], [data-toggle='overview-features'], [data-toggle='overview-classes'], [data-toggle='overview-sass'], [data-toggle='half-assed'], [data-toggle='rapid'], [data-toggle='agile-tools'], [data-toggle='math-equation'], [data-toggle='math-old'], [data-toggle='math-new'], [data-toggle='systems'] {
   background: url('../../images/rainish.svg?1383119448') no-repeat scroll 150% 250%;
   -moz-background-size: 50% auto;
   -o-background-size: 50% auto;
@@ -136,6 +144,24 @@
 [data-toggle='title'] .head {
   font-size: 1.96875rem;
   line-height: 2.5rem;
+}
+
+[data-toggle='bio-true'], [data-toggle='systems'] {
+  color: white;
+  text-shadow: #1e1e1e 0 1px 0, #1e1e1e 0 0 1rem;
+}
+[data-toggle='bio-true'] .slidehead b, [data-toggle='systems'] .slidehead b {
+  color: #ff198c;
+}
+[data-toggle='bio-true'] a:link, [data-toggle='systems'] a:link, [data-toggle='bio-true'] a:visited, [data-toggle='systems'] a:visited {
+  color: #7fdaf8;
+}
+[data-toggle='bio-true'] a:hover, [data-toggle='systems'] a:hover, [data-toggle='bio-true'] a:focus, [data-toggle='systems'] a:focus, [data-toggle='bio-true'] a:active, [data-toggle='systems'] a:active {
+  color: #ff7fbf;
+}
+
+[data-toggle='bio-true'] {
+  background-color: #1e1e1e;
 }
 
 [data-toggle='title'] .slidewrap {
@@ -178,4 +204,125 @@
 }
 [data-toggle='title'] .license a {
   font-style: italic;
+}
+
+[data-toggle='bio-compass'] [data-icon] {
+  font-size: 14.5625rem;
+  line-height: 15rem;
+  color: red;
+  display: block;
+  text-align: center;
+}
+
+[data-toggle='bio-oddbird'] [data-icon] {
+  font-size: 14.5625rem;
+  line-height: 15rem;
+  color: #ff6600;
+  display: block;
+  text-align: center;
+}
+
+[data-toggle='bio-susy'] [data-icon] {
+  font-size: 14.5625rem;
+  line-height: 15rem;
+  color: #ff0080;
+  display: block;
+  text-align: center;
+}
+
+[data-toggle='bio-true'] .slidewrap {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-toggle='bio-true'] .slidewrap::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+[data-toggle='bio-true'] .slidehead {
+  margin-bottom: 0rem;
+  text-align: left;
+}
+[data-toggle='bio-true'] .head,
+[data-toggle='bio-true'] .subhead {
+  display: inline-block;
+}
+[data-toggle='bio-true'] .subhead {
+  text-transform: lowercase;
+}
+[data-toggle='bio-true'] .subhead::before, [data-toggle='bio-true'] .subhead::after {
+  content: "[";
+}
+[data-toggle='bio-true'] .subhead::after {
+  content: "]";
+}
+
+@-moz-keyframes overload {
+  0% {
+    background-position: top center;
+  }
+
+  100% {
+    background-position: bottom center;
+  }
+}
+@-webkit-keyframes overload {
+  0% {
+    background-position: top center;
+  }
+
+  100% {
+    background-position: bottom center;
+  }
+}
+@keyframes overload {
+  0% {
+    background-position: top center;
+  }
+
+  100% {
+    background-position: bottom center;
+  }
+}
+[data-toggle='overload'] {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: url('../../images/susy2/overload.jpg?1397337881');
+}
+[id="toggle-slide-overload"]:checked + [data-toggle='overload'] {
+  -moz-animation: overload 15s 2s ease-in-out 1 both;
+  -webkit-animation: overload 15s 2s ease-in-out 1 both;
+  animation: overload 15s 2s ease-in-out 1 both;
+}
+
+[data-toggle='systems'] {
+  background: url('../../images/systems.png?1383119448') no-repeat scroll bottom;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+[data-toggle='systems']::after {
+  content: " ";
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  background-image: url('../../images/nataliedowne.png?1383119448');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 316px;
+  height: 329px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+[data-toggle='math-equation'] {
+  font-size: 1.96875rem;
+  line-height: 2.5rem;
+  text-align: center;
 }

@@ -1,0 +1,16 @@
+// Grid Overload
+// =============
+
+@include keyframes(overload) {
+  0% { background-position: top center; }
+  100% { background-position: bottom center; }
+}
+
+@include slide(overload) {
+  @include background-size(cover);
+  background-image: image-url('susy2/overload.jpg');
+
+  @include is-active(overload) {
+    @include animation(overload 15s 2s ease-in-out 1 both);
+  }
+}

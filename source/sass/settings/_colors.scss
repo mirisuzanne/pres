@@ -13,12 +13,12 @@ $red              : hsl(0,100%,50%);
 // --------
 
 @include set(color-keywords, (
-  lightest: 90%,
+  lightest: 80%,
   lighter: 50%,
   light: 10%,
   dark: -5%,
   darker: -40%,
-  darkest: -80%,
+  darkest: -60%,
 ));
 
 

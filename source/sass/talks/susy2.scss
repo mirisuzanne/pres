@@ -7,10 +7,16 @@
 // Slides
 // ------
 
-$simple-slides: bio, intro;
+$simple-slides:
+  bio-oddbird, bio-compass, bio-true, bio-art, bio-susy,
+  tldr-no-system, tldr-no-framework, tldr-toolkit, tldr-diy,
+  overview-features, overview-classes, overview-sass,
+  half-assed, rapid, agile-tools,
+  math-equation, math-old, math-new,
+;
 
 @each $slide in $simple-slides {
-  [data-toggle='#{$slide}'] { @extend %simple-slide; }
+  @include slide($slide, 'simple-slide');
 }
 
 
@@ -18,3 +24,7 @@ $simple-slides: bio, intro;
 // -------------
 
 @import "susy2/title";
+@import "susy2/bio";
+@import "susy2/overload";
+@import "susy2/systems";
+@import "susy2/math";

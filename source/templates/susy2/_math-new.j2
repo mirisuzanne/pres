@@ -1,0 +1,12 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+{% highlight 'scss' %}
+// span 3 of 12 prefix 1...
+.widget {
+  width: span(3 of 12);
+  margin-right: gutter(of 12);
+  padding-left: span(1 of 12 wide);
+}
+{% endhighlight %}
+{% endblock %}

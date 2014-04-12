@@ -41,10 +41,40 @@
 
 %invert-colors {
   color: white;
-  text-shadow: $base 0 1px 0, $base 0 0 1rem;
-  .head b { color: color($accent lighter); }
+  text-shadow: color(darkest $base) 0 1px 0, color(darkest $base) 0 0 1rem;
+  .slidehead b { color: color($accent light); }
   a {
-    #{$link} { color: color($alt lightest); }
-    #{$focus} { color: color($accent lightest); }
+    #{$link} { color: color($alt lighter); }
+    #{$focus} { color: color($accent lighter); }
   }
 }
+
+%terminal {
+  @extend %invert-colors;
+  background-color: color(darkest $base);
+}
+
+
+// Slide Selectors
+// ---------------
+
+@mixin slide(
+  $name,
+  $extends: false
+) {
+  [data-toggle='#{$name}'] {
+    @if $extends {
+      @each $class in $extends {
+        @extend %#{$class};
+      }
+    }
+    @content;
+  }
+}
+
+@mixin is-active($name) {
+  [id="toggle-slide-#{$name}"]:checked + & {
+    @content;
+  }
+}
+

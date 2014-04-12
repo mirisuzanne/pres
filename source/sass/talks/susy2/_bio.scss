@@ -1,0 +1,44 @@
+// Bio Slides
+// ==========
+
+
+// Logos
+// -----
+
+$logos: (
+  bio-compass: $red,
+  bio-oddbird: $orange,
+  bio-susy: $pink,
+);
+
+@each $slide, $color in $logos {
+  @include slide($slide) {
+    [data-icon] {
+      @include font-size(12);
+      color: $color;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+
+// True
+// ----
+
+@include slide(bio-true, terminal) {
+  .slidewrap { @include container(30em); }
+
+  .slidehead {
+    @include trailer(0);
+    text-align: left;
+  }
+
+  .head,
+  .subhead { display: inline-block; }
+
+  .subhead {
+    @include wrap-content('[' ']');
+    text-transform: lowercase;
+  }
+}

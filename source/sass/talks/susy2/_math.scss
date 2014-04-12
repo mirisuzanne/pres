@@ -1,0 +1,8 @@
+// Math Slides
+// ===========
+
+
+@include slide(math-equation) {
+  @include font-size(xlarge);
+  text-align: center;
+}

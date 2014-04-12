@@ -42,7 +42,7 @@
 }
 @font-face {
   font-family: "pres";
-  src: url('../../fonts/icons/pres.woff?1397164882') format("woff"), url('../../fonts/icons/pres.ttf?1397164882') format("truetype");
+  src: url('../../fonts/icons/pres.woff?1397332052') format("woff"), url('../../fonts/icons/pres.ttf?1397332052') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -61,6 +61,14 @@
 
 [data-icon]::before {
   content: attr(data-icon);
+}
+
+[data-icon='compass']:before {
+  content: "\e602";
+}
+
+[data-icon='susy']:before {
+  content: "\e601";
 }
 
 [data-icon='oddbird']:before {
@@ -122,16 +130,16 @@
 
 [data-toggle="fake"], [data-toggle="oddbird"], [data-toggle="systems"], [data-toggle="chris"], [data-toggle="dry"] {
   color: white;
-  text-shadow: #4c4c4c 0 1px 0, #4c4c4c 0 0 1rem;
+  text-shadow: #1e1e1e 0 1px 0, #1e1e1e 0 0 1rem;
 }
-[data-toggle="fake"] .head b, [data-toggle="oddbird"] .head b, [data-toggle="systems"] .head b, [data-toggle="chris"] .head b, [data-toggle="dry"] .head b {
-  color: #ff7fbf;
+[data-toggle="fake"] .slidehead b, [data-toggle="oddbird"] .slidehead b, [data-toggle="systems"] .slidehead b, [data-toggle="chris"] .slidehead b, [data-toggle="dry"] .slidehead b {
+  color: #ff198c;
 }
 [data-toggle="fake"] a:link, [data-toggle="oddbird"] a:link, [data-toggle="systems"] a:link, [data-toggle="chris"] a:link, [data-toggle="dry"] a:link, [data-toggle="fake"] a:visited, [data-toggle="oddbird"] a:visited, [data-toggle="systems"] a:visited, [data-toggle="chris"] a:visited, [data-toggle="dry"] a:visited {
-  color: #e5f7fd;
+  color: #7fdaf8;
 }
 [data-toggle="fake"] a:hover, [data-toggle="oddbird"] a:hover, [data-toggle="systems"] a:hover, [data-toggle="chris"] a:hover, [data-toggle="dry"] a:hover, [data-toggle="fake"] a:focus, [data-toggle="oddbird"] a:focus, [data-toggle="systems"] a:focus, [data-toggle="chris"] a:focus, [data-toggle="dry"] a:focus, [data-toggle="fake"] a:active, [data-toggle="oddbird"] a:active, [data-toggle="systems"] a:active, [data-toggle="chris"] a:active, [data-toggle="dry"] a:active {
-  color: #ffe5f2;
+  color: #ff7fbf;
 }
 
 [data-toggle="title"] {
@@ -512,7 +520,7 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5em;
   max-width: 31.25rem;
   margin: 0 auto;
-  background: #ffe5f2;
+  background: #ffcce5;
 }
 [data-toggle="tabs"] .tabs [for] {
   border-width: 0.03125rem;
@@ -521,7 +529,7 @@
   float: left;
   width: 33.33333%;
   text-align: center;
-  background: #e5f7fd;
+  background: #ccf0fc;
   font-weight: bold;
   text-transform: capitalize;
 }
