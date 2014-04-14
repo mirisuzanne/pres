@@ -1,0 +1,12 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Don't get <b>boxed in</b>{% endblock %}
+{% block subhead %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+.unbox { @include span(30% at 200px isolate); }
+{% endhighlight %}
+
+<cite class="credit">Thanks <a href="http://twitter.com/shlidor">Tsachi Schlidor</a>!</cite>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+{% highlight 'scss' %}
+// span 3 of 12 prefix 1...
+aside {
+  @include span(3);
+  @include prefix(1);
+}
+{% endhighlight %}
+
+<div class="demo">
+  <aside class="item">aside</aside>
+</div>
+{% endblock %}

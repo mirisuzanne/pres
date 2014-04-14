@@ -1,0 +1,18 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}
+  <a href="http://breakpoint-sass.com/">Breakpoint</a> <b>RWD</b>
+{% endblock %}
+{% block subhead %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+article {
+  @include full;
+
+  @include susy-breakpoint(30em, 8 .25 inside-static) {
+    @include span(last 6);
+  }
+}
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Adjust <b>as you go</b>{% endblock %}
+{% block subhead %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@include span(last 3 isolate at 3 static rtl after no-gutters);
+{% endhighlight %}
+{% endblock %}

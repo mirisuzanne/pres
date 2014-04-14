@@ -1,0 +1,76 @@
+// Demo Slides
+// ===========
+
+%demo {
+  @extend %code;
+  @include rhythm(.5);
+
+  .item {
+    @include background-clip(content-box);
+    background-color: color($red, .125);
+    outline: 1px solid $red;
+    text-align: center;
+  }
+}
+
+
+// Slide Details
+// -------------
+
+$demo-layout: auto 12 (4em 1em) after show-columns;
+
+%demo-container {
+  @extend %simple-slide;
+
+  @include with-layout($demo-layout) {
+    .demo {
+      @extend %demo;
+      @include container;
+    }
+  }
+}
+
+%susy-math-demo {
+  @extend %demo-container;
+
+  @include with-layout($demo-layout) {
+    aside {
+      @include span(3);
+      @include prefix(1);
+    }
+  }
+}
+
+@include slide('demo-functions', susy-math-demo);
+@include slide('demo-mixins', susy-math-demo);
+
+@include slide('demo-isolate', demo-container) {
+  @include with-layout($demo-layout) {
+    aside {
+      @include span(6 at 3 isolate);
+    }
+  }
+}
+
+@include slide('demo-gallery', demo-container) {
+  @include with-layout($demo-layout) {
+    .item {
+      @include gallery(3);
+      @include rhythm-margins(.25);
+    }
+  }
+}
+
+
+// Simple Demos
+// ------------
+
+%simple-demo {
+  @extend %simple-slide;
+  .slidehead { @include trailer(0); }
+  .slidebody { text-align: center; }
+}
+
+@include slide('unbox', simple-demo);
+@include slide('wild', simple-demo);
+@include slide('upgrade', simple-demo);

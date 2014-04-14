@@ -1,0 +1,23 @@
+{% macro show(slug, grid) %}
+<section class="ag-container {{ slug }}">
+  <h1>{{ grid }}</h1>
+  <div class="size1of5 ag-item"><h3>1/5</h3></div>
+  <div class="size1of5 ag-item"><h3>1/5</h3></div>
+  <div class="size3of5">
+    <div class="size1of2 ag-item"><h3>1/2</h3></div>
+    <div class="size1of2 ag-item"><h3>1/2</h3></div>
+    <div class="full">
+      <div class="size1of3 ag-item"><h3>1/3</h3></div>
+      <div class="size2of3">
+        <div class="size1of2 ag-item"><h3>1/2</h3></div>
+        <div class="size1of2 ag-item"><h3>1/2</h3></div>
+        <div class="full ag-item"><h3>1</h3></div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery">
+    <div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div>
+  </div>
+</section>
+{% endmacro %}
