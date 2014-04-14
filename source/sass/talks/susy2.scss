@@ -8,15 +8,27 @@
 // ------
 
 $simple-slides:
-  bio-oddbird, bio-compass, bio-true, bio-art, bio-susy,
-  tldr-no-system, tldr-no-framework, tldr-toolkit, tldr-diy,
-  overview-features, overview-classes, overview-sass,
-  half-assed, rapid, agile-tools,
-  math-equation, math-old, math-new,
+  'bio-oddbird', 'bio-compass', 'bio-true', 'bio-art', 'bio-susy',
+  'tldr-no-system', 'tldr-no-framework', 'tldr-toolkit', 'tldr-diy',
+  'overview-features', 'overview-classes', 'overview-sass',
+  'half-assed', 'rapid', 'agile-tools',
+  'math-equation', 'math-simple', 'math-old', 'math-new', 'math-wide',
+  'ag', 'reqs', 'diy-framework', 'breakpoint', 'rapid-dev',
+  'no-system', 'toolkit', 'yours', 'next', 'docs', 'contrib',
 ;
 
 @each $slide in $simple-slides {
   @include slide($slide, 'simple-slide');
+}
+
+.credit {
+  @include font-size(small);
+  background: color(white, .95);
+  bottom: rhythm(.25);
+  font-weight: bold;
+  padding: rhythm(.125) rhythm(.25);
+  position: absolute;
+  right: rhythm(.25);
 }
 
 
@@ -28,3 +40,21 @@ $simple-slides:
 @import "susy2/overload";
 @import "susy2/systems";
 @import "susy2/math";
+@import "susy2/demos";
+@import "susy2/ag";
+
+@include slide('next') {
+  .slidebody {
+    @extend %body;
+    @include container(23em);
+  }
+}
+
+@include slide('yours') {
+  [data-icon] {
+    @include font-size(11);
+    @include trailer;
+    color: $pink;
+    display: block;
+  }
+}

@@ -6,3 +6,34 @@
   @include font-size(xlarge);
   text-align: center;
 }
+
+@include slide(math-wide) {
+$layout: auto 6 after show-columns;
+@include with-layout($layout) {
+  .demo {
+    @include container;
+    @include rhythm-padding(1);
+
+    div {
+      @extend %code;
+      @include background-clip(content-box);
+      @include rhythm-margins(.5);
+      background-color: color($red, .125);
+      outline: 1px solid $red;
+      text-align: center;
+    }
+  }
+  .narrow {
+    @include push(2);
+    @include span(2);
+  }
+  .wide {
+    @include push(2);
+    @include span(2 wide);
+  }
+  .wider {
+    @include push(2 narrow);
+    @include span(2 wider);
+  }
+}
+}

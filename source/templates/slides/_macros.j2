@@ -1,7 +1,7 @@
 {# Slide #}
 
-{% macro pre(name, first=False) -%}
-  <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if first %}checked autofocus{% endif %} />
+{% macro pre(name, focus) -%}
+  <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if focus %}checked autofocus{% endif %} />
   <section class="slide" data-toggle="{{ name }}">
 {%- endmacro %}
 
@@ -26,28 +26,28 @@
 </section>
 {%- endmacro %}
 
-{% macro show(talk, this, prev, next, first) %}
+{% macro show(talk, this, prev, next, focus) %}
   {% include "%s/_%s.j2" % (talk, this) %}
 {% endmacro %}
 
-{% macro loop(talk, slides) %}
-{% set first=True %}
+{% macro loop(talk, slides, dev=False) %}
 {% for slide in slides %}
   {% set prev=none if loop.first else this %}
   {% set this=none if loop.first else next %}
   {% set next=slide %}
 
   {% if this %}
-    {{ show(talk, this, prev, next, first) }}
-    {% set first=False %}
+    {% set focus=True if loop.index == 2 and not dev else False %}
+    {{ show(talk, this, prev, next, focus) }}
   {% endif %}
 
   {% if loop.last %}
+    {% set focus=True if dev else False %}
     {% set prev=this %}
     {% set this=next %}
     {% set next=none %}
 
-    {{ show(talk, this, prev, next, first) }}
+    {{ show(talk, this, prev, next, focus) }}
   {% endif %}
 
 {% endfor %}

@@ -4,6 +4,8 @@
 .slidehead {
   @include trailer;
   text-align: center;
+
+  &:last-child { @include trailer(0); }
 }
 
 .head {
