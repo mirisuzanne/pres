@@ -8,13 +8,13 @@
 // ------
 
 $simple-slides:
-  'bio-oddbird', 'bio-compass', 'bio-true', 'bio-art', 'bio-susy',
+  'bio-oddbird', 'bio-compass', 'bio-true', 'bio-susy',
   'tldr-no-system', 'tldr-no-framework', 'tldr-toolkit', 'tldr-diy',
   'overview-features', 'overview-classes', 'overview-sass',
   'half-assed', 'rapid', 'agile-tools',
   'math-equation', 'math-simple', 'math-old', 'math-new', 'math-wide',
   'ag', 'reqs', 'diy-framework', 'breakpoint', 'rapid-dev',
-  'no-system', 'toolkit', 'yours', 'next', 'docs', 'contrib',
+  'no-system', 'toolkit', 'yours', 'next', 'docs', 'contrib', 'end',
 ;
 
 @each $slide in $simple-slides {
@@ -42,6 +42,19 @@ $simple-slides:
 @import "susy2/math";
 @import "susy2/demos";
 @import "susy2/ag";
+
+%simple-code {
+  @extend %vertical-center;
+  text-align: center;
+}
+
+$simple-code: 'overview-classes', 'overview-sass',
+  'unbox', 'wild',
+;
+
+@each $slide in $simple-code {
+  @include slide($slide, 'simple-code');
+}
 
 @include slide('next') {
   .slidebody {

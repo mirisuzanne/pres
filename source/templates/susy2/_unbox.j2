@@ -1,9 +1,6 @@
-{% extends "slides/_default.j2" %}
+{% extends "slides/_blank.j2" %}
 
-{% block h1 %}Don't get <b>boxed in</b>{% endblock %}
-{% block subhead %}{% endblock %}
-
-{% block slidebody %}
+{% block slide %}
 {% highlight 'scss' %}
 .unbox { @include span(30% at 200px isolate); }
 {% endhighlight %}

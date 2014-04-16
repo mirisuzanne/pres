@@ -4,7 +4,7 @@
 $global: $susy;
 $susy: ();
 
-%ag {
+.ag-container {
   @extend %code;
   box-shadow: 0 0 0 1px color(darker) inset;
 
@@ -50,7 +50,6 @@ $susy: ();
 ) {
   @include with-layout($layout) {
     .ag-container.#{$slug} {
-      @extend %ag;
       @include container;
       @include leader(.5);
       @include trailer(.5);
