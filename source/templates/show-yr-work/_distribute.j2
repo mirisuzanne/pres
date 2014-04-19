@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Package <b class="amp">&</b> Distribute{% endblock %}
+{% block h2 %}
+  <a href="http://compass-style.org/">Compass</a>,
+  <a href="https://rubygems.org/">RubyGems</a>,
+  <a href="http://sache.in/">Sache</a>,
+  <a href="http://bower.io/">Bower</a>
+{% endblock %}
+
+{% block slidebody %}
+{% highlight 'bash' %}
+# command line
+compass create susy --using compass/extension -x scss
+{% endhighlight %}
+{% endblock %}

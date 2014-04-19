@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<a href="http://travis-ci.org">Travis</a>{% endblock %}
+{% block subhead %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'yaml' %}
+# travis.yml
+language: ruby
+script: "rake"
+rvm:
+  - 2.0.0
+{% endhighlight %}
+
+<img src="../static/images/show-yr-work/travis-github.png" alt="Travis/Github integration" class="travis-github">
+{% endblock %}

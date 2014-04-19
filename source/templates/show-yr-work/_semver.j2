@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}
+  <a href="http://semver.org/">Semantic Version</a>
+  <b class="amp">&</b>
+  <a href="http://git-scm.com/book/en/Git-Basics-Tagging">tag</a>
+{% endblock %}
+{% block subhead %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'bash' %}
+#  Major.Minor.Patch
+git tag v1.4.3
+git push --tags
+{% endhighlight %}
+{% endblock %}
