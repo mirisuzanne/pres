@@ -1,17 +1,19 @@
-{% extends "slides/_blank.j2" %}
+{% extends "slides/_default.j2" %}
 
-{% block slide %}
+{% block h1 %}<a href="http://eric.andmeyer.com/true/">True</a>{% endblock %}
+
+{% block slidebody %}
 {% highlight 'scss' %}
-@include test('[function] column-count()') {
-  // A symmetrical grid is equal to its column count.
+@include test('column-count') {
+
   @include assert-equal(
     column-count(12), 12,
     'Symmetrical grid-count should equal $columns setting.');
 
-  // Asymmetrical grid is equal to the list length.
   @include assert-equal(
     column-count(1 2 3), 3,
     'Asymmetrical grid-count should equal the list-length of $columns setting.');
+
 }
 {% endhighlight %}
 {% endblock %}

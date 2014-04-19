@@ -367,7 +367,7 @@
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  background-image: url('../../images/susy2/artsy/tg1.jpg?1397684663'), url('../../images/susy2/artsy/tg2.jpg?1397684685'), url('../../images/susy2/artsy/tg3.jpg?1397684718'), url('../../images/susy2/artsy/tg4.jpg?1397684727'), url('../../images/susy2/artsy/tg5.jpg?1397684733'), url('../../images/susy2/artsy/tg6.jpg?1397684738'), url('../../images/susy2/artsy/tg7.jpg?1397684745'), url('../../images/susy2/artsy/tg8.jpg?1397684752');
+  background-image: url('../../images/artsy/tg1.jpg?1397684663'), url('../../images/artsy/tg2.jpg?1397684685'), url('../../images/artsy/tg3.jpg?1397684718'), url('../../images/artsy/tg4.jpg?1397684727'), url('../../images/artsy/tg5.jpg?1397684733'), url('../../images/artsy/tg6.jpg?1397684738'), url('../../images/artsy/tg7.jpg?1397684745'), url('../../images/artsy/tg8.jpg?1397684752');
   background-position: center;
   background-repeat: no-repeat;
 }

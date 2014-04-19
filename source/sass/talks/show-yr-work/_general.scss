@@ -1,41 +1,58 @@
 // General Slides
 // ==============
 
-[data-toggle="grids"] {
-  @extend %simple-slide;
+
+$simple-slides:
+  bio-oddbird, bio-compass, bio-true, bio-art, bio-susy,
+  tldr, tldr-better,
+  no-ruby, no-idea, no-plan, no-experience, no-name, no-badge,
+  grids, 'susy01', credit, wild, show, readme, license, 'bsd3',
+  github, semver, soft, ask, changelog,
+  distribute, sache, document, contrib, respond,
+  copy, new
+;
+
+@each $slide in $simple-slides {
+  @include slide($slide, 'simple-slide');
 }
 
-[data-toggle="chris"] {
-  @extend %simple-slide;
-  @extend %invert-colors;
-  @include background(image-url('chris.jpg') no-repeat scroll center);
+.credit {
+  @include font-size(small);
+  background: color(white, .95);
+  bottom: rhythm(.25);
+  font-weight: bold;
+  padding: rhythm(.125) rhythm(.25);
+  position: absolute;
+  right: rhythm(.25);
+}
+
+
+// Slides
+// ------
+
+@include slide(chris, simple-slide invert-colors) {
+  @include background(image-url('show-yr-work/chris.jpg') no-repeat scroll center);
   @include background-size(cover);
 }
 
-[data-toggle="susy01"] {
-  @extend %simple-slide;
-}
-
-[data-toggle="github"] {
-  @extend %simple-slide;
+@include slide(susy-origin, simple-slide) {
   @include align-items(flex-end);
-  @include background(image-url('susy1.png') no-repeat scroll top center);
+  @include background(image-url('show-yr-work/susy1.png') no-repeat scroll top center);
   @include background-size(cover);
 }
 
-[data-toggle="docs01"] {
-  @extend %vertical-center;
-}
+@include slide(docs01, vertical-center);
 
-[data-toggle="wtf"] {
-  @extend %vertical-center;
-  .page, .left-nav, .main-content { outline: 1px solid $red; }
-  .page { @include container(12); }
-  .left-nav { @include span(3 of 12) }
-  .main-content {
-    @include prefix(1 of 12);
-    @include span(last 4 of 10);
-    strong { background: color(white,.25); }
+@include slide(wtf, vertical-center) {
+  @include with-layout(12 .25 after show-columns) {
+    .page, .left-nav, .main-content { outline: 1px solid $red; }
+    .page { @include container; }
+    .left-nav { @include span(3) }
+    .main-content {
+      @include prefix(1);
+      @include span(last 4 of 10);
+      strong { background: color(white,.25); }
+    }
   }
   strong {
     display: block;
@@ -48,29 +65,19 @@
 [data-toggle="community"] {
   @extend %simple-slide;
   .contributors {
-    @include font-size(xlarge);
-    @include inline-list;
-    @include stretch;
-    @include transform(translateY(rhythm(1)) rotate(-5deg));
+    @include font-size(small);
+    @include delimited-list(' / ');
+    @include after('...');
     color: color(lighter);
+    display: inline;
     text-align: justify;
-    z-index: -1;
-    overflow: hidden;
   }
-}
-
-[data-toggle="wild"] {
-  @extend %simple-slide;
-}
-
-[data-toggle="share"] {
-  @extend %simple-slide;
 }
 
 [data-toggle="dry"] {
   @extend %simple-slide;
   @extend %invert-colors;
-  @include background(image-url('trash.jpg') no-repeat scroll center);
+  @include background(image-url('show-yr-work/trash.jpg') no-repeat scroll center);
   @include background-size(cover);
 }
 
@@ -121,27 +128,21 @@
   @extend %simple-slide;
 }
 
+@include slide(bsd3) {
+  .slidewrap { @include font-size(xxsmall); }
+}
+
 [data-toggle="true"] {
   @extend %simple-slide;
 }
 
-[data-toggle="public"] {
-  @extend %simple-slide;
+@include slide(semver) {
+  .slidebody { @include container(30em); }
 }
 
-[data-toggle="document"] {
-  @extend %simple-slide;
-}
-
-[data-toggle="respond"] {
-  @extend %simple-slide;
-}
-
-[data-toggle="bigger"] {
-  @extend %simple-slide;
-  .head { @include font-size(xlarge); }
-}
-
-[data-toggle="new"] {
-  @extend %simple-slide;
+@include slide(travis, simple-slide) {
+  .travis-github {
+    @include leader;
+    @include box-shadow;
+  }
 }

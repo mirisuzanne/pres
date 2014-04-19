@@ -1,40 +1,42 @@
-// Title Slide
-// ===========
+// Title
+// =====
 
-[data-toggle="title"] {
-  @include background(image-url('eric.svg') no-repeat scroll rhythm(-5));
-  @include background-size(contain);
+@include slide(title) {
+  @extend %title-slide;
 
   .slidewrap {
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(space-around);
-    height: 100%;
+    @include justify-content(space-between);
   }
-  .head { @include font-size(xlarge); }
-}
 
-.vcard {
-  @include rhythm-padding(.5);
-  text-align: right;
-
-  .fn, .title { display: block; }
-  .fn { font-weight: bold; }
-  [rel="me"] {
-    display: inline-block;
-    margin-left: rhythm(.5);
+  .slidehead {
+    @include rhythm(2);
   }
-  [data-icon] { @include font-size(small); }
-  .link-text { color: $base; }
+
+  .slidebody {
+    @include font-size(xsmall, .75);
+    @include susy-clearfix;
+  }
+
+  .logo {
+    #{$link} {
+      @include font-size(xxlarge);
+      @include leader(-.25);
+      float: left;
+      margin-right: rhythm(.5);
+    }
+  }
+
+  .info {
+    float: right;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .license {
+    @include font-size(xxsmall, .75);
+
+    strong { font-weight: bold; }
+    a { font-style: italic; }
+  }
+
 }
-
-.talk-info {
-  @include font-size(xsmall, .75);
-  @include rhythm-padding(.5);
-  @include bleed-x(rhythm(10));
-  background: color($accent 85%,.9);
-
-  [rel="slides"] { font-weight: bold; }
-}
-
-.colophon, .copyright { display: inline; }

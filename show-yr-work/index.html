@@ -34,7 +34,6 @@
   
   
 
-
   
   
   
@@ -50,6 +49,7 @@
 
   
     
+    
   
 
 <input type="radio" id="toggle-slide-title" name="slide-toggles" checked autofocus />
@@ -58,53 +58,42 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">
-  <span>Show Your Work</span>
-  <b class="amp">&</b>
-  <span>Share Your Toys</span>
-</h1>
-  <h2 class="subhead">Building <b>+</b> Maintaining Sass Plugins</h2>
+  <h1 class="head">Show Your Work <b class="amp">&</b> Share Your Toys</h1>
+  <h2 class="subhead">
+  Eric M<del>eyer</del> Suzanne |
+  <a href="http://twitter.com/ericmsuzanne">
+    @ericmsuzanne
+  </a>
+</h2>
 </header>
 <div class="slidebody">
   
-<div class="vcard eric">
-  <strong class="fn">Eric A. Meyer</strong>
-  <a href="http://oddbird.net/" class="url" rel="me">
-    <span data-icon="bubble"> </span>
-    <span class="link-text">oddbird.net</span>
-  </a>
-  <a href="http://twitter.com/eriiicam/" rel="me">
-    <span data-icon="twitter"> </span>
-    <span class="link-text">eriiicam</span>
-  </a>
-  <a href="http://github.com/ericam/" rel="me">
-    <span data-icon="github"> </span>
-    <span class="link-text">ericam</span>
-  </a>
+<a href="http://oddbird.net" class="logo">
+  
+  <span data-icon="oddbird"></span>
+
+  <span class="alt-text">OddBird</span>
+</a>
+
+<div class="info">
+  <p class="bio">
+    <a href="http://oddbird.net" class="bio-link">
+      <span>oddbird.net</span>
+    </a>
+    |
+    <a href="http://github.com/ericam/" class="bio-link">
+      github.com/ericam
+    </a>
+  </p>
+  <p class="source">
+    <a href="http://ericsuzanne.com/pres/show-yr-work/">http://ericsuzanne.com/pres/show-yr-work/</a>
+  </p>
+  <p class="license">
+    Copyright &copy; 2014 <strong>Eric M. Suzanne</strong> |
+    <a href="https://github.com/ericam/pres/LICENSE">some rights reserved</a>
+  </p>
 </div>
 
-<footer class="talk-info">
-  <p class="colophon">
-    Built on plain old semantic
-    <a href="http://www.w3.org/TR/html5/">HTML5</a>
-    and <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
-    with help from
-    <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
-    <a href="http://github.com/Team-Sass/modular-scale">Modular-Scale</a>,
-    <a href="http://compass-style.org/">Compass</a>,
-    <a href="http://sass-lang.com/">Sass</a>,
-    and a tiny touch of <a href="http://jquery.com">jQuery</a>.
-    Slides available at
-    <a href="http://eric.andmeyer.com/pres/plugins/" rel="slides">eric.andmeyer.com/pres/plugins/</a>,
-    source available on
-    <a href="https://github.com/ericam/pres">Github</a>.
-  </p>
-
-  <p class="copyright">
-    Copyright &copy; 2013 <strong>Eric A. Meyer</strong>.
-    <a href="https://github.com/ericam/pres/LICENSE">Some rights reserved</a>.
-  </p>
-</footer>
 
 </div>
 
@@ -119,14 +108,13 @@
   </label>
   
   
-  <label class="next" for="toggle-slide-fake">
+  <label class="next" for="toggle-slide-bio-oddbird">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -138,20 +126,24 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-fake" name="slide-toggles"  />
-  <section class="slide" data-toggle="fake">
+<input type="radio" id="toggle-slide-bio-oddbird" name="slide-toggles"  />
+  <section class="slide" data-toggle="bio-oddbird">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Eric <b>A.</b> Meyer</h1>
-  <h2 class="subhead">
-  <a href="http://www.meyerweb.com/eric/books/css-tdg/">CSS: The Definitive Guide</a>,
-  <a href="http://meyerweb.com/eric/tools/css/reset/index.html">The Reset</a>,
-  <a href="http://aneventapart.com/">The Events (Apart)</a>...
-</h2>
+  <h1 class="head">
+<a href="http://oddbird.net/">
+  
+  <span data-icon="oddbird"></span>
+
+  <span class="alt-text">OddBird</span>
+</a>
+</h1>
+  
 </header>
 
 </div>
@@ -163,19 +155,18 @@
   </label>
   
   
-  <label class="this" for="toggle-slide-fake">
+  <label class="this" for="toggle-slide-bio-oddbird">
     <span class="alt-text">this</span>
   </label>
   
   
-  <label class="next" for="toggle-slide-about">
+  <label class="next" for="toggle-slide-bio-compass">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -187,20 +178,70 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-about" name="slide-toggles"  />
-  <section class="slide" data-toggle="about">
+<input type="radio" id="toggle-slide-bio-compass" name="slide-toggles"  />
+  <section class="slide" data-toggle="bio-compass">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Eric <b class="amp">&</b> Meyer</h1>
+  <h1 class="head">
+  <a href="http://compass-style.org">
+    
+  <span data-icon="compass"></span>
+
+    Compass
+  </a>
+</h1>
+  
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-bio-oddbird">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-bio-compass">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-bio-true">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-bio-true" name="slide-toggles"  />
+  <section class="slide" data-toggle="bio-true">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><a href="http://ericsuzanne.com/true/">True</a></h1>
   <h2 class="subhead">
-  <a href="http://eric.andmeyer.com/">Artsy Bullshit</a>,
-  <a href="http://oddbird.net">OddBird</a>,
-  <a href="http://susy.oddbird.net">Susy</a>,
-  <a href="http://compass-style.org">Compass</a>...
+<pre><span class="nb">SUMMARY</span><span class="o">:</span> <span class="mi">55</span> <span class="nb">Tests</span><span class="p">,</span> <span class="mi">55</span> <span class="nb">Passed</span><span class="p">,</span> <span class="mi">0</span> <span class="nb">Failed</span></pre>
 </h2>
 </header>
 
@@ -208,24 +249,23 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-fake">
+  <label class="prev" for="toggle-slide-bio-compass">
     <span class="alt-text">previous</span>
   </label>
   
   
-  <label class="this" for="toggle-slide-about">
+  <label class="this" for="toggle-slide-bio-true">
     <span class="alt-text">this</span>
   </label>
   
   
-  <label class="next" for="toggle-slide-plugins">
+  <label class="next" for="toggle-slide-bio-art">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -237,41 +277,40 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-plugins" name="slide-toggles"  />
-  <section class="slide" data-toggle="plugins">
+<input type="radio" id="toggle-slide-bio-art" name="slide-toggles"  />
+  <section class="slide" data-toggle="bio-art">
 
 <div class="slidewrap">
   
-<ul class="plugin-history">
-  <li class="susy"><span class="alt-text">Susy</span></li>
-  <li class="true"><span class="alt-text">True</span></li>
-  <li class="accoutrement"><span class="alt-text">Accoutrement</span></li>
-</ul>
+<header class="slidehead">
+  <h1 class="head">Arty <b>Bullshit</b></h1>
+  <h2 class="subhead">Writing<b>+</b>Music<b>+</b>Performance</h2>
+</header>
 
 </div>
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-about">
+  <label class="prev" for="toggle-slide-bio-true">
     <span class="alt-text">previous</span>
   </label>
   
   
-  <label class="this" for="toggle-slide-plugins">
+  <label class="this" for="toggle-slide-bio-art">
     <span class="alt-text">this</span>
   </label>
   
   
-  <label class="next" for="toggle-slide-show">
+  <label class="next" for="toggle-slide-bio-susy">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -283,15 +322,23 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-show" name="slide-toggles"  />
-  <section class="slide" data-toggle="show">
+<input type="radio" id="toggle-slide-bio-susy" name="slide-toggles"  />
+  <section class="slide" data-toggle="bio-susy">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Show <b>Your</b> Work</h1>
+  <h1 class="head">
+<a href="http://susy.oddbird.net/">
+  
+  <span data-icon="susy"></span>
+
+  <span class="alt-text">Susy</span>
+</a>
+</h1>
   
 </header>
 
@@ -299,12 +346,102 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-plugins">
+  <label class="prev" for="toggle-slide-bio-art">
     <span class="alt-text">previous</span>
   </label>
   
   
-  <label class="this" for="toggle-slide-show">
+  <label class="this" for="toggle-slide-bio-susy">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-tldr">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-tldr" name="slide-toggles"  />
+  <section class="slide" data-toggle="tldr">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h2 class="subhead">tl<b>;</b>dr</h2>
+  <h1 class="head">Share your damn <b>code</b></h1>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-bio-susy">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-tldr">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-tldr-better">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-tldr-better" name="slide-toggles"  />
+  <section class="slide" data-toggle="tldr-better">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h2 class="subhead">tl<b>;</b>dr</h2>
+  <h1 class="head">Let's talk <b>why</b> <span class="amp">&</span> <b>how</b></h1>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-tldr">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-tldr-better">
     <span class="alt-text">this</span>
   </label>
   
@@ -316,17 +453,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -336,7 +473,7 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">You Don't Need <b>Ruby Skillz</b></h1>
+  <h1 class="head">No <b>Ruby Skillz</b></h1>
   
 </header>
 
@@ -344,7 +481,7 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-show">
+  <label class="prev" for="toggle-slide-tldr-better">
     <span class="alt-text">previous</span>
   </label>
   
@@ -361,17 +498,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -381,7 +518,7 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">You Don't Need <b>Original Ideas</b></h1>
+  <h1 class="head">No <b>Original Ideas</b></h1>
   
 </header>
 
@@ -406,17 +543,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -426,7 +563,7 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">You Don't Need <b>A Plan</b></h1>
+  <h1 class="head">No <b>Plan</b></h1>
   
 </header>
 
@@ -451,17 +588,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -471,7 +608,7 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">You Don't Need <b>Experience</b></h1>
+  <h1 class="head">No <b>Experience</b></h1>
   
 </header>
 
@@ -496,17 +633,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -516,7 +653,7 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">You Don't Need <b>Followers</b></h1>
+  <h1 class="head">No <b>Followers</b></h1>
   
 </header>
 
@@ -534,6 +671,51 @@
   </label>
   
   
+  <label class="next" for="toggle-slide-no-badge">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-no-badge" name="slide-toggles"  />
+  <section class="slide" data-toggle="no-badge">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">No <b>Stinkin’ Badges</b></h1>
+  
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-no-name">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-no-badge">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
   <label class="next" for="toggle-slide-oddbird">
     <span class="alt-text">next</span>
   </label>
@@ -541,17 +723,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -562,14 +744,14 @@
   
 <header class="slidehead">
   <h1 class="head">2008<b>:</b> OddBird</h1>
-  <h2 class="subhead">Web Tools for Humans</h2>
+  
 </header>
 
 </div>
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-no-name">
+  <label class="prev" for="toggle-slide-no-badge">
     <span class="alt-text">previous</span>
   </label>
   
@@ -586,17 +768,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -631,17 +813,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -673,17 +855,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -722,17 +904,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -767,17 +949,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -787,7 +969,7 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">2009<b>:</b> One-File Susy</h1>
+  <h1 class="head">Susy <b>0.1</b></h1>
   <h2 class="subhead"><b>4</b> Settings, <b>5</b> mixins</h2>
 </header>
 <div class="slidebody">
@@ -814,14 +996,13 @@
   </label>
   
   
-  <label class="next" for="toggle-slide-github">
+  <label class="next" for="toggle-slide-susy-origin">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -833,10 +1014,11 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-github" name="slide-toggles"  />
-  <section class="slide" data-toggle="github">
+<input type="radio" id="toggle-slide-susy-origin" name="slide-toggles"  />
+  <section class="slide" data-toggle="susy-origin">
 
 <div class="slidewrap">
   
@@ -849,7 +1031,7 @@
   </label>
   
   
-  <label class="this" for="toggle-slide-github">
+  <label class="this" for="toggle-slide-susy-origin">
     <span class="alt-text">this</span>
   </label>
   
@@ -861,17 +1043,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -895,7 +1077,7 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-github">
+  <label class="prev" for="toggle-slide-susy-origin">
     <span class="alt-text">previous</span>
   </label>
   
@@ -912,17 +1094,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -958,17 +1140,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -987,6 +1169,7 @@
   <li>Carl Meyer</li>
   <li>Jonny Gerig Meyer</li>
   <li>Chris Eppstein</li>
+  <li>Aaron Gray</li>
   <li>Jina Bolton</li>
   <li>Danny Palmer</li>
   <li>Tsachi Shlidor</li>
@@ -995,7 +1178,7 @@
   <li>Scott Kellum</li>
   <li>Sam Richard</li>
   <li>Daniel Bayerlein</li>
-  <li>Matija Marohnić</li>
+  <li>Matija Marohnic</li>
   <li>Thomas bredin-Grey</li>
   <li>Tim Berman</li>
   <li>djessup</li>
@@ -1033,14 +1216,13 @@
   </label>
   
   
-  <label class="next" for="toggle-slide-wild">
+  <label class="next" for="toggle-slide-credit">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -1052,16 +1234,17 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-wild" name="slide-toggles"  />
-  <section class="slide" data-toggle="wild">
+<input type="radio" id="toggle-slide-credit" name="slide-toggles"  />
+  <section class="slide" data-toggle="credit">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Observe <b>wild</b> code</h1>
-  <h2 class="subhead">Watch. Listen. Adjust.</h2>
+  <h1 class="head">Give too much <b>credit</b></h1>
+  
 </header>
 
 </div>
@@ -1073,19 +1256,18 @@
   </label>
   
   
-  <label class="this" for="toggle-slide-wild">
+  <label class="this" for="toggle-slide-credit">
     <span class="alt-text">this</span>
   </label>
   
   
-  <label class="next" for="toggle-slide-share">
+  <label class="next" for="toggle-slide-show">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -1097,15 +1279,16 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-share" name="slide-toggles"  />
-  <section class="slide" data-toggle="share">
+<input type="radio" id="toggle-slide-show" name="slide-toggles"  />
+  <section class="slide" data-toggle="show">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Share <b>Your</b> Toys</h1>
+  <h1 class="head"><b>Show</b> Your Work</h1>
   
 </header>
 
@@ -1113,12 +1296,12 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-wild">
+  <label class="prev" for="toggle-slide-credit">
     <span class="alt-text">previous</span>
   </label>
   
   
-  <label class="this" for="toggle-slide-share">
+  <label class="this" for="toggle-slide-show">
     <span class="alt-text">this</span>
   </label>
   
@@ -1130,17 +1313,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1151,19 +1334,64 @@
   
 <header class="slidehead">
   <h1 class="head">Plugins are <b>byproducts</b></h1>
-  Look for wet spots
+  
 </header>
 
 </div>
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-share">
+  <label class="prev" for="toggle-slide-show">
     <span class="alt-text">previous</span>
   </label>
   
   
   <label class="this" for="toggle-slide-dry">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-tools">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-tools" name="slide-toggles"  />
+  <section class="slide" data-toggle="tools">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Systems</b> Not Solutions</h1>
+  
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-dry">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-tools">
     <span class="alt-text">this</span>
   </label>
   
@@ -1175,17 +1403,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1203,102 +1431,12 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-dry">
+  <label class="prev" for="toggle-slide-tools">
     <span class="alt-text">previous</span>
   </label>
   
   
   <label class="this" for="toggle-slide-small">
-    <span class="alt-text">this</span>
-  </label>
-  
-  
-  <label class="next" for="toggle-slide-sass">
-    <span class="alt-text">next</span>
-  </label>
-  
-</nav>
-</section>
-
-    
-  
-
-  
-
-
-  
-  
-  
-
-  
-    
-  
-
-<input type="radio" id="toggle-slide-sass" name="slide-toggles"  />
-  <section class="slide" data-toggle="sass">
-
-<div class="slidewrap">
-  
-<header class="slidehead">
-  <h1 class="head">Sass <b>></b> CSS</h1>
-  <h2 class="subhead">Pugins > Libraries</h2>
-</header>
-
-</div>
-
-<nav class="slidenav">
-  
-  <label class="prev" for="toggle-slide-small">
-    <span class="alt-text">previous</span>
-  </label>
-  
-  
-  <label class="this" for="toggle-slide-sass">
-    <span class="alt-text">this</span>
-  </label>
-  
-  
-  <label class="next" for="toggle-slide-tools">
-    <span class="alt-text">next</span>
-  </label>
-  
-</nav>
-</section>
-
-    
-  
-
-  
-
-
-  
-  
-  
-
-  
-    
-  
-
-<input type="radio" id="toggle-slide-tools" name="slide-toggles"  />
-  <section class="slide" data-toggle="tools">
-
-<div class="slidewrap">
-  
-<header class="slidehead">
-  <h1 class="head"><b>Systems</b> Not Solutions</h1>
-  <h2 class="subhead">Settings aren't enough. Functions are awesome.</h2>
-</header>
-
-</div>
-
-<nav class="slidenav">
-  
-  <label class="prev" for="toggle-slide-sass">
-    <span class="alt-text">previous</span>
-  </label>
-  
-  
-  <label class="this" for="toggle-slide-tools">
     <span class="alt-text">this</span>
   </label>
   
@@ -1310,17 +1448,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1373,7 +1511,7 @@
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-tools">
+  <label class="prev" for="toggle-slide-small">
     <span class="alt-text">previous</span>
   </label>
   
@@ -1390,17 +1528,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1410,8 +1548,8 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Just the <b>Tabs</b></h1>
-  <h2 class="subhead">Without the paint</h2>
+  <h1 class="head">Just the <b>system</b></h1>
+  
 </header>
 <div class="slidebody">
   
@@ -1470,17 +1608,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1556,6 +1694,736 @@
   </label>
   
   
+  <label class="next" for="toggle-slide-wild">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-wild" name="slide-toggles"  />
+  <section class="slide" data-toggle="wild">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Observe <b>wild</b> code</h1>
+  <h2 class="subhead">Watch. Listen. Adjust.</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-toggle">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-wild">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-readme">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-readme" name="slide-toggles"  />
+  <section class="slide" data-toggle="readme">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Add a <b>Readme</b></h1>
+  <h2 class="subhead">Installation <b class="amp">&</b> Getting Started</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-wild">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-readme">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-license">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-license" name="slide-toggles"  />
+  <section class="slide" data-toggle="license">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Choose a <b>license</b></h1>
+  <h2 class="subhead">
+  <a href="http://opensource.org/licenses/BSD-3-Clause">BSD</a>,
+  <a href="http://opensource.org/licenses/MIT">MIT</a>...
+  [<a href="http://opensource.org/licenses/gpl-license">GPL</a>,
+  <a href="http://opensource.org/licenses/gpl-license">Apache</a>,
+  <a href="http://opensource.org/licenses/MPL-2.0">MPL</a>]
+</h2>
+</header>
+<div class="slidebody">
+  
+<p class="credit">
+  Thanks
+  <a href="http://oddbird.net/set-your-code-free-preso/#/step-6">Carl Meyer</a>
+  and
+  <a href="http://www.youtube.com/watch?v=vhuF0oalOi8">Jacob Kaplan-Moss</a>
+</p>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-readme">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-license">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-bsd3">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-bsd3" name="slide-toggles"  />
+  <section class="slide" data-toggle="bsd3">
+
+<div class="slidewrap">
+  
+<pre>
+Copyright (c) 2014, Eric M. Suzanne
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+    * Neither the name of the author nor the names of other
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-license">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-bsd3">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-github">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-github" name="slide-toggles"  />
+  <section class="slide" data-toggle="github">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Publish on <b>Github</b></h1>
+  
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-bsd3">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-github">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-semver">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-semver" name="slide-toggles"  />
+  <section class="slide" data-toggle="semver">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">
+  <a href="http://semver.org/">Semantic Version</a>
+  <b class="amp">&</b>
+  <a href="http://git-scm.com/book/en/Git-Basics-Tagging">tag</a>
+</h1>
+  
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c">#  Major.Minor.Patch</span>
+git tag v1.4.3
+git push --tags
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-github">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-semver">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-document">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-document" name="slide-toggles"  />
+  <section class="slide" data-toggle="document">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Document</b> (ergo sum)</h1>
+  <h2 class="subhead">
+<a href="http://sphinx-doc.org/">Sphinx</a> <b>+</b>
+<a href="https://readthedocs.org/">ReadTheDocs</a>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-semver">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-document">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-changelog">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-changelog" name="slide-toggles"  />
+  <section class="slide" data-toggle="changelog">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Maintain a <b>Changelog</b></h1>
+  
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-document">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-changelog">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-soft">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-soft" name="slide-toggles"  />
+  <section class="slide" data-toggle="soft">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Launch <b>softly</b></h1>
+  
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-changelog">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-soft">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-ask">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-ask" name="slide-toggles"  />
+  <section class="slide" data-toggle="ask">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Ask for <b>Feedback</b></h1>
+  <h2 class="subhead">
+  <a href="http://twitter.com/ericmsuzanne">@ericmsuzanne</a>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-soft">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-ask">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-contrib">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-contrib" name="slide-toggles"  />
+  <section class="slide" data-toggle="contrib">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Help us <b>help you</b></h1>
+  <h2 class="subhead">CONTRIBUTING.md</h2>
+</header>
+<div class="slidebody">
+  
+@@@ Need Contrib-Github Screenshot
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-ask">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-contrib">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-respond">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-respond" name="slide-toggles"  />
+  <section class="slide" data-toggle="respond">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Respond</b> to issues</h1>
+  <h2 class="subhead">Quickly <b>+</b> kindly</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-contrib">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-respond">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-distribute">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-distribute" name="slide-toggles"  />
+  <section class="slide" data-toggle="distribute">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Package <b class="amp">&</b> Distribute</h1>
+  <h2 class="subhead">
+  <a href="http://compass-style.org/">Compass</a>,
+  <a href="https://rubygems.org/">RubyGems</a>,
+  <a href="http://sache.in/">Sache</a>,
+  <a href="http://bower.io/">Bower</a>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c"># command line</span>
+compass create susy --using compass/extension -x scss
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-respond">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-distribute">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-sache">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-sache" name="slide-toggles"  />
+  <section class="slide" data-toggle="sache">
+
+<div class="slidewrap">
+  
+<div class="highlight"><pre><span class="err">#</span> <span class="err">sache.json</span>
+<span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;susy&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Web layout power-tools for Sass.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;layout&quot;</span><span class="p">,</span> <span class="s2">&quot;grid&quot;</span><span class="p">,</span> <span class="s2">&quot;rwd&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="err">#</span> <span class="err">bower.json</span>
+<span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;susy&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;main&quot;</span><span class="p">:</span> <span class="s2">&quot;sass/_susy.scss&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Web layout power-tools for Sass.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;authors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Eric Suzanne &lt;eric@oddbird.net&gt;&quot;</span><span class="p">],</span>
+  <span class="nt">&quot;homepage&quot;</span><span class="p">:</span> <span class="s2">&quot;http://susy.oddbird.net&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;layout&quot;</span><span class="p">,</span> <span class="s2">&quot;grid&quot;</span><span class="p">,</span> <span class="s2">&quot;sass&quot;</span><span class="p">,</span> <span class="s2">&quot;compass&quot;</span><span class="p">,</span> <span class="s2">&quot;responsive&quot;</span><span class="p">,</span> <span class="s2">&quot;rwd&quot;</span><span class="p">,</span> <span class="s2">&quot;semantic&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;BSD-3-Clause&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-distribute">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-sache">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
   <label class="next" for="toggle-slide-test">
     <span class="alt-text">next</span>
   </label>
@@ -1563,17 +2431,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1583,15 +2451,15 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">Write <b>Tests</b></h1>
-  <h2 class="subhead">Try <a href="http://eric.andmeyer.com/true/">True</a></h2>
+  <h1 class="head"><b>Test</b> or die</h1>
+  <h2 class="subhead">Keep tests passing!</h2>
 </header>
 
 </div>
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-toggle">
+  <label class="prev" for="toggle-slide-sache">
     <span class="alt-text">previous</span>
   </label>
   
@@ -1608,17 +2476,17 @@
 </nav>
 </section>
 
+  
+
+  
+
+
+  
+  
+  
+
+  
     
-  
-
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1627,18 +2495,27 @@
 
 <div class="slidewrap">
   
-<div class="highlight"><pre><span class="k">@include</span><span class="nd"> test</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">[function] column-count()&#39;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// A symmetrical grid is equal to its column count.</span>
+<header class="slidehead">
+  <h1 class="head"><a href="http://eric.andmeyer.com/true/">True</a></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@include</span><span class="nd"> test</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">column-count&#39;</span><span class="p">)</span> <span class="p">{</span>
+
   <span class="k">@include</span><span class="nd"> assert-equal</span><span class="p">(</span>
     <span class="nf">column-count</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">,</span> <span class="mi">12</span><span class="o">,</span>
     <span class="s1">&#39;</span><span class="s2">Symmetrical grid-count should equal $columns setting.&#39;</span><span class="p">);</span>
 
-  <span class="c1">// Asymmetrical grid is equal to the list length.</span>
   <span class="k">@include</span><span class="nd"> assert-equal</span><span class="p">(</span>
     <span class="nf">column-count</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span>
     <span class="s1">&#39;</span><span class="s2">Asymmetrical grid-count should equal the list-length of $columns setting.&#39;</span><span class="p">);</span>
+
 <span class="p">}</span>
 </pre></div>
+
+
+</div>
 
 
 </div>
@@ -1655,14 +2532,13 @@
   </label>
   
   
-  <label class="next" for="toggle-slide-public">
+  <label class="next" for="toggle-slide-travis">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -1674,17 +2550,32 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-public" name="slide-toggles"  />
-  <section class="slide" data-toggle="public">
+<input type="radio" id="toggle-slide-travis" name="slide-toggles"  />
+  <section class="slide" data-toggle="travis">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head">README, <b>LICENSE</b>, CONTRIBUTING</h1>
-  <h2 class="subhead">Every bit helps</h2>
+  <h1 class="head"><a href="http://travis-ci.org">Travis</a></h1>
+  
 </header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1"># travis.yml</span>
+<span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ruby</span>
+<span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="s">&quot;rake&quot;</span>
+<span class="l-Scalar-Plain">rvm</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">2.0.0</span>
+</pre></div>
+
+
+<img src="../static/images/show-yr-work/travis-github.png" alt="Travis/Github integration" class="travis-github">
+
+</div>
+
 
 </div>
 
@@ -1695,19 +2586,18 @@
   </label>
   
   
-  <label class="this" for="toggle-slide-public">
+  <label class="this" for="toggle-slide-travis">
     <span class="alt-text">this</span>
   </label>
   
   
-  <label class="next" for="toggle-slide-document">
+  <label class="next" for="toggle-slide-copy">
     <span class="alt-text">next</span>
   </label>
   
 </nav>
 </section>
 
-    
   
 
   
@@ -1719,121 +2609,29 @@
 
   
     
+    
   
 
-<input type="radio" id="toggle-slide-document" name="slide-toggles"  />
-  <section class="slide" data-toggle="document">
+<input type="radio" id="toggle-slide-copy" name="slide-toggles"  />
+  <section class="slide" data-toggle="copy">
 
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head"><b>Document</b> (ergo sum)</h1>
-  <h2 class="subhead">It's hard, boring work</h2>
+  <h1 class="head">Copy <b class="amp">&</b> Paste</h1>
+  
 </header>
 
 </div>
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-public">
+  <label class="prev" for="toggle-slide-travis">
     <span class="alt-text">previous</span>
   </label>
   
   
-  <label class="this" for="toggle-slide-document">
-    <span class="alt-text">this</span>
-  </label>
-  
-  
-  <label class="next" for="toggle-slide-respond">
-    <span class="alt-text">next</span>
-  </label>
-  
-</nav>
-</section>
-
-    
-  
-
-  
-
-
-  
-  
-  
-
-  
-    
-  
-
-<input type="radio" id="toggle-slide-respond" name="slide-toggles"  />
-  <section class="slide" data-toggle="respond">
-
-<div class="slidewrap">
-  
-<header class="slidehead">
-  <h1 class="head"><b>Respond</b> to issues</h1>
-  Quickly <b>+</b> kindly
-</header>
-
-</div>
-
-<nav class="slidenav">
-  
-  <label class="prev" for="toggle-slide-document">
-    <span class="alt-text">previous</span>
-  </label>
-  
-  
-  <label class="this" for="toggle-slide-respond">
-    <span class="alt-text">this</span>
-  </label>
-  
-  
-  <label class="next" for="toggle-slide-bigger">
-    <span class="alt-text">next</span>
-  </label>
-  
-</nav>
-</section>
-
-    
-  
-
-  
-
-
-  
-  
-  
-
-  
-    
-  
-
-<input type="radio" id="toggle-slide-bigger" name="slide-toggles"  />
-  <section class="slide" data-toggle="bigger">
-
-<div class="slidewrap">
-  
-<header class="slidehead">
-  <h1 class="head">RubyGems, <b>Compass</b>, Git Tags</h1>
-  <h2 class="subhead">
-  <a href="http://bower.io/">Bower</a>?
-  <a href="http://yeoman.io/">Yeoman</a>?
-</h2>
-</header>
-
-</div>
-
-<nav class="slidenav">
-  
-  <label class="prev" for="toggle-slide-respond">
-    <span class="alt-text">previous</span>
-  </label>
-  
-  
-  <label class="this" for="toggle-slide-bigger">
+  <label class="this" for="toggle-slide-copy">
     <span class="alt-text">this</span>
   </label>
   
@@ -1845,17 +2643,14 @@
 </nav>
 </section>
 
+  
+
+  
     
-  
+    
+    
+    
 
-  
-
-
-  
-  
-  
-
-  
     
   
 
@@ -1865,109 +2660,20 @@
 <div class="slidewrap">
   
 <header class="slidehead">
-  <h1 class="head"><b>Make shit</b> up</h1>
-  <h2 class="subhead">Sass is new. Explore!</h2>
+  <h1 class="head">Make shit up<b>!</b></h1>
+  <h2 class="subhead">No excuses</h2>
 </header>
 
 </div>
 
 <nav class="slidenav">
   
-  <label class="prev" for="toggle-slide-bigger">
+  <label class="prev" for="toggle-slide-copy">
     <span class="alt-text">previous</span>
   </label>
   
   
   <label class="this" for="toggle-slide-new">
-    <span class="alt-text">this</span>
-  </label>
-  
-  
-  <label class="next" for="toggle-slide-title">
-    <span class="alt-text">next</span>
-  </label>
-  
-</nav>
-</section>
-
-    
-  
-
-  
-    
-    
-    
-
-    
-  
-
-<input type="radio" id="toggle-slide-title" name="slide-toggles"  />
-  <section class="slide" data-toggle="title">
-
-<div class="slidewrap">
-  
-<header class="slidehead">
-  <h1 class="head">
-  <span>Show Your Work</span>
-  <b class="amp">&</b>
-  <span>Share Your Toys</span>
-</h1>
-  <h2 class="subhead">Building <b>+</b> Maintaining Sass Plugins</h2>
-</header>
-<div class="slidebody">
-  
-<div class="vcard eric">
-  <strong class="fn">Eric A. Meyer</strong>
-  <a href="http://oddbird.net/" class="url" rel="me">
-    <span data-icon="bubble"> </span>
-    <span class="link-text">oddbird.net</span>
-  </a>
-  <a href="http://twitter.com/eriiicam/" rel="me">
-    <span data-icon="twitter"> </span>
-    <span class="link-text">eriiicam</span>
-  </a>
-  <a href="http://github.com/ericam/" rel="me">
-    <span data-icon="github"> </span>
-    <span class="link-text">ericam</span>
-  </a>
-</div>
-
-<footer class="talk-info">
-  <p class="colophon">
-    Built on plain old semantic
-    <a href="http://www.w3.org/TR/html5/">HTML5</a>
-    and <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
-    with help from
-    <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
-    <a href="http://github.com/Team-Sass/modular-scale">Modular-Scale</a>,
-    <a href="http://compass-style.org/">Compass</a>,
-    <a href="http://sass-lang.com/">Sass</a>,
-    and a tiny touch of <a href="http://jquery.com">jQuery</a>.
-    Slides available at
-    <a href="http://eric.andmeyer.com/pres/plugins/" rel="slides">eric.andmeyer.com/pres/plugins/</a>,
-    source available on
-    <a href="https://github.com/ericam/pres">Github</a>.
-  </p>
-
-  <p class="copyright">
-    Copyright &copy; 2013 <strong>Eric A. Meyer</strong>.
-    <a href="https://github.com/ericam/pres/LICENSE">Some rights reserved</a>.
-  </p>
-</footer>
-
-</div>
-
-
-</div>
-
-<nav class="slidenav">
-  
-  <label class="prev" for="toggle-slide-new">
-    <span class="alt-text">previous</span>
-  </label>
-  
-  
-  <label class="this" for="toggle-slide-title">
     <span class="alt-text">this</span>
   </label>
   
