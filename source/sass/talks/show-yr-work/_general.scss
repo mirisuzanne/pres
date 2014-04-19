@@ -4,7 +4,7 @@
 
 $simple-slides:
   bio-oddbird, bio-compass, bio-true, bio-art, bio-susy,
-  tldr, tldr-better,
+  tldr, tldr-better, tldr-contrib,
   no-ruby, no-idea, no-plan, no-experience, no-name, no-badge,
   grids, 'susy01', credit, wild, show, readme, license, 'bsd3',
   github, semver, soft, ask, changelog,
@@ -143,6 +143,12 @@ $simple-slides:
 @include slide(travis, simple-slide) {
   .travis-github {
     @include leader;
+    @include box-shadow;
+  }
+}
+
+@include slide(contrib) {
+  .github-contrib {
     @include box-shadow;
   }
 }
