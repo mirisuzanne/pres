@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+{% import "utility.macros.j2" as utility %}
+
+{% block h1 %}DIY Grids with <b>Su</b>{% endblock %}
+{% block h2 %}2 Settings <b class="amp">&</b> 5 Functions{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+$fluid: percentage(susy(3) / susy(12));
+$static: susy(3) * 4em;
+{% endhighlight %}
+{% endblock %}

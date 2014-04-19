@@ -6,10 +6,10 @@ $simple-slides:
   bio-oddbird, bio-compass, bio-true, bio-art, bio-susy,
   tldr, tldr-better, tldr-contrib,
   no-ruby, no-idea, no-plan, no-experience, no-name, no-badge,
-  grids, 'susy01', credit, wild, show, readme, license, 'bsd3',
+  grids, 'susy01', credit, wild, readme, license, 'bsd3',
   github, semver, soft, ask, changelog,
   distribute, sache, document, contrib, respond,
-  copy, new
+  copy, new, su, bmore,
 ;
 
 @each $slide in $simple-slides {
@@ -78,6 +78,11 @@ $simple-slides:
   @extend %simple-slide;
   @extend %invert-colors;
   @include background(image-url('show-yr-work/trash.jpg') no-repeat scroll center);
+  @include background-size(cover);
+}
+
+@include slide(show, simple-slide invert-colors) {
+  @include background(image-url('show-yr-work/new-math.jpg') no-repeat scroll center);
   @include background-size(cover);
 }
 
