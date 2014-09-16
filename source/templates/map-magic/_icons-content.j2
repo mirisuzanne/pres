@@ -1,0 +1,15 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Using <b>@content</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+.title {
+  @include icon(kevin bacon) {
+    background: red;
+    color: white;
+    margin-right: .4em;
+  }
+}
+{% endhighlight %}
+{% endblock %}

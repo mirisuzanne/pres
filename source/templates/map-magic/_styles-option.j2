@@ -1,0 +1,13 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Style <b>Options</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$button-options: (
+  style: flat glow outline,
+  shape: round square pill,
+  display: inline block inline-block,
+);
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Global</b> Defaults{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$button-defaults: (
+  style: flat,
+  shape: round,
+  display: inline-block,
+  color: action,
+  icon: false,
+  size: medium,
+);
+{% endhighlight %}
+{% endblock %}

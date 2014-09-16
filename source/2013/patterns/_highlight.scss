@@ -2,14 +2,14 @@
 // ===================
 
 .c { color: color(lighter) } /* Comment */
-.err { color: color(lighter) } /* Error */
+.err { color: $accent } /* Error */
 .g { color: color(lighter) } /* Generic */
-.k { color: color(dark) } /* Keyword */
-.l { color: color(lighter) } /* Literal */
-.n { color: color(lighter) } /* Name */
-.o { color: color(dark) } /* Operator */
+.k { color: color(dark); } /* Keyword */
+.l { color: color(dark) } /* Literal */
+.n { color: $accent } /* Name */
+.o { color: color(light) } /* Operator */
 .x { color: $accent } /* Other */
-.p { color: color(dark) } /* Punctuation */
+.p { color: color(light) } /* Punctuation */
 .cm { color: color(lighter) } /* Comment.Multiline */
 .cp { color: color(dark) } /* Comment.Preproc */
 .c1 { color: color(lighter) } /* Comment.Single */

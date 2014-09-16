@@ -1,0 +1,27 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<div class="slidebody">
+{% highlight 'scss' %}
+@function parse($shorthand, $keywords){
+  @if type-of($shorthand) == map {
+    @return $shorthand;
+  } @else {
+    $return: ();
+    @each $item in $shorthand {
+      @if type-of($item) == map {
+        $return: map-merge($return, $item);
+      } @else {
+        @each $setting, $options in $keywords {
+          @if index($options, $item) {
+            $return: map-merge($return, ($setting: $item));
+          }
+        }
+      }
+    }
+    @return $return;
+  }
+}
+{% endhighlight %}
+</div>
+{% endblock %}

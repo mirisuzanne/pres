@@ -1,0 +1,21 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Icon <b>Mixin</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@mixin icon($name) {
+  &amp;:before {
+    @extend %icon;
+    content: icon($name);
+    @content;
+  }
+}
+
+@each $name, $glyph in $icons {
+  [data-icon='#{$icon}'] {
+    @include icon($name);
+  }
+}
+{% endhighlight %}
+{% endblock %}

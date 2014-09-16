@@ -1,0 +1,22 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Render</b> Nested{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@mixin render(
+  $css
+) {
+  @each $key, $value in $css {
+    @if type-of($value) == map {
+      // Recursive...
+      #{$key} { @include render($value); }
+    } @else if $key == 'extend' {
+      @extend #{$value};
+    } @else {
+      #{$key}: $value;
+    }
+  }
+}
+{% endhighlight %}
+{% endblock %}

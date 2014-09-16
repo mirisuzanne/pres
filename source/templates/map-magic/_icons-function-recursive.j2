@@ -1,0 +1,18 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Recursive</b> Function{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@function icon($icon) {
+  $icon: map-get($icons, $icon) or $icon;
+
+  // Add self-calling lookup
+  @if map-has-key($icons, $icon) {
+    $icon: icon($icon);
+  }
+
+  @return $icon;
+}
+{% endhighlight %}
+{% endblock %}

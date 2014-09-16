@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+{% import "utility.macros.j2" as utility %}
+
+{% block h1 %}<b>Anything</b> Goes!{% endblock %}
+{% block h2 %}I dare you to find a good use case.{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$OMG-STOP: (
+  14 - floor(13/2): math, // map-get($OMG-STOP, 8)
+  ❄: (first: Eric, last: Suzanne),
+  (one, two, three): 1 2 3,
+  (tests: 12, pass: 0, fail: 12): "All your tests failed!",
+);
+{% endhighlight %}
+{% endblock %}

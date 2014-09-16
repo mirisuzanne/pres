@@ -1,0 +1,10 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Flexible</b> Syntax{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@include span(isolate 3 at 10 of 12 static rtl inside);
+{% endhighlight %}
+</div>
+{% endblock %}

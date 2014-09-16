@@ -1,0 +1,45 @@
+{% import "utility.macros.j2" as utility %}
+
+{% macro btn_action() %}
+  <a href="#" class="btn btn--call-to-action">Call To Action</a>
+{% endmacro %}
+
+{% macro btn_form() %}
+  <div class="form">
+    <button class="btn btn--submit">
+      {{ utility.icon('checkmark') }}
+      Submit
+    </button>
+    <button class="btn btn--secondary">Secondary</button>
+    <button class="btn btn--alert">Alert</button>
+  </div>
+{% endmacro %}
+
+{% macro btn_social() %}
+  <div class="social">
+    <a href="#" class="btn btn--twitter">twitter</a>
+    <a href="#" class="btn btn--github">github</a>
+    <a href="#" class="btn btn--stackoverflow">stackoverflow</a>
+    <a href="#" class="btn btn--dribbble">dribbble</a>
+    <a href="#" class="btn btn--instagram">instagram</a>
+    <a href="#" class="btn btn--soundcloud">soundcloud</a>
+  </div>
+{% endmacro %}
+
+{% macro btn_all() %}
+  {{ btn_action() }}
+  {{ btn_form() }}
+  {{ btn_social() }}
+{% endmacro %}
+
+{% macro btn_bread(active) %}
+<ol class="btn-bread">
+  <li {% if active == 'icon' %}class="crumb-active"{% endif %}>Icons</li>
+  <li {% if active == 'color' %}class="crumb-active"{% endif %}>Colors</li>
+  <li {% if active == 'size' %}class="crumb-active"{% endif %}>Sizes</li>
+  <li {% if active == 'display' %}class="crumb-active"{% endif %}>Display</li>
+  <li {% if active == 'shapes' %}class="crumb-active"{% endif %}>Shapes</li>
+  <li {% if active == 'styles' %}class="crumb-active"{% endif %}>Styles</li>
+  <li {% if active == 'preset' %}class="crumb-active"{% endif %}>Defaults <i class="amp">&</i> Presets</li>
+</ol>
+{% endmacro %}

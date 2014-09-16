@@ -1,0 +1,27 @@
+// Slidehead
+// =========
+
+.slidehead {
+  margin-bottom: size(shim);
+  text-align: center;
+
+  &:last-child { margin-bottom: 0; }
+
+  em { font-style: italic; }
+  strong { font-weight: bold; }
+}
+
+.head {
+  @extend %h1;
+
+  .amp {
+    @include font-size(amp);
+    position: relative;
+    display: inline-block;
+    margin: 0 -.25em;
+    vertical-align: middle;
+    z-index: -1;
+  }
+
+  b { display: inline-block; }
+}

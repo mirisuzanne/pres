@@ -1,0 +1,21 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Colors <b>Map</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$colors: (
+  dark: #333,
+  light: #eee,
+  brand: hsl(330, 100%, 50%),
+  accent: hsl(195, 100%, 55%),
+
+  twitter: #00aced,
+  instagram: #517fa4,
+  stackoverflow: #F47920,
+  soundcloud: #FF6600,
+  dribbble: #EA4C89,
+  github: #4183C4,
+);
+{% endhighlight %}
+{% endblock %}

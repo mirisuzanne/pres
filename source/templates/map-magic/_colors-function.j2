@@ -1,0 +1,24 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<div class="slidebody">
+{% highlight 'scss' %}
+@function color($color) {
+  // Parse arguments
+  $color: map-get($colors, $color) or $color;
+  $base: nth($color, 1);
+  $adjust: if(length($color) > 1, nth($color, 2), ());
+
+  // Recursive check
+  $color: if(map-has-key($colors, $base), color($base), $base);
+
+  // Adjustments [consider function-exists() warning]
+  @each $function, $values in $adjust {
+    $color: call($function, $color, $values...);
+  }
+
+  @return $color;
+}
+{% endhighlight %}
+</div>
+{% endblock %}

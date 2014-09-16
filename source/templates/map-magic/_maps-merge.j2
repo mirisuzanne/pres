@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Merging</b> Maps{% endblock %}
+{% block h2 %}{% highlight 'scss' %}map-merge($map1, $map2){% endhighlight %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+// Map One
+$map-magic: (
+  hello: world,
+  name: Eric Suzanne,
+);
+
+// Map Two
+$blendconf: (
+  hello: Charlotte,
+  audience: far away,
+);
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Recursive</b> Colors{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$colors: (
+  dark: #333,
+  light: #eee,
+  brand: hsl(330, 100%, 50%),
+  accent: hsl(195, 100%, 55%),
+
+  text: dark,
+  action: accent,
+);
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Adding <b>Pairs</b>{% endblock %}
+{% block h2 %}Merge all the things. There is no <code>map-set()</code>.{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+// Add
+$tonight: map-merge($tonight, (month: September));
+
+// Result
+$tonight: (
+  hello: Charlotte,
+  name: Eric Suzanne,
+  audience: far away,
+  month: September,
+);
+{% endhighlight %}
+{% endblock %}

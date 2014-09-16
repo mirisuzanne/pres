@@ -133,13 +133,6 @@
   background-size: 50% auto;
 }
 
-[data-toggle='title'] {
-  background: url('../../images/eric.svg?1383119448') no-repeat scroll -6.25rem;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
 [data-toggle='title'] .slidewrap {
   display: -webkit-flex;
   display: flex;

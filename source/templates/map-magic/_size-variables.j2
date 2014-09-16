@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Modular <b>Scale</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$size-normal: 24px;
+$ratio: 5/4;
+
+$size-rhythm: modular-scale(1);
+$size-h1: modular-scale(4);
+$size-large: modular-scale(2);
+$size-medium: $size-rhythm;
+$size-small: modular-scale(-2);
+$size-shim: .125em;
+{% endhighlight %}
+{% endblock %}

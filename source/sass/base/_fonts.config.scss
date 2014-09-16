@@ -1,0 +1,34 @@
+// Fonts
+// =====
+
+$fonts: (
+  sans: (
+    name: SourceSansPro,
+    type: sans-serif,
+    files: (
+      regular: 'sans/sourcesanspro-light-webfont',
+      italic: 'sans/sourcesanspro-lightitalic-webfont',
+      bold: 'sans/sourcesanspro-bold-webfont',
+      bold italic: 'sans/sourcesanspro-bolditalic-webfont',
+    ),
+    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  ),
+
+  code: (
+    name: SourceCodePro,
+    type: monospace,
+    path: 'code/sourcecodepro-%s%s-webfont',
+    styles: (regular, bold),
+    stack: (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New'),
+  ),
+
+  amp: (
+    name: BaskervilleAmp,
+    files: (normal: 'amp/Baskerville-amp-webfont'),
+  ),
+
+  pres: (
+    name: 'pres',
+    files: (normal: 'icons/pres'),
+  )
+);

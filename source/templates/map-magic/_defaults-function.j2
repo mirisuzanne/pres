@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Get</b> Config{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@function btn-get(
+  $setting,
+  $config: $button-config
+) {
+  @return map-get($config, $setting)
+          or map-get($button-config, $setting)
+          or map-get($btn-defaults, $setting);
+}
+{% endhighlight %}
+{% endblock %}

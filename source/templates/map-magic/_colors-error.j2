@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+{% import "utility.macros.j2" as utility %}
+
+{% block h1 %}<b>{{ utility.icon('warning') }}</b> Recursive <b>Errors</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$colors: (
+  brand: hsl(330, 100%, 50%),
+
+  // ERROR: map doesn't yet exist...
+  accent: adjust-hue(brand, 180deg),
+  accent: adjust-hue(map-get($colors, brand), 180deg),
+);
+{% endhighlight %}
+{% endblock %}

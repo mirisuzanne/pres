@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Reading</b> Maps{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+.print-tonight {
+  @each $key, $value in $tonight {
+    #{$key}: $value;
+  }
+}
+
+// Result
+.print-tonight {
+  hello: Charlotte;
+  name: Eric Suzanne;
+  audience: "smart and attractive!";
+}
+{% endhighlight %}
+{% endblock %}

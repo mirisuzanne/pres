@@ -1,0 +1,5595 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+
+  
+
+  <!-- Page Info -->
+  <title>Pres</title>
+
+  <meta name="author" content="Eric A. Meyer" />
+  <meta name="language" content="en-us" />
+
+  <!-- Microformat Profiles -->
+  <!-- hCard, hCalendar, rel-license, rel-tag, XOXO, XFN, VoteLinks -->
+  <link rel="profile" href="http://microformats.org/profile/specs/" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+
+  <!-- Styles -->
+  
+  <link rel="stylesheet" href="../static/css/screen.css" />
+
+<link rel="stylesheet" href="../static/css/talks/map-magic/slides.css" />
+
+  <link rel="stylesheet" href="../static/css/screen.css" />
+
+<link rel="stylesheet" href="../static/css/talks/map-magic/buttons.css" />
+
+
+</head>
+
+<body class="" data-talk="map-magic">
+
+
+  
+  
+
+  
+  
+  
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-title" name="slide-toggles" checked autofocus />
+  <section class="slide" data-toggle="title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Sass <b>Map</b> Magic</h1>
+  <h2 class="subhead">
+  <a href="http://twitter.com/ericmsuzanne">@EricMSuzanne</a> |
+  <a href="http://twitter.com/oddestbirds">@OddestBirds</a> |
+  <a href="http://twitter.com/sasssusy">@SassSusy</a>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="logos">
+  <a href="http://oddbird.net" class="logo">
+    
+  <span data-icon="oddbird"></span>
+
+    <span class="alt-text">OddBird</span>
+  </a>
+
+  <a href="http://susy.oddbird.net" class="logo">
+    
+  <span data-icon="susy"></span>
+
+    <span class="alt-text">Susy</span>
+  </a>
+</div>
+
+<div class="info">
+  <p class="bio">
+    <a href="http://oddbird.net" class="bio-link">
+      <span>oddbird.net</span>
+    </a>
+    |
+    <a href="http://github.com/ericam/" class="bio-link">
+      github.com/ericam
+    </a>
+  </p>
+  <p class="source">
+    <a href="http://ericsuzanne.com/pres/susy2/">ericsuzanne.com/pres/map-magic/</a>
+  </p>
+  <p class="license">
+    Copyright &copy; 2014 <strong>Eric M. Suzanne</strong> |
+    <a href="https://github.com/ericam/pres/blob/gh-pages/LICENSE">some rights reserved</a>
+  </p>
+</div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  
+  <label class="this" for="toggle-slide-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-sourcemaps">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-sourcemaps" name="slide-toggles"  />
+  <section class="slide" data-toggle="sourcemaps">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Sass Maps <b>!=</b> Sourcemaps</h1>
+  <h2 class="subhead">[please exit quietly]</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-sourcemaps">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-map">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-map" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-map">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Sass <b>Maps</b>!</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$map</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">key</span><span class="o">:</span> <span class="n">value</span><span class="o">,</span>
+  <span class="n">another</span> <span class="n">key</span><span class="o">:</span> <span class="n">another</span> <span class="n">value</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-sourcemaps">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-map">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-no-magic">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-no-magic" name="slide-toggles"  />
+  <section class="slide" data-toggle="no-magic">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>No</b> Magic</h1>
+  <h2 class="subhead">Hipsters used maps <b>before Sass existed</b>.</h2>
+</header>
+<div class="slidebody">
+  
+<div class="samples">
+<div class="s-wrap">
+<div class="highlight"><pre><span class="c1"># Ruby</span>
+<span class="n">phonebook</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Sally Smart&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;555-9999&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;John Doe&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;555-1212&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="c"># Python</span>
+<span class="n">phonebook</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">&#39;Sally Smart&#39;</span> <span class="p">:</span> <span class="s">&#39;555-9999&#39;</span><span class="p">,</span>
+  <span class="s">&#39;John Doe&#39;</span> <span class="p">:</span> <span class="s">&#39;555-1212&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="c1"># YAML</span>
+<span class="l-Scalar-Plain">Sally Smart</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">555-9999</span>
+<span class="l-Scalar-Plain">John Doe</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">555-1212</span>
+<span class="l-Scalar-Plain">J. Random Hacker</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">555-1337</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="err">#</span> <span class="err">JSON</span>
+<span class="p">{</span>
+  <span class="nt">&quot;Sally Smart&quot;</span><span class="p">:</span> <span class="s2">&quot;555-9999&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;John Doe&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1212&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="err">#</span> <span class="nx">Javascript</span>
+<span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Sally Smart&quot;</span>      <span class="o">:</span> <span class="s2">&quot;555-9999&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;John Doe&quot;</span>         <span class="o">:</span> <span class="s2">&quot;555-1212&quot;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="x"># PHP</span>
+<span class="x">$phonebook = [</span>
+<span class="x">  &#39;Sally Smart&#39;      =&gt; &#39;555-9999&#39;,</span>
+<span class="x">  &#39;John Doe&#39;         =&gt; &#39;555-1212&#39;,</span>
+<span class="x">];</span>
+</pre></div>
+
+</div>
+</div>
+
+<cite class="credit">Samples from <a href="http://en.wikipedia.org/wiki/Comparison_of_programming_languages_(mapping)">Wikipedia</a>.</cite>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-map">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-no-magic">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-css">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-css" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-css">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Remember <b>CSS</b>?</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nc">.selector</span> <span class="p">{</span>
+  <span class="na">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="no">solid</span> <span class="ni">pink</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-no-magic">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-css">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-mapcss">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-mapcss" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-mapcss">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Map</b>CSS!</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$variable</span><span class="o">:</span> <span class="p">(</span>
+  <span class="no">background</span><span class="o">:</span> <span class="nv">$white</span><span class="o">,</span>
+  <span class="no">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="no">solid</span> <span class="nv">$pink</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-css">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-mapcss">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-mundane">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-mundane" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-mundane">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Mundane</b> Sass</h1>
+  <h2 class="subhead">Looks for lists of related variables</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// Before</span>
+<span class="nv">$color-black</span><span class="o">:</span> <span class="mh">#333</span><span class="p">;</span>
+<span class="nv">$color-white</span><span class="o">:</span> <span class="mh">#EEE</span><span class="p">;</span>
+<span class="nv">$color-pink</span><span class="o">:</span> <span class="mh">#FF0080</span><span class="p">;</span>
+<span class="nv">$color-blue</span><span class="o">:</span> <span class="mh">#1AC6FF</span><span class="p">;</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-mapcss">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-mundane">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-mundane-maps">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-mundane-maps" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-mundane-maps">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Organized <b>Maps</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// After</span>
+<span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="nb">black</span><span class="o">:</span> <span class="mh">#333</span><span class="o">,</span>
+  <span class="nb">white</span><span class="o">:</span> <span class="mh">#EEE</span><span class="o">,</span>
+  <span class="ni">pink</span><span class="o">:</span> <span class="mh">#FF0080</span><span class="o">,</span>
+  <span class="nb">blue</span><span class="o">:</span> <span class="mh">#1AC6FF</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-mundane">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-mundane-maps">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-insane">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-insane" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-insane">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Sass <b>Insanity</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@include</span><span class="nd"> span</span><span class="p">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">12</span><span class="o">,</span> <span class="nv">$output</span><span class="o">:</span> <span class="n">isolate</span><span class="o">,</span> <span class="nv">$math</span><span class="o">:</span> <span class="no">static</span><span class="o">,</span> <span class="nv">$flow</span><span class="o">:</span> <span class="n">rtl</span><span class="o">,</span> <span class="nv">$gutter-position</span><span class="o">:</span> <span class="no">inside</span><span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-mundane-maps">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-insane">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-intro-sane">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-intro-sane" name="slide-toggles"  />
+  <section class="slide" data-toggle="intro-sane">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Flexible</b> Syntax</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@include</span><span class="nd"> span</span><span class="p">(</span><span class="n">isolate</span> <span class="mi">3</span> <span class="n">at</span> <span class="mi">10</span> <span class="n">of</span> <span class="mi">12</span> <span class="no">static</span> <span class="n">rtl</span> <span class="no">inside</span><span class="p">);</span>
+</pre></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-insane">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-intro-sane">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-buttons-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-buttons-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="buttons-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Let's Make Buttons!</h1>
+  <h2 class="subhead">Because it has <b>never</b> been done before.</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-intro-sane">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-buttons-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-queer">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-queer" name="slide-toggles"  />
+  <section class="slide" data-toggle="queer">
+
+<div class="slidewrap">
+  
+<div class="slidebody">
+  <p>This is a <b>queer</b> interlude.</p>
+</div>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-buttons-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-queer">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-preview">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-preview" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-preview">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div demo="btn-preview">
+  
+  
+  <a href="#" class="btn btn--call-to-action">Call To Action</a>
+
+  
+  <div class="form">
+    <button class="btn btn--submit">
+      
+  <span data-icon="checkmark"></span>
+
+      Submit
+    </button>
+    <button class="btn btn--secondary">Secondary</button>
+    <button class="btn btn--alert">Alert</button>
+  </div>
+
+  
+  <div class="social">
+    <a href="#" class="btn btn--twitter">twitter</a>
+    <a href="#" class="btn btn--github">github</a>
+    <a href="#" class="btn btn--stackoverflow">stackoverflow</a>
+    <a href="#" class="btn btn--dribbble">dribbble</a>
+    <a href="#" class="btn btn--instagram">instagram</a>
+    <a href="#" class="btn btn--soundcloud">soundcloud</a>
+  </div>
+
+
+</div>
+
+<cite class="credit">
+  Kinda ripping off <a href="http://alexwolfe.github.io/Buttons/">Alex Wolfe</a>.
+</cite>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-queer">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-preview">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-preview-options">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-preview-options" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-preview-options">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Button <b>Config</b></h1>
+  <h2 class="subhead"><div class="highlight"><pre><span class="k">@inlude</span> <span class="nt">button</span><span class="o">(</span><span class="nt">large</span> <span class="nt">alert</span><span class="o">);</span>
+</pre></div>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="two-up">
+<div class="highlight"><pre><span class="c1">// All the options in one (editable) map</span>
+<span class="nv">$button-options</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">flat</span> <span class="n">glow</span> <span class="no">outline</span><span class="o">,</span>
+  <span class="n">corners</span><span class="o">:</span> <span class="n">round</span> <span class="no">square</span> <span class="n">pill</span><span class="o">,</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span> <span class="no">block</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+  <span class="no">color</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$colors</span><span class="p">)</span><span class="o">,</span>
+  <span class="no">icon</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$icons</span><span class="p">)</span><span class="o">,</span>
+  <span class="no">size</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$sizes</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">preset</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$buttons</span><span class="p">)</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="c1">// My styleguide</span>
+<span class="nv">$buttons</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">submit</span><span class="o">:</span> <span class="n">glow</span> <span class="n">round</span><span class="o">,</span>
+  <span class="n">call-to-action</span><span class="o">:</span> <span class="n">glow</span> <span class="no">square</span> <span class="no">large</span> <span class="no">block</span><span class="o">,</span>
+  <span class="n">secondary</span><span class="o">:</span> <span class="n">submit</span> <span class="no">text</span> <span class="no">outline</span> <span class="n">small</span><span class="o">,</span>
+  <span class="n">alert</span><span class="o">:</span> <span class="n">submit</span> <span class="n">stop</span> <span class="n">skull</span><span class="o">,</span>
+  <span class="n">social</span><span class="o">:</span> <span class="n">flat</span> <span class="n">pill</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-preview">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-preview-options">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-basics-title">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-basics-title" name="slide-toggles"  />
+  <section class="slide" data-toggle="basics-title">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Back to <b>Basics</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-preview-options">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-basics-title">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-empty">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-empty" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-empty">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Creating</b> Maps</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$map-magic</span><span class="o">:</span> <span class="p">();</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-basics-title">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-empty">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-longhand">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-longhand" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-longhand">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Creating</b> Maps</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$map-magic</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">world</span><span class="o">,</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-empty">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-longhand">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-merge">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-merge" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-merge">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Merging</b> Maps</h1>
+  <h2 class="subhead"><div class="highlight"><pre><span class="nt">map-merge</span><span class="o">(</span><span class="err">$</span><span class="nt">map1</span><span class="o">,</span> <span class="err">$</span><span class="nt">map2</span><span class="o">)</span>
+</pre></div>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// Map One</span>
+<span class="nv">$map-magic</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">world</span><span class="o">,</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="c1">// Map Two</span>
+<span class="nv">$blendconf</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">Charlotte</span><span class="o">,</span>
+  <span class="n">audience</span><span class="o">:</span> <span class="n">far</span> <span class="n">away</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-longhand">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-merge">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-merge-result">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-merge-result" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-merge-result">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Merging</b> Maps</h1>
+  <h2 class="subhead"><b>Second</b> value takes precedence.</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$tonight</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$map-magic</span><span class="o">,</span> <span class="nv">$blendconf</span><span class="p">);</span>
+
+<span class="c1">// After</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">Charlotte</span><span class="o">,</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="o">,</span>
+  <span class="n">audience</span><span class="o">:</span> <span class="n">far</span> <span class="n">away</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-merge">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-merge-result">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-edit">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-edit" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-edit">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Editing <b>Values</b></h1>
+  <h2 class="subhead">Merge all the things. There is no <code>map-set()</code>.</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// Edit</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$tonight</span><span class="o">,</span> <span class="p">(</span><span class="n">audience</span><span class="o">:</span> <span class="s2">&quot;smart and attractive!&quot;</span><span class="p">));</span>
+
+<span class="c1">// Result</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">Charlotte</span><span class="o">,</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="o">,</span>
+  <span class="n">audience</span><span class="o">:</span> <span class="s2">&quot;smart and attractive!&quot;</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-merge-result">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-edit">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-set">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-set" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-set">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Adding <b>Pairs</b></h1>
+  <h2 class="subhead">Merge all the things. There is no <code>map-set()</code>.</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// Add</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$tonight</span><span class="o">,</span> <span class="p">(</span><span class="n">month</span><span class="o">:</span> <span class="n">September</span><span class="p">));</span>
+
+<span class="c1">// Result</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">Charlotte</span><span class="o">,</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="o">,</span>
+  <span class="n">audience</span><span class="o">:</span> <span class="n">far</span> <span class="n">away</span><span class="o">,</span>
+  <span class="n">month</span><span class="o">:</span> <span class="n">September</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-edit">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-set">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-remove">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-remove" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-remove">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Removing</b> Pairs</h1>
+  <h2 class="subhead"><div class="highlight"><pre><span class="nt">map-remove</span><span class="o">(</span><span class="err">$</span><span class="nt">map</span><span class="o">,</span> <span class="err">$</span><span class="nt">key</span><span class="o">)</span>
+</pre></div>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// Remove</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$tonight</span><span class="o">,</span> <span class="n">month</span><span class="p">);</span>
+
+<span class="c1">// Result</span>
+<span class="nv">$tonight</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">hello</span><span class="o">:</span> <span class="n">Charlotte</span><span class="o">,</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="o">,</span>
+  <span class="n">audience</span><span class="o">:</span> <span class="s2">&quot;smart and attractive!&quot;</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-set">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-remove">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-get">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-get" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-get">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Accessing</b> Map Pairs</h1>
+  <h2 class="subhead"><div class="highlight"><pre><span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">map</span><span class="o">,</span> <span class="err">$</span><span class="nt">key</span><span class="o">)</span>
+</pre></div>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="na">.talk</span><span class="o">::</span><span class="n">before</span> <span class="p">{</span>
+  <span class="na">content</span><span class="o">:</span> <span class="s2">&quot;Hello, &quot;</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$tonight</span><span class="o">,</span> <span class="n">hello</span><span class="p">)</span> <span class="s2">&quot;! &quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Result</span>
+<span class="na">.talk</span><span class="o">::</span><span class="n">before</span> <span class="p">{</span>
+  <span class="na">content</span><span class="o">:</span> <span class="s2">&quot;Hello, Charlotte!&quot;</span><span class="o">,</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-remove">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-get">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-more">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-more" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-more">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Keys <b class="amp">&</b> Values</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="c1">// map-has-key(map, key) =&gt; True/False</span>
+<span class="nv">$has-hello</span><span class="o">:</span> <span class="nf">map-has-key</span><span class="p">(</span><span class="nv">$tonight</span><span class="o">,</span> <span class="n">hello</span><span class="p">);</span>
+
+<span class="c1">// map-keys(map) =&gt; List of Keys</span>
+<span class="nv">$keys</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$tonight</span><span class="p">);</span>
+
+<span class="c1">// map-values(map) =&gt; List of Values</span>
+<span class="nv">$values</span><span class="o">:</span> <span class="nf">map-values</span><span class="p">(</span><span class="nv">$tonight</span><span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-get">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-more">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-loop">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-loop" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-loop">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Reading</b> Maps</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nc">.print-tonight</span> <span class="p">{</span>
+  <span class="k">@each</span> <span class="err">$</span><span class="nt">key</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">tonight</span> <span class="p">{</span>
+    <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">key</span><span class="p">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">value</span><span class="o">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Result</span>
+<span class="nc">.print-tonight</span> <span class="p">{</span>
+  <span class="na">hello</span><span class="o">:</span> <span class="n">Charlotte</span><span class="p">;</span>
+  <span class="na">name</span><span class="o">:</span> <span class="n">Eric</span> <span class="n">Suzanne</span><span class="p">;</span>
+  <span class="na">audience</span><span class="o">:</span> <span class="s2">&quot;smart and attractive!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-more">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-loop">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-args">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-args" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-args">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Map <b>Arguments</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$alert</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">flat</span><span class="o">,</span>
+  <span class="no">size</span><span class="o">:</span> <span class="no">large</span><span class="o">,</span>
+  <span class="no">color</span><span class="o">:</span> <span class="nb">red</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="nv">$alert</span><span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-loop">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-args">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-maps-vargs">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-maps-vargs" name="slide-toggles"  />
+  <section class="slide" data-toggle="maps-vargs">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Variable</b> Arguments</h1>
+  <h2 class="subhead">"<code>...</code>" expands each pair into a keyword argument</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$alert</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">flat</span><span class="o">,</span>
+  <span class="no">size</span><span class="o">:</span> <span class="no">large</span><span class="o">,</span>
+  <span class="no">color</span><span class="o">:</span> <span class="nb">red</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="k">@mixin</span> <span class="err">$</span><span class="nt">button</span><span class="o">(</span><span class="err">$</span><span class="nt">style</span><span class="o">,</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">size</span><span class="o">)</span> <span class="p">{</span><span class="cm">/* clever mixin */</span><span class="p">}</span>
+<span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="nv">$alert</span><span class="o">...</span><span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-args">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-maps-vargs">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-simple-keys">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-simple-keys" name="slide-toggles"  />
+  <section class="slide" data-toggle="simple-keys">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Anything</b> Goes!</h1>
+  <h2 class="subhead">I dare you to find a good use case.</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$OMG-STOP</span><span class="o">:</span> <span class="p">(</span>
+  <span class="mi">14</span> <span class="o">-</span> <span class="nf">floor</span><span class="p">(</span><span class="mi">13</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span> <span class="n">math</span><span class="o">,</span> <span class="c1">// map-get($OMG-STOP, 8)</span>
+  <span class="err">❄</span><span class="o">:</span> <span class="p">(</span><span class="n">first</span><span class="o">:</span> <span class="n">Eric</span><span class="o">,</span> <span class="n">last</span><span class="o">:</span> <span class="n">Suzanne</span><span class="p">)</span><span class="o">,</span>
+  <span class="p">(</span><span class="n">one</span><span class="o">,</span> <span class="n">two</span><span class="o">,</span> <span class="n">three</span><span class="p">)</span><span class="o">:</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="o">,</span>
+  <span class="p">(</span><span class="n">tests</span><span class="o">:</span> <span class="mi">12</span><span class="o">,</span> <span class="n">pass</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span> <span class="n">fail</span><span class="o">:</span> <span class="mi">12</span><span class="p">)</span><span class="o">:</span> <span class="s2">&quot;All your tests failed!&quot;</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-maps-vargs">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-simple-keys">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-buttons-please">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-buttons-please" name="slide-toggles"  />
+  <section class="slide" data-toggle="buttons-please">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Gimme 'em goram buttons, Ms. Suzanne</h1>
+  <h2 class="subhead"></h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-simple-keys">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-buttons-please">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-buttons-please2">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-buttons-please2" name="slide-toggles"  />
+  <section class="slide" data-toggle="buttons-please2">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Now, please.</h1>
+  <h2 class="subhead"></h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-buttons-please">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-buttons-please2">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-modules">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-modules" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-modules">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Button <b>Components</b></h1>
+  <h2 class="subhead">The <b>Yack-Shaving</b> Approach™</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-buttons-please2">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-modules">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-icon">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-icon" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-icon">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li class="crumb-active">Icons</li>
+  <li >Colors</li>
+  <li >Sizes</li>
+  <li >Display</li>
+  <li >Shapes</li>
+  <li >Styles</li>
+  <li >Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-modules">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-icon">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-basic">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-basic" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-basic">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Font <b>Icons</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="o">[</span><span class="nt">class</span><span class="o">^=</span><span class="s2">&quot;icon-&quot;</span><span class="o">],</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">&quot; icon-&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="o">:</span> <span class="s1">&#39;magic&#39;</span><span class="p">;</span>
+  <span class="k">speak</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+  <span class="k">font-variant</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+  <span class="k">text-transform</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">osx</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">grayscale</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<cite class="credit">
+  Icons from <a href="http://icomoon.io">IcoMoon</a>.
+</cite>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-icon">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-basic">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-placeholder">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-placeholder" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-placeholder">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Sass <b>Placeholder</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="err">%</span><span class="nt">icon</span> <span class="p">{</span>
+  <span class="na">font-family</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">magic&#39;</span><span class="p">;</span>
+  <span class="na">speak</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
+  <span class="na">font-style</span><span class="o">:</span> <span class="no">normal</span><span class="p">;</span>
+  <span class="na">font-weight</span><span class="o">:</span> <span class="no">normal</span><span class="p">;</span>
+  <span class="na">font-variant</span><span class="o">:</span> <span class="no">normal</span><span class="p">;</span>
+  <span class="na">text-transform</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
+  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="na">-webkit-font-smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span>
+  <span class="na">-moz-osx-font-smoothing</span><span class="o">:</span> <span class="n">grayscale</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-basic">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-placeholder">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-long">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-long" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-long">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nc">.icon-skull</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e18c&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-warning</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e243&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-checkmark</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e258&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-instagram</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e32e&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-twitter</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e32f&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-dribbble</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e341&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-github</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e34c&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-soundcloud</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e35d&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.icon-stackoverflow</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\e367&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-placeholder">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-long">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-map">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-map" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-map">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Icon <b>Map</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$icons</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">skull</span><span class="o">:</span> <span class="s2">&quot;\e18c&quot;</span><span class="o">,</span>
+  <span class="n">warning</span><span class="o">:</span> <span class="s2">&quot;\e243&quot;</span><span class="o">,</span>
+  <span class="n">checkmark</span><span class="o">:</span> <span class="s2">&quot;\e258&quot;</span><span class="o">,</span>
+  <span class="n">instagram</span><span class="o">:</span> <span class="s2">&quot;\e32e&quot;</span><span class="o">,</span>
+  <span class="n">twitter</span><span class="o">:</span> <span class="s2">&quot;\e32f&quot;</span><span class="o">,</span>
+  <span class="n">dribbble</span><span class="o">:</span> <span class="s2">&quot;\e341&quot;</span><span class="o">,</span>
+  <span class="n">github</span><span class="o">:</span> <span class="s2">&quot;\e34c&quot;</span><span class="o">,</span>
+  <span class="n">soundcloud</span><span class="o">:</span> <span class="s2">&quot;\e35d&quot;</span><span class="o">,</span>
+  <span class="n">stackoverflow</span><span class="o">:</span> <span class="s2">&quot;\e367&quot;</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-long">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-map">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-loop">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-loop" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-loop">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Data-Icon <b>Loop</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="o">[</span><span class="nt">data-icon</span><span class="o">]</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">@extend</span> <span class="err">%</span><span class="nt">icon</span><span class="o">;</span>
+  <span class="nt">content</span><span class="nd">:</span> <span class="nt">attr</span><span class="o">(</span><span class="nt">data-icon</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="k">@each</span> <span class="err">$</span><span class="nt">name</span><span class="o">,</span> <span class="err">$</span><span class="nt">glyph</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">icons</span> <span class="p">{</span>
+  <span class="o">[</span><span class="nt">data-icon</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">#{</span><span class="nv">$icon</span><span class="si">}</span><span class="s2">&#39;</span><span class="o">]</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="na">content</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$icons</span><span class="o">,</span> <span class="nv">$name</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-map">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-loop">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-function">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-function" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-function">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Icon <b>Function</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">icon</span><span class="o">(</span><span class="err">$</span><span class="nt">icon</span><span class="o">)</span> <span class="p">{</span>
+  <span class="c1">// Get from map, or trust me.</span>
+  <span class="nv">$icon</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$icons</span><span class="o">,</span> <span class="nv">$icon</span><span class="p">)</span> <span class="ow">or</span> <span class="nv">$icon</span><span class="p">;</span>
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">icon</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="k">@each</span> <span class="err">$</span><span class="nt">name</span><span class="o">,</span> <span class="err">$</span><span class="nt">glyph</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">icons</span> <span class="p">{</span>
+  <span class="o">[</span><span class="nt">data-icon</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">#{</span><span class="nv">$icon</span><span class="si">}</span><span class="s2">&#39;</span><span class="o">]</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="na">content</span><span class="o">:</span> <span class="nf">icon</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-loop">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-function">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-mixin">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-mixin" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-mixin">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Icon <b>Mixin</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> icon</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">@extend</span> <span class="err">%</span><span class="nt">icon</span><span class="o">;</span>
+    <span class="nt">content</span><span class="nd">:</span> <span class="nt">icon</span><span class="o">(</span><span class="err">$</span><span class="nt">name</span><span class="o">);</span>
+    <span class="o">@</span><span class="nt">content</span><span class="o">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@each</span> <span class="err">$</span><span class="nt">name</span><span class="o">,</span> <span class="err">$</span><span class="nt">glyph</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">icons</span> <span class="p">{</span>
+  <span class="o">[</span><span class="nt">data-icon</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">#{</span><span class="nv">$icon</span><span class="si">}</span><span class="s2">&#39;</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> icon</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-function">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-mixin">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-data-demo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-data-demo" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-data-demo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">
+  <span data-icon="checkmark"></span>
+ <b>Data</b>-Icon</h1>
+  <h2 class="subhead"><div class="highlight"><pre>  <span class="o">&lt;</span><span class="nt">span</span> <span class="nt">data-icon</span><span class="o">=</span><span class="s2">&quot;checkmark&quot;</span><span class="o">&gt;&lt;/</span><span class="nt">span</span><span class="o">&gt;</span>
+</pre></div>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-mixin">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-data-demo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-mixin-demo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-mixin-demo" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-mixin-demo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Sass-only</b> Icon</h1>
+  <h2 class="subhead"><div class="highlight"><pre><span class="nc">.title</span> <span class="p">{</span> <span class="k">@include</span><span class="nd"> icon</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">checkmark&#39;</span><span class="p">);</span> <span class="p">}</span>
+</pre></div>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-data-demo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-mixin-demo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-map-recursive">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-map-recursive" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-map-recursive">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Map <b>Self-Reference</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$icons</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">skull</span><span class="o">:</span> <span class="s2">&quot;\e18c&quot;</span><span class="o">,</span>
+  <span class="n">warning</span><span class="o">:</span> <span class="s2">&quot;\e243&quot;</span><span class="o">,</span>
+  <span class="n">checkmark</span><span class="o">:</span> <span class="s2">&quot;\e258&quot;</span><span class="o">,</span>
+
+  <span class="c1">// Add self-referential names</span>
+  <span class="n">escher</span><span class="o">:</span> <span class="n">skull</span><span class="o">,</span>
+  <span class="n">godel</span><span class="o">:</span> <span class="n">escher</span><span class="o">,</span>
+  <span class="n">bach</span><span class="o">:</span> <span class="n">godel</span><span class="o">,</span>
+  <span class="n">kevin</span> <span class="n">bacon</span><span class="o">:</span> <span class="n">bach</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-mixin-demo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-map-recursive">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-function-recursive">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-function-recursive" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-function-recursive">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Recursive</b> Function</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">icon</span><span class="o">(</span><span class="err">$</span><span class="nt">icon</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$icon</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$icons</span><span class="o">,</span> <span class="nv">$icon</span><span class="p">)</span> <span class="ow">or</span> <span class="nv">$icon</span><span class="p">;</span>
+
+  <span class="c1">// Add self-calling lookup</span>
+  <span class="k">@if</span> <span class="nf">map-has-key</span><span class="p">(</span><span class="nv">$icons</span><span class="o">,</span> <span class="nv">$icon</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$icon</span><span class="o">:</span> <span class="nf">icon</span><span class="p">(</span><span class="nv">$icon</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">icon</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-map-recursive">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-function-recursive">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-recursive-demo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-recursive-demo" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-recursive-demo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Six Degrees</b> of Icon</h1>
+  <h2 class="subhead"><div class="highlight"><pre><span class="nc">.title</span> <span class="p">{</span> <span class="k">@include</span><span class="nd"> icon</span><span class="p">(</span><span class="n">kevin</span> <span class="n">bacon</span><span class="p">);</span> <span class="p">}</span>
+</pre></div>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-function-recursive">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-recursive-demo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-icons-content">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-icons-content" name="slide-toggles"  />
+  <section class="slide" data-toggle="icons-content">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Using <b>@content</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nc">.title</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> icon</span><span class="p">(</span><span class="n">kevin</span> <span class="n">bacon</span><span class="p">)</span> <span class="p">{</span>
+    <span class="na">background</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+    <span class="na">margin-right</span><span class="o">:</span> <span class="mf">.4</span><span class="kt">em</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-recursive-demo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-icons-content">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-color">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-color" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-color">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li >Icons</li>
+  <li class="crumb-active">Colors</li>
+  <li >Sizes</li>
+  <li >Display</li>
+  <li >Shapes</li>
+  <li >Styles</li>
+  <li >Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-icons-content">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-color">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-colors-variable">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-colors-variable" name="slide-toggles"  />
+  <section class="slide" data-toggle="colors-variable">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Color <b>Variables</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$color-dark</span><span class="o">:</span> <span class="mh">#333</span><span class="p">;</span>
+<span class="nv">$color-light</span><span class="o">:</span> <span class="mh">#eee</span><span class="p">;</span>
+<span class="nv">$color-brand</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">330</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">);</span>
+<span class="nv">$color-accent</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">195</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">55</span><span class="kt">%</span><span class="p">);</span>
+
+<span class="nv">$color-twitter</span><span class="o">:</span> <span class="mh">#00aced</span><span class="p">;</span>
+<span class="nv">$color-instagram</span><span class="o">:</span> <span class="mh">#517fa4</span><span class="p">;</span>
+<span class="nv">$color-stackoverflow</span><span class="o">:</span> <span class="mh">#F47920</span><span class="p">;</span>
+<span class="nv">$color-soundcloud</span><span class="o">:</span> <span class="mh">#FF6600</span><span class="p">;</span>
+<span class="nv">$color-dribbble</span><span class="o">:</span> <span class="mh">#EA4C89</span><span class="p">;</span>
+<span class="nv">$color-github</span><span class="o">:</span> <span class="mh">#4183C4</span><span class="p">;</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-color">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-colors-variable">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-colors-map">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-colors-map" name="slide-toggles"  />
+  <section class="slide" data-toggle="colors-map">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Colors <b>Map</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">dark</span><span class="o">:</span> <span class="mh">#333</span><span class="o">,</span>
+  <span class="n">light</span><span class="o">:</span> <span class="mh">#eee</span><span class="o">,</span>
+  <span class="n">brand</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">330</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">accent</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">195</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">55</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+
+  <span class="n">twitter</span><span class="o">:</span> <span class="mh">#00aced</span><span class="o">,</span>
+  <span class="n">instagram</span><span class="o">:</span> <span class="mh">#517fa4</span><span class="o">,</span>
+  <span class="n">stackoverflow</span><span class="o">:</span> <span class="mh">#F47920</span><span class="o">,</span>
+  <span class="n">soundcloud</span><span class="o">:</span> <span class="mh">#FF6600</span><span class="o">,</span>
+  <span class="n">dribbble</span><span class="o">:</span> <span class="mh">#EA4C89</span><span class="o">,</span>
+  <span class="n">github</span><span class="o">:</span> <span class="mh">#4183C4</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-colors-variable">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-colors-map">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-colors-recursive">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-colors-recursive" name="slide-toggles"  />
+  <section class="slide" data-toggle="colors-recursive">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Recursive</b> Colors</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">dark</span><span class="o">:</span> <span class="mh">#333</span><span class="o">,</span>
+  <span class="n">light</span><span class="o">:</span> <span class="mh">#eee</span><span class="o">,</span>
+  <span class="n">brand</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">330</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">accent</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">195</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">55</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+
+  <span class="no">text</span><span class="o">:</span> <span class="n">dark</span><span class="o">,</span>
+  <span class="n">action</span><span class="o">:</span> <span class="n">accent</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-colors-map">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-colors-recursive">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-colors-error">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-colors-error" name="slide-toggles"  />
+  <section class="slide" data-toggle="colors-error">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>
+  <span data-icon="warning"></span>
+</b> Recursive <b>Errors</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">brand</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">330</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+
+  <span class="c1">// ERROR: map doesn&#39;t yet exist...</span>
+  <span class="n">accent</span><span class="o">:</span> <span class="nf">adjust-hue</span><span class="p">(</span><span class="n">brand</span><span class="o">,</span> <span class="mi">180</span><span class="kt">deg</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">accent</span><span class="o">:</span> <span class="nf">adjust-hue</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="n">brand</span><span class="p">)</span><span class="o">,</span> <span class="mi">180</span><span class="kt">deg</span><span class="p">)</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-colors-recursive">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-colors-error">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-colors-adjust">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-colors-adjust" name="slide-toggles"  />
+  <section class="slide" data-toggle="colors-adjust">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Possible <b>Solution</b>?</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">brand</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="mi">330</span><span class="o">,</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+
+  <span class="c1">// Define now</span>
+  <span class="n">accent</span><span class="o">:</span> <span class="n">brand</span> <span class="p">(</span><span class="n">adjust-hue</span><span class="o">:</span> <span class="mi">180</span><span class="kt">deg</span><span class="p">)</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="c1">// Calculate later</span>
+<span class="nt">a</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nf">color</span><span class="p">(</span><span class="n">accent</span><span class="p">);</span> <span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-colors-error">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-colors-adjust">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-colors-function">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-colors-function" name="slide-toggles"  />
+  <section class="slide" data-toggle="colors-function">
+
+<div class="slidewrap">
+  
+<div class="slidebody">
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">)</span> <span class="p">{</span>
+  <span class="c1">// Parse arguments</span>
+  <span class="nv">$color</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="ow">or</span> <span class="nv">$color</span><span class="p">;</span>
+  <span class="nv">$base</span><span class="o">:</span> <span class="nf">nth</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="nv">$adjust</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">,</span> <span class="nf">nth</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">,</span> <span class="p">());</span>
+
+  <span class="c1">// Recursive check</span>
+  <span class="nv">$color</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nf">map-has-key</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="nv">$base</span><span class="p">)</span><span class="o">,</span> <span class="nf">color</span><span class="p">(</span><span class="nv">$base</span><span class="p">)</span><span class="o">,</span> <span class="nv">$base</span><span class="p">);</span>
+
+  <span class="c1">// Adjustments [consider function-exists() warning]</span>
+  <span class="k">@each</span> <span class="err">$</span><span class="nt">function</span><span class="o">,</span> <span class="err">$</span><span class="nt">values</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">adjust</span> <span class="p">{</span>
+    <span class="nv">$color</span><span class="o">:</span> <span class="nf">call</span><span class="p">(</span><span class="nv">$function</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$values</span><span class="o">...</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-colors-adjust">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-colors-function">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-size">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-size" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-size">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li >Icons</li>
+  <li >Colors</li>
+  <li class="crumb-active">Sizes</li>
+  <li >Display</li>
+  <li >Shapes</li>
+  <li >Styles</li>
+  <li >Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-colors-function">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-size">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-size-variables">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-size-variables" name="slide-toggles"  />
+  <section class="slide" data-toggle="size-variables">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Modular <b>Scale</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$size-normal</span><span class="o">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$ratio</span><span class="o">:</span> <span class="mi">5</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
+
+<span class="nv">$size-rhythm</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$size-h1</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="nv">$size-large</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="nv">$size-medium</span><span class="o">:</span> <span class="nv">$size-rhythm</span><span class="p">;</span>
+<span class="nv">$size-small</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">-2</span><span class="p">);</span>
+<span class="nv">$size-shim</span><span class="o">:</span> <span class="mf">.125</span><span class="kt">em</span><span class="p">;</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-size">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-size-variables">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-size-map">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-size-map" name="slide-toggles"  />
+  <section class="slide" data-toggle="size-map">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Scale <b>Maps</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$base-size</span><span class="o">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$ratio</span><span class="o">:</span> <span class="mi">5</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
+
+<span class="nv">$sizes</span><span class="o">:</span> <span class="p">(</span>
+  <span class="no">normal</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">rhythm</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">,</span>
+
+  <span class="n">h1</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">,</span>
+  <span class="no">large</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="no">medium</span><span class="o">:</span> <span class="no">normal</span><span class="o">,</span>
+  <span class="n">small</span><span class="o">:</span> <span class="nf">modular-scale</span><span class="p">(</span><span class="mi">-2</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">shim</span><span class="o">:</span> <span class="mf">.125</span><span class="kt">em</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-size-variables">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-size-map">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-size-ratios">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-size-ratios" name="slide-toggles"  />
+  <section class="slide" data-toggle="size-ratios">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Named</b> Ratios</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$ratio-options</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">octave</span>            <span class="o">:</span> <span class="mi">2</span><span class="o">,</span>
+  <span class="n">major-seventh</span>     <span class="o">:</span> <span class="mi">15</span><span class="o">/</span><span class="mi">8</span><span class="o">,</span>
+  <span class="n">major-sixth</span>       <span class="o">:</span> <span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="o">,</span>
+  <span class="n">fifth</span>             <span class="o">:</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">,</span>
+  <span class="n">augmented-fourth</span>  <span class="o">:</span> <span class="mi">45</span><span class="o">/</span><span class="mi">32</span><span class="o">,</span>
+  <span class="n">fourth</span>            <span class="o">:</span> <span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="o">,</span>
+  <span class="n">major-third</span>       <span class="o">:</span> <span class="mi">5</span><span class="o">/</span><span class="mi">4</span><span class="o">,</span>
+  <span class="n">major-second</span>      <span class="o">:</span> <span class="mi">9</span><span class="o">/</span><span class="mi">8</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="nv">$ratio</span><span class="o">:</span> <span class="n">major-third</span><span class="p">;</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-size-map">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-size-ratios">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-size-combo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-size-combo" name="slide-toggles"  />
+  <section class="slide" data-toggle="size-combo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Simpler</b> Scale</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$base-size</span><span class="o">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$ratio</span><span class="o">:</span> <span class="n">major-third</span><span class="p">;</span>
+<span class="nv">$sizes</span><span class="o">:</span> <span class="p">(</span>
+  <span class="no">normal</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="n">rhythm</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
+
+  <span class="n">h1</span><span class="o">:</span> <span class="mi">4</span><span class="o">,</span>
+  <span class="no">large</span><span class="o">:</span> <span class="mi">2</span><span class="o">,</span>
+  <span class="no">medium</span><span class="o">:</span> <span class="no">normal</span><span class="o">,</span>
+  <span class="n">small</span><span class="o">:</span> <span class="mi">-2</span><span class="o">,</span>
+  <span class="n">shim</span><span class="o">:</span> <span class="mf">.125</span><span class="kt">em</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-size-ratios">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-size-combo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-size-get">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-size-get" name="slide-toggles"  />
+  <section class="slide" data-toggle="size-get">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Scale <b>Retrieval</b> </h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">get-size</span><span class="o">(</span><span class="err">$</span><span class="nt">size</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$size</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$sizes</span><span class="o">,</span> <span class="nv">$size</span><span class="p">)</span> <span class="ow">or</span> <span class="nv">$size</span><span class="p">;</span>
+  <span class="k">@if</span> <span class="nf">map-has-key</span><span class="p">(</span><span class="nv">$sizes</span><span class="o">,</span> <span class="nv">$size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$size</span><span class="o">:</span> <span class="nf">get-size</span><span class="p">(</span><span class="nv">$size</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">size</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="k">@function</span> <span class="nt">get-ratio</span><span class="o">(</span><span class="err">$</span><span class="nt">ratio</span><span class="nd">:</span> <span class="err">$</span><span class="nt">ratio</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$ratio</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$ratio-options</span><span class="o">,</span> <span class="nv">$ratio</span><span class="p">)</span> <span class="ow">or</span> <span class="nv">$ratio</span><span class="p">;</span>
+  <span class="k">@if</span> <span class="nf">map-has-key</span><span class="p">(</span><span class="nv">$ratio-options</span><span class="o">,</span> <span class="nv">$ratio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$ratio</span><span class="o">:</span> <span class="nf">get-ratio</span><span class="p">(</span><span class="nv">$ratio</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">ratio</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-size-combo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-size-get">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-size-function">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-size-function" name="slide-toggles"  />
+  <section class="slide" data-toggle="size-function">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Size <b>Function</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">size</span><span class="o">(</span>
+  <span class="err">$</span><span class="nt">size</span>
+<span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$size</span><span class="o">:</span> <span class="nf">get-size</span><span class="p">(</span><span class="nv">$size</span><span class="p">);</span>
+
+  <span class="k">@if</span> <span class="nf">unitless</span><span class="p">(</span><span class="nv">$size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$ratio</span><span class="o">:</span> <span class="nf">get-ratio</span><span class="p">(</span><span class="nv">$ratio</span><span class="p">);</span>
+    <span class="nv">$size</span><span class="o">:</span> <span class="nf">round</span><span class="p">(</span><span class="nv">$base-size</span> <span class="o">*</span> <span class="nf">pow</span><span class="p">(</span><span class="nv">$ratio</span><span class="o">,</span> <span class="nv">$size</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">size</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-size-get">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-size-function">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-display">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-display" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-display">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li >Icons</li>
+  <li >Colors</li>
+  <li >Sizes</li>
+  <li class="crumb-active">Display</li>
+  <li >Shapes</li>
+  <li >Styles</li>
+  <li >Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-size-function">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-display">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-display">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-display" name="slide-toggles"  />
+  <section class="slide" data-toggle="display">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Display <b>Options</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div demo="btn-display">
+  <a href="#" class="btn btn--block">
+    <code>@include button(block);</code>
+  </a>
+  <a href="#" class="btn btn--inline-block">
+    <code>@include button(inline-block);</code>
+  </a>
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-display">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-display">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-display-shorthand">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-display-shorthand" name="slide-toggles"  />
+  <section class="slide" data-toggle="display-shorthand">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Button <b>Shorthand</b></h1>
+  <h2 class="subhead"><code>button: icon size color display shape preset</code></h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-display">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-display-shorthand">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-display-parse-goal">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-display-parse-goal" name="slide-toggles"  />
+  <section class="slide" data-toggle="display-parse-goal">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Parse</b> Shorthand</h1>
+  <h2 class="subhead"><div class="highlight"><pre>
+</pre></div>
+</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$button</span><span class="o">:</span> <span class="nf">parse</span><span class="p">(</span><span class="no">large</span> <span class="n">flat</span> <span class="n">pill</span> <span class="n">checkmark</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="p">);</span>
+
+<span class="c1">// Result</span>
+<span class="nv">$button</span><span class="o">:</span> <span class="p">(</span>
+  <span class="no">size</span><span class="o">:</span> <span class="no">large</span><span class="o">,</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">flat</span><span class="o">,</span>
+  <span class="n">shape</span><span class="o">:</span> <span class="n">pill</span><span class="o">,</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+  <span class="no">icon</span><span class="o">:</span> <span class="n">checkmark</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-display-shorthand">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-display-parse-goal">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-display-map">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-display-map" name="slide-toggles"  />
+  <section class="slide" data-toggle="display-map">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Options</b> Map</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$button-options</span><span class="o">:</span> <span class="p">(</span>
+  <span class="c1">// List of display keywords</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span> <span class="no">block</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-display-parse-goal">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-display-map">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-display-parse">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-display-parse" name="slide-toggles"  />
+  <section class="slide" data-toggle="display-parse">
+
+<div class="slidewrap">
+  
+<div class="slidebody">
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">parse</span><span class="o">(</span><span class="err">$</span><span class="nt">shorthand</span><span class="o">,</span> <span class="err">$</span><span class="nt">keywords</span><span class="o">)</span><span class="p">{</span>
+  <span class="k">@if</span> <span class="nf">type-of</span><span class="p">(</span><span class="nv">$shorthand</span><span class="p">)</span> <span class="o">==</span> <span class="n">map</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="err">$</span><span class="nt">shorthand</span><span class="o">;</span>
+  <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+    <span class="nv">$return</span><span class="o">:</span> <span class="p">();</span>
+    <span class="k">@each</span> <span class="err">$</span><span class="nt">item</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">shorthand</span> <span class="p">{</span>
+      <span class="k">@if</span> <span class="nf">type-of</span><span class="p">(</span><span class="nv">$item</span><span class="p">)</span> <span class="o">==</span> <span class="n">map</span> <span class="p">{</span>
+        <span class="nv">$return</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$return</span><span class="o">,</span> <span class="nv">$item</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+        <span class="k">@each</span> <span class="err">$</span><span class="nt">setting</span><span class="o">,</span> <span class="err">$</span><span class="nt">options</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">keywords</span> <span class="p">{</span>
+          <span class="k">@if</span> <span class="nf">index</span><span class="p">(</span><span class="nv">$options</span><span class="o">,</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$return</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$return</span><span class="o">,</span> <span class="p">(</span><span class="nv">$setting</span><span class="o">:</span> <span class="nv">$item</span><span class="p">));</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">@return</span> <span class="err">$</span><span class="nt">return</span><span class="o">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-display-map">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-display-parse">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-display-btn-mixin">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-display-btn-mixin" name="slide-toggles"  />
+  <section class="slide" data-toggle="display-btn-mixin">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Input <b>=></b> Output</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span>
+  <span class="nv">$style</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// parse</span>
+  <span class="nv">$style</span><span class="o">:</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">$style</span><span class="p">);</span>
+
+  <span class="c1">// display-setting output</span>
+  <span class="na">display</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$style</span><span class="o">,</span> <span class="no">display</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-display-parse">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-display-btn-mixin">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-shapes">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-shapes" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-shapes">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li >Icons</li>
+  <li >Colors</li>
+  <li >Sizes</li>
+  <li >Display</li>
+  <li class="crumb-active">Shapes</li>
+  <li >Styles</li>
+  <li >Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-display-btn-mixin">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-shapes">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-shapes">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-shapes" name="slide-toggles"  />
+  <section class="slide" data-toggle="shapes">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Button <b>Shapes</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div demo="btn-shapes">
+  <button class="btn btn--square">Square Button!</button>
+  <button class="btn btn--round">Rounded button!</button>
+  <button class="btn btn--pill">Pill Button!</button>
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-shapes">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-shapes">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-shapes-option">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-shapes-option" name="slide-toggles"  />
+  <section class="slide" data-toggle="shapes-option">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Shape <b>Options</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$button-options</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">shape</span><span class="o">:</span> <span class="n">round</span> <span class="no">square</span> <span class="n">pill</span><span class="o">,</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span> <span class="no">block</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-shapes">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-shapes-option">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-shapes-function">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-shapes-function" name="slide-toggles"  />
+  <section class="slide" data-toggle="shapes-function">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Shape <b>Function</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="two-up">
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-shape</span><span class="o">(</span>
+  <span class="err">$</span><span class="nt">input</span>
+<span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$shape</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="n">shape</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="nv">$shape</span> <span class="o">==</span> <span class="n">round</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nt">size</span><span class="o">(</span><span class="nt">shim</span><span class="o">);</span>
+  <span class="p">}</span> <span class="k">@else</span> <span class="nt">if</span> <span class="err">$</span><span class="nt">shape</span> <span class="o">==</span> <span class="nt">pill</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nt">50em</span><span class="o">;</span>
+  <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nt">0</span><span class="o">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span>
+  <span class="nv">$style</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// parse</span>
+  <span class="nv">$style</span><span class="o">:</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">$style</span><span class="p">);</span>
+
+  <span class="c1">// Output</span>
+  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">btn-shape</span><span class="p">(</span><span class="nv">$input</span><span class="p">);</span> <span class="c1">// Shape logic</span>
+  <span class="na">display</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$style</span><span class="o">,</span> <span class="no">display</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-shapes-option">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-shapes-function">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-styles">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-styles" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-styles">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li >Icons</li>
+  <li >Colors</li>
+  <li >Sizes</li>
+  <li >Display</li>
+  <li >Shapes</li>
+  <li class="crumb-active">Styles</li>
+  <li >Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-shapes-function">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-styles">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-styles">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-styles" name="slide-toggles"  />
+  <section class="slide" data-toggle="styles">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Button <b>Styles</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div demo="btn-styles">
+  <button class="btn btn--flat">Flat Button!</button>
+  <button class="btn btn--glow">Glowing button!</button>
+  <button class="btn btn--outline">Outline Button!</button>
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-styles">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-styles">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-styles-option">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-styles-option" name="slide-toggles"  />
+  <section class="slide" data-toggle="styles-option">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Style <b>Options</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$button-options</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">flat</span> <span class="n">glow</span> <span class="no">outline</span><span class="o">,</span>
+  <span class="n">shape</span><span class="o">:</span> <span class="n">round</span> <span class="no">square</span> <span class="n">pill</span><span class="o">,</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span> <span class="no">block</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-styles">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-styles-option">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-combo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-combo" name="slide-toggles"  />
+  <section class="slide" data-toggle="combo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Colors, Sizes <b class="amp">&</b> Icons</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-parse</span><span class="o">(</span>
+  <span class="err">$</span><span class="nt">input</span>
+<span class="o">)</span> <span class="p">{</span>
+  <span class="c1">// Add color, size, and icon keyword options</span>
+  <span class="nv">$options</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$button-options</span><span class="o">,</span> <span class="p">(</span>
+    <span class="no">color</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$colors</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">icon</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$icons</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">size</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$sizes</span><span class="p">)</span><span class="o">,</span>
+  <span class="p">));</span>
+
+  <span class="nv">$input</span><span class="o">:</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="nv">$options</span><span class="p">);</span>
+
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">input</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-styles-option">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-combo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-styles-custom">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-styles-custom" name="slide-toggles"  />
+  <section class="slide" data-toggle="styles-custom">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Custom</b> Functions</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$style</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$input</span><span class="o">:</span> <span class="nf">btn-parse</span><span class="p">(</span><span class="nv">$style</span><span class="p">);</span>
+  <span class="nv">$output</span><span class="o">:</span> <span class="p">(</span>
+    <span class="no">display</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="no">display</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="nf">btn-shape</span><span class="p">(</span><span class="nv">$input</span><span class="p">)</span><span class="o">,</span>
+  <span class="p">);</span>
+
+  <span class="nv">$style</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="n">style</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="nf">function-exists</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">btn-</span><span class="si">#{</span><span class="nv">$style</span><span class="si">}</span><span class="s2">&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$output</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$output</span><span class="o">,</span> <span class="nf">call</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">btn-</span><span class="si">#{</span><span class="nv">$style</span><span class="si">}</span><span class="s2">&#39;</span><span class="o">,</span> <span class="nv">$input</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="k">@include</span><span class="nd"> render</span><span class="p">(</span><span class="nv">$output</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-combo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-styles-custom">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-styles-functions">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-styles-functions" name="slide-toggles"  />
+  <section class="slide" data-toggle="styles-functions">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Style <b>Functions</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="two-up">
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-flat</span><span class="o">(</span>
+  <span class="err">$</span><span class="nt">input</span>
+<span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$color</span><span class="o">:</span> <span class="nf">color</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="no">color</span><span class="p">));</span>
+  <span class="nv">$output</span><span class="o">:</span> <span class="p">(</span>
+    <span class="no">background</span><span class="o">:</span> <span class="nv">$color</span><span class="o">,</span>
+    <span class="no">color</span><span class="o">:</span> <span class="nf">contrast</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="nf">btn-radius</span><span class="p">(</span><span class="nv">$input</span><span class="p">)</span><span class="o">,</span>
+  <span class="p">);</span>
+
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">output</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-outline</span><span class="o">(</span><span class="err">$</span><span class="nt">input</span><span class="o">)</span> <span class="p">{</span>
+  <span class="c1">// ...outline logic Here...</span>
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">output</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="k">@function</span> <span class="nt">btn-glow</span><span class="o">(</span><span class="err">$</span><span class="nt">input</span><span class="o">)</span> <span class="p">{</span>
+  <span class="c1">// ...glow logic Here...</span>
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">output</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-styles-custom">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-styles-functions">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-styles-render">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-styles-render" name="slide-toggles"  />
+  <section class="slide" data-toggle="styles-render">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Render</b> Maps</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> render</span><span class="p">(</span>
+  <span class="nv">$css</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="k">@each</span> <span class="err">$</span><span class="nt">key</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">css</span> <span class="p">{</span>
+    <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">key</span><span class="p">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">value</span><span class="o">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-styles-functions">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-styles-render">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-styles-render-demo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-styles-render-demo" name="slide-toggles"  />
+  <section class="slide" data-toggle="styles-render-demo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Render</b> Maps</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$output</span><span class="o">:</span> <span class="p">(</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+  <span class="no">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">em</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="nc">.btn</span> <span class="p">{</span> <span class="k">@include</span><span class="nd"> render</span><span class="p">(</span><span class="nv">$output</span><span class="p">);</span> <span class="p">}</span>
+
+<span class="c1">// Result</span>
+<span class="nc">.btn</span> <span class="p">{</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="p">;</span>
+  <span class="na">border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-styles-render">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-styles-render-demo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-combo-icons">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-combo-icons" name="slide-toggles"  />
+  <section class="slide" data-toggle="combo-icons">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Nested</b> Output</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-icons</span><span class="o">(</span><span class="err">$</span><span class="nt">input</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$output</span><span class="o">:</span> <span class="n">null</span><span class="p">;</span>
+  <span class="nv">$icon</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="no">icon</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="nv">$icon</span> <span class="p">{</span>
+    <span class="nv">$output</span><span class="o">:</span> <span class="p">(</span>
+      <span class="n">extend</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">%icon&#39;</span><span class="o">,</span>
+      <span class="no">content</span><span class="o">:</span> <span class="nf">icon</span><span class="p">(</span><span class="nv">$icon</span><span class="p">)</span><span class="o">,</span>
+      <span class="no">margin-right</span><span class="o">:</span> <span class="mf">.4</span><span class="kt">em</span><span class="o">,</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">output</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-styles-render-demo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-combo-icons">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-combo-render">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-combo-render" name="slide-toggles"  />
+  <section class="slide" data-toggle="combo-render">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Render</b> Nested</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> render</span><span class="p">(</span>
+  <span class="nv">$css</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="k">@each</span> <span class="err">$</span><span class="nt">key</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">css</span> <span class="p">{</span>
+    <span class="k">@if</span> <span class="nf">type-of</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="o">==</span> <span class="n">map</span> <span class="p">{</span>
+      <span class="c1">// Recursive...</span>
+      <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">key</span><span class="p">}</span> <span class="p">{</span> <span class="k">@include</span><span class="nd"> render</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span> <span class="p">}</span>
+    <span class="p">}</span> <span class="k">@else</span> <span class="nt">if</span> <span class="err">$</span><span class="nt">key</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="s2">extend&#39;</span> <span class="p">{</span>
+      <span class="k">@extend</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">value</span><span class="p">}</span><span class="o">;</span>
+    <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+      <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">key</span><span class="p">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">value</span><span class="o">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-combo-icons">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-combo-render">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-combo-mixin">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-combo-mixin" name="slide-toggles"  />
+  <section class="slide" data-toggle="combo-mixin">
+
+<div class="slidewrap">
+  
+<div class="slidebody">
+<div class="highlight"><pre><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$style</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$input</span><span class="o">:</span> <span class="nf">btn-parse</span><span class="p">(</span><span class="nv">$style</span><span class="p">);</span>
+
+  <span class="nv">$output</span><span class="o">:</span> <span class="p">(</span>
+    <span class="no">display</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="no">display</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="nf">btn-shape</span><span class="p">(</span><span class="nv">$input</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">font-size</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="no">size</span><span class="p">)</span><span class="o">,</span>
+    <span class="s1">&#39;</span><span class="s2">&amp;:before&#39;</span><span class="o">:</span> <span class="nf">btn-icons</span><span class="p">(</span><span class="nv">$input</span><span class="p">)</span><span class="o">,</span>
+  <span class="p">);</span>
+
+  <span class="nv">$style</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="n">style</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="nf">function-exists</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">btn-</span><span class="si">#{</span><span class="nv">$style</span><span class="si">}</span><span class="s2">&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$output</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$output</span><span class="o">,</span> <span class="nf">call</span><span class="p">(</span><span class="s1">&#39;</span><span class="s2">btn-</span><span class="si">#{</span><span class="nv">$style</span><span class="si">}</span><span class="s2">&#39;</span><span class="o">,</span> <span class="nv">$input</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="k">@include</span><span class="nd"> render</span><span class="p">(</span><span class="nv">$output</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-combo-render">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-combo-mixin">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-combo-demo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-combo-demo" name="slide-toggles"  />
+  <section class="slide" data-toggle="combo-demo">
+
+<div class="slidewrap">
+  
+<div class="slidebody">
+<div demo="btn-combo">
+  <div class="glow">
+    <button class="btn btn--square">Square Button!</button>
+    <button class="btn btn--round">Rounded button!</button>
+    <button class="btn btn--pill">Pill Button!</button>
+  </div>
+  <div class="flat">
+    <button class="btn btn--square">Square Button!</button>
+    <button class="btn btn--round">Rounded button!</button>
+    <button class="btn btn--pill">Pill Button!</button>
+  </div>
+  <div class="outline">
+    <button class="btn btn--square">Square Button!</button>
+    <button class="btn btn--round">Rounded button!</button>
+    <button class="btn btn--pill">Pill Button!</button>
+  </div>
+</div>
+</div>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-combo-mixin">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-combo-demo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-btn-bread-preset">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-btn-bread-preset" name="slide-toggles"  />
+  <section class="slide" data-toggle="btn-bread-preset">
+
+<div class="slidewrap">
+  
+<ol class="btn-bread">
+  <li >Icons</li>
+  <li >Colors</li>
+  <li >Sizes</li>
+  <li >Display</li>
+  <li >Shapes</li>
+  <li >Styles</li>
+  <li class="crumb-active">Defaults <i class="amp">&</i> Presets</li>
+</ol>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-combo-demo">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-btn-bread-preset">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-defaults">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-defaults" name="slide-toggles"  />
+  <section class="slide" data-toggle="defaults">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Global</b> Defaults</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$button-defaults</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">flat</span><span class="o">,</span>
+  <span class="n">shape</span><span class="o">:</span> <span class="n">round</span><span class="o">,</span>
+  <span class="no">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="o">,</span>
+  <span class="no">color</span><span class="o">:</span> <span class="n">action</span><span class="o">,</span>
+  <span class="no">icon</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="o">,</span>
+  <span class="no">size</span><span class="o">:</span> <span class="no">medium</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-btn-bread-preset">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-defaults">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-defaults-user">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-defaults-user" name="slide-toggles"  />
+  <section class="slide" data-toggle="defaults-user">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>User</b> Config</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$button-config</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">style</span><span class="o">:</span> <span class="n">glow</span><span class="o">,</span>
+  <span class="n">shape</span><span class="o">:</span> <span class="no">square</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-defaults">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-defaults-user">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-defaults-function">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-defaults-function" name="slide-toggles"  />
+  <section class="slide" data-toggle="defaults-function">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Get</b> Config</h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-get</span><span class="o">(</span>
+  <span class="err">$</span><span class="nt">setting</span><span class="o">,</span>
+  <span class="err">$</span><span class="nt">config</span><span class="nd">:</span> <span class="err">$</span><span class="nt">button-config</span>
+<span class="o">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">config</span><span class="o">,</span> <span class="err">$</span><span class="nt">setting</span><span class="o">)</span>
+          <span class="nt">or</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">button-config</span><span class="o">,</span> <span class="err">$</span><span class="nt">setting</span><span class="o">)</span>
+          <span class="nt">or</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">btn-defaults</span><span class="o">,</span> <span class="err">$</span><span class="nt">setting</span><span class="o">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-defaults-user">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-defaults-function">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-presets-intro">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-presets-intro" name="slide-toggles"  />
+  <section class="slide" data-toggle="presets-intro">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Named <b>Presets</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div demo="btn-preview">
+  
+  
+  <a href="#" class="btn btn--call-to-action">Call To Action</a>
+
+  
+  <div class="form">
+    <button class="btn btn--submit">
+      
+  <span data-icon="checkmark"></span>
+
+      Submit
+    </button>
+    <button class="btn btn--secondary">Secondary</button>
+    <button class="btn btn--alert">Alert</button>
+  </div>
+
+  
+  <div class="social">
+    <a href="#" class="btn btn--twitter">twitter</a>
+    <a href="#" class="btn btn--github">github</a>
+    <a href="#" class="btn btn--stackoverflow">stackoverflow</a>
+    <a href="#" class="btn btn--dribbble">dribbble</a>
+    <a href="#" class="btn btn--instagram">instagram</a>
+    <a href="#" class="btn btn--soundcloud">soundcloud</a>
+  </div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-defaults-function">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-presets-intro">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-presets">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-presets" name="slide-toggles"  />
+  <section class="slide" data-toggle="presets">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head">Named <b>Presets</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$buttons</span><span class="o">:</span> <span class="p">(</span>
+  <span class="n">submit</span><span class="o">:</span> <span class="n">glow</span> <span class="n">round</span><span class="o">,</span>
+  <span class="n">call-to-action</span><span class="o">:</span> <span class="n">glow</span> <span class="no">square</span> <span class="no">large</span> <span class="no">block</span><span class="o">,</span>
+  <span class="n">secondary</span><span class="o">:</span> <span class="n">submit</span> <span class="no">text</span> <span class="no">outline</span> <span class="n">small</span><span class="o">,</span>
+  <span class="n">alert</span><span class="o">:</span> <span class="n">submit</span> <span class="n">stop</span> <span class="n">skull</span><span class="o">,</span>
+  <span class="n">social</span><span class="o">:</span> <span class="n">flat</span> <span class="n">pill</span><span class="o">,</span>
+<span class="p">);</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-presets-intro">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-presets">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-presets-parse">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-presets-parse" name="slide-toggles"  />
+  <section class="slide" data-toggle="presets-parse">
+
+<div class="slidewrap">
+  
+<div class="slidebody">
+<div class="highlight"><pre><span class="k">@function</span> <span class="nt">btn-parse</span><span class="o">(</span><span class="err">$</span><span class="nt">input</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$options</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$button-options</span><span class="o">,</span> <span class="p">(</span>
+    <span class="no">color</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$colors</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">icon</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$icons</span><span class="p">)</span><span class="o">,</span>
+    <span class="no">size</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$sizes</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">preset</span><span class="o">:</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$buttons</span><span class="p">)</span><span class="o">,</span>
+  <span class="p">));</span>
+
+  <span class="nv">$input</span><span class="o">:</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="nv">$options</span><span class="p">);</span>
+
+  <span class="c1">// Recursive presets...</span>
+  <span class="nv">$preset</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$input</span><span class="o">,</span> <span class="n">preset</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="nf">map-has-key</span><span class="p">(</span><span class="nv">$buttons</span><span class="o">,</span> <span class="nv">$preset</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$preset</span><span class="o">:</span> <span class="nf">btn-parse</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$buttons</span><span class="o">,</span> <span class="nv">$preset</span><span class="p">));</span>
+    <span class="nv">$input</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$preset</span><span class="o">,</span> <span class="nv">$input</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">@return</span> <span class="err">$</span><span class="nt">input</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-presets">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-presets-parse">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-omg">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-omg" name="slide-toggles"  />
+  <section class="slide" data-toggle="omg">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>OMG</b> We're Done</h1>
+  <h2 class="subhead">
+  <a href="http://twitter.com/ericmsuzanne">@EricMSuzanne</a> |
+  <a href="http://twitter.com/oddestbirds">@OddestBirds</a> |
+  <a href="http://twitter.com/sasssusy">@SassSusy</a>
+</h2>
+</header>
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-presets-parse">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-omg">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-social">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+
+
+  
+  
+  
+
+  
+    
+    
+  
+
+<input type="radio" id="toggle-slide-social" name="slide-toggles"  />
+  <section class="slide" data-toggle="social">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>Social</b> Buttons</h1>
+  <h2 class="subhead">Same names for colors <i class="amp">&</i> icons!</h2>
+</header>
+<div class="slidebody">
+  
+<div class="highlight"><pre><span class="nv">$social</span><span class="o">:</span> <span class="n">twitter</span> <span class="n">instagram</span> <span class="n">stackoverflow</span> <span class="n">soundcloud</span> <span class="n">dribbble</span> <span class="n">github</span><span class="p">;</span>
+
+<span class="k">@each</span> <span class="err">$</span><span class="nt">site</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">social</span> <span class="p">{</span>
+  <span class="nc">.btn--</span><span class="si">#{</span><span class="nv">$site</span><span class="si">}</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="n">social</span> <span class="nv">$site</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-omg">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-social">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+  <label class="next" for="toggle-slide-social-demo">
+    <span class="alt-text">next</span>
+  </label>
+  
+</nav>
+</section>
+
+  
+
+  
+    
+    
+    
+    
+
+    
+  
+
+<input type="radio" id="toggle-slide-social-demo" name="slide-toggles"  />
+  <section class="slide" data-toggle="social-demo">
+
+<div class="slidewrap">
+  
+<header class="slidehead">
+  <h1 class="head"><b>BOOM</b></h1>
+  <h2 class="subhead"></h2>
+</header>
+<div class="slidebody">
+  
+<div demo="btn-preview">
+  
+  <div class="social">
+    <a href="#" class="btn btn--twitter">twitter</a>
+    <a href="#" class="btn btn--github">github</a>
+    <a href="#" class="btn btn--stackoverflow">stackoverflow</a>
+    <a href="#" class="btn btn--dribbble">dribbble</a>
+    <a href="#" class="btn btn--instagram">instagram</a>
+    <a href="#" class="btn btn--soundcloud">soundcloud</a>
+  </div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<nav class="slidenav">
+  
+  <label class="prev" for="toggle-slide-social">
+    <span class="alt-text">previous</span>
+  </label>
+  
+  
+  <label class="this" for="toggle-slide-social-demo">
+    <span class="alt-text">this</span>
+  </label>
+  
+  
+</nav>
+</section>
+
+  
+
+
+
+
+
+
+<!-- JavaScript -->
+
+  <script src="../static/js/vendor/jquery.min.js"></script>
+
+<script src="../static/js/init.js"></script>
+  <script>
+    var saySomething = function(what, where, when) {
+      var also = [
+            "Build toolkits, not frameworks.",
+          ];
+
+      what = what.concat(what, what, what, what, also);
+
+      setInterval(function() {
+        var straw = Math.floor(Math.random() * what.length);
+
+        $(where).append('<p>' + what[straw] + '</p>')
+        $("[data-toggle='queer']").animate({ scrollTop: $(document).height() }, "slow");
+      }, when);
+    };
+
+    var what = [
+          "People are <b>queer</b>.",
+          "The web is <b>queer</b>.",
+          "It's a <b>queer</b> web."
+        ],
+        where = '[data-toggle="queer"] .slidebody',
+        when = 1000;
+
+    $('#toggle-slide-queer').on('change', function () {
+      if ($(this).prop('checked')) {
+        saySomething(what, where, when);
+      }
+    });
+  </script>
+
+
+</body>
+</html>

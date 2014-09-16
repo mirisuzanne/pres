@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Merging</b> Maps{% endblock %}
+{% block h2 %}<b>Second</b> value takes precedence.{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$tonight: map-merge($map-magic, $blendconf);
+
+// After
+$tonight: (
+  hello: Charlotte,
+  name: Eric Suzanne,
+  audience: far away,
+);
+{% endhighlight %}
+{% endblock %}

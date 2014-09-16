@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Input <b>=></b> Output{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@mixin button(
+  $style
+) {
+  // parse
+  $style: parse($style);
+
+  // display-setting output
+  display: map-get($style, display);
+}
+{% endhighlight %}
+{% endblock %}

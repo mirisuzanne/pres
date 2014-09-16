@@ -1,0 +1,590 @@
+// Sass Map Magic Buttons
+// ======================
+
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+@function contrast(
+  $color
+) {
+  $dark: color(dark);
+  $light: color(light);
+
+  $color-brightness: brightness($color);
+  $dark-text-brightness: brightness($dark);
+  $light-text-brightness: brightness($light);
+
+  @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+}
+
+// Sizes
+// -----
+
+$ratio-options: (
+  octave            : 2,
+  major-seventh     : 15/8,
+  minor-seventh     : 16/9,
+  major-sixth       : 5/3,
+  minor-sixth       : 8/5,
+  fifth             : 3/2,
+  augmented-fourth  : 45/32,
+  fourth            : 4/3,
+  major-third       : 5/4,
+  minor-third       : 6/5,
+  major-second      : 9/8,
+  minor-second      : 16/15,
+);
+
+$base-size: 24px;
+$ratio: major-third;
+
+$sizes: (
+  normal: 0,
+  rhythm: 1,
+
+  h1: 4,
+  large: 2,
+  medium: normal,
+  small: -2,
+  shim: .25em,
+);
+
+@function get-size(
+  $size
+) {
+  $size: map-get($sizes, $size) or $size;
+
+  @if map-has-key($sizes, $size) {
+    $size: get-size($size);
+  }
+
+  @return $size;
+}
+
+@function get-ratio(
+  $ratio: $ratio
+) {
+  $ratio: map-get($ratio-options, $ratio) or $ratio;
+
+  @if map-has-key($ratio-options, $ratio) {
+    $ratio: get-ratio($ratio);
+  }
+
+  @return $ratio;
+}
+
+@function size(
+  $size
+) {
+  $size: get-size($size);
+
+  @if unitless($size) {
+    $ratio: get-ratio($ratio);
+    $size: round($base-size * pow($ratio, $size));
+  }
+
+  @return $size;
+}
+
+
+// Colors
+// ------
+
+$colors: (
+  dark: #333,
+  light: #eee,
+  brand: hsl(330, 100%, 50%),
+  accent: hsl(195, 100%, 55%),
+
+  text: dark,
+  background: light,
+  action: accent,
+  focus: action (darken: 15%),
+
+  stop: red,
+  yield: yellow,
+  go: green,
+
+  twitter: #00aced,
+  instagram: #517fa4,
+  stackoverflow: #F47920,
+  soundcloud: #FF6600,
+  dribbble: #EA4C89,
+  github: #4183C4,
+);
+
+@function color($color) {
+  // Parse arguments
+  $color: map-get($colors, $color) or $color;
+  $base: nth($color, 1);
+  $adjust: if(length($color) > 1, nth($color, 2), ());
+
+  // Recursive check
+  $color: if(map-has-key($colors, $base), color($base), $base);
+
+  // Adjustments [consider function-exists() warning]
+  @each $function, $values in $adjust {
+    $color: call($function, $color, $values...);
+  }
+
+  @return $color;
+}
+
+// Icons
+// -----
+
+$icons: (
+  skull: "\e18c",
+  warning: "\e243",
+  checkmark: "\e258",
+  instagram: "\e32e",
+  twitter: "\e32f",
+  dribbble: "\e341",
+  github: "\e34c",
+  soundcloud: "\e35d",
+  stackoverflow: "\e367",
+
+  danger: skull,
+  escher: danger,
+  godel: escher,
+  bach: godel,
+  kevin bacon: bach,
+);
+
+@function icon($icon) {
+  $icon: map-get($icons, $icon) or $icon;
+
+  @if map-has-key($icons, $icon) {
+    $icon: icon($icon);
+  }
+
+  @return $icon;
+}
+
+@mixin icon($name) {
+  &:before {
+    @extend %icon;
+    content: icon($name);
+    @content;
+  }
+}
+
+%icon {
+  font-family: 'magic';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Fonts
+// -----
+
+$font-path: '../../../fonts/';
+
+$icon-font: (
+  name: 'magic',
+  path: 'magicons/',
+);
+
+@font-face {
+  $path: $font-path + map-get($icon-font, path) + map-get($icon-font, name);
+
+  font-family: map-get($icon-font, name);
+  src: url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// Button Defaults
+// ---------------
+
+%btn-reset {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+  text-shadow: none;
+};
+
+
+// Render
+// ------
+
+@mixin render(
+  $css
+) {
+  @each $key, $value in $css {
+    @if type-of($value) == map {
+      #{$key} {
+        @include render($value);
+      }
+    } @else if $key == 'extend' {
+      @extend #{$value};
+    } @else {
+      #{$key}: $value;
+    }
+  }
+}
+
+
+// Parse
+// -----
+
+@function parse(
+  $shorthand,
+  $keywords
+){
+  @if type-of($shorthand) == map {
+    @return $shorthand;
+  } @else {
+    $return: ();
+
+    @each $item in $shorthand {
+      @if type-of($item) == map {
+        $return: map-merge($return, $item);
+      } @else {
+        @each $setting, $options in $keywords {
+          @if index($options, $item) {
+            $return: map-merge($return, ($setting: $item));
+          }
+        }
+      }
+    }
+
+    @return $return;
+  }
+}
+
+
+// Buttons!
+// --------
+
+$btn-defaults: (
+  style: flat,
+  shape: round,
+  display: inline-block,
+  color: action,
+  icon: false,
+  size: medium,
+);
+
+@function btn-get(
+  $setting,
+  $config: $button-config
+) {
+  @return map-get($config, $setting) or map-get($button-config, $setting) or map-get($btn-defaults, $setting);
+}
+
+@function btn-parse(
+  $input
+) {
+  $options: map-merge($button-options, (
+    color: map-keys($colors),
+    icon: map-keys($icons),
+    size: map-keys($sizes),
+    preset: map-keys($buttons),
+  ));
+
+  $input: parse($input, $options);
+
+  $preset: map-get($input, preset);
+  @if map-has-key($buttons, $preset) {
+    $preset: btn-parse(map-get($buttons, $preset));
+    $input: map-merge($preset, $input);
+  }
+
+  @return $input;
+}
+
+@function btn-radius(
+  $input
+) {
+  $shape: btn-get(shape, $input);
+  @if $shape == round {
+    @return size(shim);
+  } @else if $shape == pill {
+    @return 50em;
+  } @else {
+    @return 0;
+  }
+}
+
+
+// Styles
+// ------
+
+@function btn-flat(
+  $input
+) {
+  $color: color(btn-get(color, $input));
+  $output: (
+    background: $color,
+    color: contrast($color),
+  );
+
+  @return $output;
+}
+
+@function btn-outline(
+  $input
+) {
+  $color: color(btn-get(color, $input));
+  $output: (
+    border: 2px solid $color,
+    color: $color,
+  );
+
+  @return $output;
+}
+
+@function btn-glow(
+  $input
+) {
+  $color: color(btn-get(color, $input));
+  $contrast: contrast($color);
+  $output: (
+    background: linear-gradient(to top, darken($color, 15%), $color) $color,
+    border: 1px solid darken($color, 25%),
+    box-shadow: 0 1px 0 rgba(lighten($color, 80%), .5) inset,
+    color: $contrast,
+    text-shadow: 0 1px 0 rgba(contrast($contrast), .5),
+  );
+
+  @return $output;
+}
+
+@function btn-icons(
+  $input
+) {
+  $output: null;
+
+  $icon: map-get($input, icon);
+  @if $icon {
+    $output: (
+      extend: '%icon',
+      content: icon($icon),
+      margin-right: .4em,
+    );
+  }
+
+  @return $output;
+}
+
+// Buttons!
+// --------
+
+@mixin button(
+  $style
+) {
+  $input: btn-parse($style);
+
+  $size: size(btn-get(size, $input));
+  $padding: .25em 1em;
+
+  @if $size > 24px {
+    $padding: 1em;
+  } @else if $size < 15px {
+    $padding: 0 1em;
+  }
+
+  $output: (
+    display: btn-get(display, $input),
+    border-radius: btn-radius($input),
+    font-size: $size,
+    margin-bottom: if(btn-get(display, $input) == 'block', size(rhythm), null),
+    padding: $padding,
+    '&:before': btn-icons($input),
+  );
+
+  $style: 'btn-#{btn-get(style, $input)}';
+  @if function-exists($style) {
+    $output: map-merge($output, call($style, $input));
+  } @else {
+    @warn "We don't know how to make #{$style} buttons.";
+  }
+
+  @include render($output);
+}
+
+
+// Extends
+// -------
+
+$button-config: ();
+
+$button-options: (
+  style: flat glow outline,
+  shape: round square pill,
+  display: inline block inline-block,
+);
+
+$buttons: (
+  submit: glow round,
+  call-to-action: glow square large block,
+  secondary: submit text outline small,
+  alert: submit stop skull,
+  social: flat pill,
+);
+
+$social: twitter instagram stackoverflow soundcloud dribbble github;
+
+%buttons {
+  margin: 0 auto;
+  max-width: 25rem;
+  font-size: size(normal);
+  line-height: size(rhythm);
+  text-align: center;
+
+  .btn {
+    @extend %btn-reset;
+  }
+
+  @each $btn, $styles in $buttons {
+    .btn--#{$btn} { @include button($styles); }
+  }
+
+  @each $site in $social {
+    .btn--#{$site} {
+      @include button(social $site);
+      margin-bottom: size(rhythm);
+    }
+  }
+
+  .form {
+    margin-bottom: size(rhythm);
+  }
+
+}
+
+// Slides
+// ------
+
+[data-toggle='buttons-title'] {
+  .head {
+    @include button(submit brand h1 block skull);
+  }
+}
+
+[data-toggle='buttons-please'],
+[data-toggle='buttons-please2'] {
+  .head {
+    @include button(submit stop h1 block warning);
+  }
+}
+
+[demo='btn-preview'] {
+  @extend %buttons;
+}
+
+[data-toggle='icons-mixin-demo'] {
+  .head { @include icon(checkmark); }
+}
+
+[data-toggle='icons-recursive-demo'] {
+  .head { @include icon(kevin bacon); }
+}
+
+[data-toggle='icons-content'] {
+  .head {
+    @include icon(kevin bacon) {
+      background: red;
+      color: white;
+      margin-right: .4em;
+    }
+  }
+}
+
+[demo='btn-display'] {
+  text-align: center;
+
+  .btn {
+    @extend %btn-reset;
+
+    + .btn {
+      margin-left: .4em;
+    }
+  }
+
+  @each $shape in map-get($button-options, display) {
+    .btn--#{$shape} {
+      @include button(large brand $shape flat);
+      margin-bottom: size(rhythm);
+    }
+  }
+}
+
+[demo='btn-shapes'] {
+  text-align: center;
+
+  .btn {
+    @extend %btn-reset;
+
+    + .btn {
+      margin-left: .4em;
+    }
+  }
+
+  @each $shape in map-get($button-options, shape) {
+    .btn--#{$shape} { @include button(rhythm brand $shape flat); }
+  }
+}
+
+[demo='btn-styles'] {
+  text-align: center;
+
+  .btn {
+    @extend %btn-reset;
+
+    + .btn {
+      margin-left: .4em;
+    }
+  }
+
+  @each $style in map-get($button-options, style) {
+    .btn--#{$style} { @include button(rhythm brand round $style); }
+  }
+}
+
+[demo='btn-combo'] {
+  text-align: center;
+
+  .btn {
+    @extend %btn-reset;
+
+    + .btn { margin-left: .4em; }
+  }
+
+  .glow, .flat, .outline {
+    margin-bottom: size(shim);
+  }
+
+  .glow {
+    .btn--square { @include button(square brand small glow); }
+    .btn--round { @include button(round brand skull normal glow); }
+    .btn--pill { @include button(pill brand checkmark rhythm glow); }
+  }
+  .flat {
+    .btn--square { @include button(square brand small flat); }
+    .btn--round { @include button(round brand skull normal flat); }
+    .btn--pill { @include button(pill brand checkmark rhythm flat); }
+  }
+  .outline {
+    .btn--square { @include button(square brand small outline); }
+    .btn--round { @include button(round brand skull normal outline); }
+    .btn--pill { @include button(pill brand checkmark rhythm outline); }
+  }
+}

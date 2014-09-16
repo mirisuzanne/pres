@@ -1,0 +1,18 @@
+// Base
+// ====
+
+@import "requirements.config";
+@import "color.config";
+@import "scale.config";
+@import "fonts.config";
+@import "type.config";
+@import "icons.config";
+
+
+// Setup
+// -----
+
+@include fonts;
+@include establish-baseline;
+@include border-box-sizing;
+@include data-icons;

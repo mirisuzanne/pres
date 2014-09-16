@@ -22,9 +22,6 @@
 }
 
 %title-slide {
-  @include background(image-url('eric.svg') no-repeat scroll rhythm(-5));
-  @include background-size(contain);
-
   .slidewrap {
     @include display-flex;
     @include flex-direction(column);
@@ -33,6 +30,11 @@
   }
 
   .head { @include font-size(xlarge); }
+}
+
+%simple-code {
+  @extend %vertical-center;
+  text-align: center;
 }
 
 

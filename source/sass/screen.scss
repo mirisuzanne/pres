@@ -2,18 +2,11 @@
 // ======
 
 @import "compass/reset";
-@import "settings";
-
-@import "placeholders/type";
-
-@import "general/root";
-@import "general/links";
-@import "general/type";
-
-@import "patterns/accordion";
-@import "patterns/highlight";
+@import "base/base";
+@import "base/root";
 
 @import "layout/slide";
 @import "layout/slidenav";
+@import "layout/slidehead";
 
-@import "modules/slidehead";
+@import "vendor/pygments";

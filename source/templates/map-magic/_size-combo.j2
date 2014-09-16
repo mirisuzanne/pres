@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Simpler</b> Scale{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$base-size: 24px;
+$ratio: major-third;
+$sizes: (
+  normal: 0,
+  rhythm: 1,
+
+  h1: 4,
+  large: 2,
+  medium: normal,
+  small: -2,
+  shim: .125em,
+);
+{% endhighlight %}
+{% endblock %}

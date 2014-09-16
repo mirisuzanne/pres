@@ -1,0 +1,41 @@
+// html/body
+// ---------
+
+html {
+  @extend %sans;
+  background: color(back);
+  color: color(base);
+  text-shadow: color(shadow) 0 1px 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+
+// Type
+// ----
+
+.amp {
+  @extend %amp;
+  font-weight: normal;
+  font-style: normal;
+}
+
+pre, code { @extend %code; }
+b { color: color(accent); }
+
+a {
+  #{$link} { @extend %link; }
+  #{$focus} { @extend %link-focus; }
+}
+
+
+// Utility
+// -------
+
+.alt-text,
+.is-hidden {
+  @extend %is-hidden;
+}

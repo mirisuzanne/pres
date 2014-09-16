@@ -1,0 +1,14 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Display <b>Options</b>{% endblock %}
+
+{% block slidebody %}
+<div demo="btn-display">
+  <a href="#" class="btn btn--block">
+    <code>@include button(block);</code>
+  </a>
+  <a href="#" class="btn btn--inline-block">
+    <code>@include button(inline-block);</code>
+  </a>
+</div>
+{% endblock %}

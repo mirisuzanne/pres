@@ -1,0 +1,23 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Font <b>Icons</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'css' %}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'magic';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+{% endhighlight %}
+
+<cite class="credit">
+  Icons from <a href="http://icomoon.io">IcoMoon</a>.
+</cite>
+{% endblock %}

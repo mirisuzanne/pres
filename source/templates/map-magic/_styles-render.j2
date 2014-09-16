@@ -1,0 +1,15 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Render</b> Maps{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@mixin render(
+  $css
+) {
+  @each $key, $value in $css {
+    #{$key}: $value;
+  }
+}
+{% endhighlight %}
+{% endblock %}

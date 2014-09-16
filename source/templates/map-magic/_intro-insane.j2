@@ -1,0 +1,9 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Sass <b>Insanity</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@include span(3, 10, 12, $output: isolate, $math: static, $flow: rtl, $gutter-position: inside);
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,44 @@
+// Slide Nav
+// =========
+
+.prev, .next {
+  @include display-flex;
+  @include align-items(center);
+  @include font-size(xlarge);
+  @include transition(opacity 300ms);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: rhythm(.125);
+  background: color($accent, .25);
+  color: color(white, .5);
+  cursor: pointer;
+  z-index: 500;
+
+  #{$focus} { opacity: .5; }
+}
+
+.prev {
+  @include before('«');
+  left: 0;
+}
+.next {
+  @include before('»');
+  right: 0;
+}
+
+.this {
+  @include before(counter(slide));
+  @include font-size(xxsmall);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: rhythm(1.75);
+  padding: 0 rhythm(.25);
+  color: color(lighter, .5);
+  text-align: left;
+  z-index: 800;
+
+  &:hover { color: color(light); }
+}

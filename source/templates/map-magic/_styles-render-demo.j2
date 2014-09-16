@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Render</b> Maps{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$output: (
+  display: inline-block,
+  border-radius: .25em,
+);
+
+.btn { @include render($output); }
+
+// Result
+.btn {
+  display: inline-block;
+  border-radius: .25em;
+}
+{% endhighlight %}
+{% endblock %}

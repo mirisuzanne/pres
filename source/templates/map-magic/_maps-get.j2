@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Accessing</b> Map Pairs{% endblock %}
+{% block h2 %}{% highlight 'scss' %}map-get($map, $key){% endhighlight %}{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+.talk::before {
+  content: "Hello, " map-get($tonight, hello) "! ";
+}
+
+// Result
+.talk::before {
+  content: "Hello, Charlotte!",
+}
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,65 @@
+// Pygments
+// ========
+
+.c { color: color('gray'); font-style: italic; }
+.err { color: color('red'); }
+.k { font-weight: bold; }
+.o { color: color('gray'); }
+.cm { color: color('gray'); font-style: italic; }
+.cp { color: color('gray'); font-weight: bold; }
+.c1 { color: color('gray'); font-style: italic; }
+.cs { color: color('gray'); font-weight: bold; font-style: italic; }
+.gd { color: color(base); background-color: #ffdddd; }
+.gd .x { color: color(base); background-color: #ffaaaa; }
+.ge { font-style: italic; }
+.gr { color: #aa0000; }
+.gh { color: color('gray'); }
+.gi { color: color(base); background-color: #ddffdd; }
+.gi .x { color: color(base); background-color: #aaffaa; }
+.go { color: #888888; }
+.gp { color: #555555; }
+.gs { font-weight: bold; }
+.gu { color: #800080; font-weight: bold; }
+.gt { color: #aa0000; }
+.kc { font-weight: bold; }
+.kd { font-weight: bold; }
+.kn { font-weight: bold; }
+.kp { font-weight: bold; }
+.kr { font-weight: bold; }
+.kt { color: color('blue' (shade: 50%)); font-weight: bold; }
+.m { color: color(alt); }
+.s { color: color(accent); }
+.n { color: color(base); }
+.na { color: color(alt); }
+.nb { color: color(accent); }
+.nc { color: color('blue' (shade: 50%)); font-weight: bold; }
+.no { color: color(alt); }
+.ni { color: color(accent); }
+.ne { color: color(accent); font-weight: bold; }
+.nf { color: color(accent); font-weight: bold; }
+.nn { color: color('gray'); }
+.nt { color: color('blue' (shade: 50%)); }
+.nv { color: color(accent); }
+.ow { font-weight: bold; }
+.w { color: #bbbbbb; }
+.mf { color: color(alt); }
+.mh { color: color(alt); }
+.mi { color: color(alt); }
+.mo { color: color(alt); }
+.sb { color: color(accent); }
+.sc { color: color(accent); }
+.sd { color: color(accent); }
+.s2 { color: color(accent); }
+.se { color: color(accent); }
+.sh { color: color(accent); }
+.si { color: color(accent); }
+.sx { color: color(accent); }
+.sr { color: #009926; }
+.s1 { color: color(accent); }
+.ss { color: #990073; }
+.bp { color: color('gray'); }
+.vc { color: color(alt); }
+.vg { color: color(alt); }
+.vi { color: color(alt); }
+.il { color: color(alt); }
+.gc { color: #999; background-color: #EAF2F5; }

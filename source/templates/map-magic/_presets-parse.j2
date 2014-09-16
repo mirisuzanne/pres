@@ -1,0 +1,27 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<div class="slidebody">
+{% highlight 'scss' %}
+@function btn-parse($input) {
+  $options: map-merge($button-options, (
+    color: map-keys($colors),
+    icon: map-keys($icons),
+    size: map-keys($sizes),
+    preset: map-keys($buttons),
+  ));
+
+  $input: parse($input, $options);
+
+  // Recursive presets...
+  $preset: map-get($input, preset);
+  @if map-has-key($buttons, $preset) {
+    $preset: btn-parse(map-get($buttons, $preset));
+    $input: map-merge($preset, $input);
+  }
+
+  @return $input;
+}
+{% endhighlight %}
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Shape <b>Function</b>{% endblock %}
+
+{% block slidebody %}
+<div class="two-up">
+{% highlight 'scss' %}
+@function btn-shape(
+  $input
+) {
+  $shape: map-get($input, shape);
+  @if $shape == round {
+    @return size(shim);
+  } @else if $shape == pill {
+    @return 50em;
+  } @else {
+    @return 0;
+  }
+}
+{% endhighlight %}
+
+{% highlight 'scss' %}
+@mixin button(
+  $style
+) {
+  // parse
+  $style: parse($style);
+
+  // Output
+  border-radius: btn-shape($input); // Shape logic
+  display: map-get($style, display);
+}
+{% endhighlight %}
+</div>
+{% endblock %}

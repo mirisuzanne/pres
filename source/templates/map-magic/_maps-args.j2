@@ -1,0 +1,15 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Map <b>Arguments</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$alert: (
+  style: flat,
+  size: large,
+  color: red,
+);
+
+@include button($alert);
+{% endhighlight %}
+{% endblock %}

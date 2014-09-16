@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Nested</b> Output{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@function btn-icons($input) {
+  $output: null;
+  $icon: map-get($input, icon);
+  @if $icon {
+    $output: (
+      extend: '%icon',
+      content: icon($icon),
+      margin-right: .4em,
+    );
+  }
+  @return $output;
+}
+{% endhighlight %}
+{% endblock %}

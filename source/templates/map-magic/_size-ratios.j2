@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Named</b> Ratios{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$ratio-options: (
+  octave            : 2,
+  major-seventh     : 15/8,
+  major-sixth       : 5/3,
+  fifth             : 3/2,
+  augmented-fourth  : 45/32,
+  fourth            : 4/3,
+  major-third       : 5/4,
+  major-second      : 9/8,
+);
+
+$ratio: major-third;
+{% endhighlight %}
+{% endblock %}

@@ -142,13 +142,6 @@
   background-size: 50% auto;
 }
 
-[data-toggle='title'] {
-  background: url('../../images/eric.svg?1383119448') no-repeat scroll -6.25rem;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
 [data-toggle='title'] .slidewrap {
   display: -webkit-flex;
   display: flex;
@@ -161,6 +154,10 @@
 [data-toggle='title'] .head {
   font-size: 1.96875rem;
   line-height: 2.5rem;
+}
+
+[data-toggle='overview-classes'], [data-toggle='overview-sass'], [data-toggle='unbox'], [data-toggle='wild'] {
+  text-align: center;
 }
 
 [data-toggle='bio-true'], [data-toggle='bio-art'], [data-toggle='systems'] {

@@ -1,19 +1,20 @@
 // Slide Nav
 // =========
 
-.prev, .next {
-  @include display-flex;
+.prev,
+.next {
   @include align-items(center);
-  @include font-size(xlarge);
+  @include display-flex;
+  @include font-size(h2);
   @include transition(opacity 300ms);
+  background: color(action (rgba: .25));
+  bottom: 0;
+  color: color(shadow);
+  cursor: pointer;
   opacity: 0;
+  padding: size(shim);
   position: fixed;
   top: 0;
-  bottom: 0;
-  padding: rhythm(.125);
-  background: color($accent, .25);
-  color: color(white, .5);
-  cursor: pointer;
   z-index: 500;
 
   #{$focus} { opacity: .5; }
@@ -30,15 +31,14 @@
 
 .this {
   @include before(counter(slide));
-  @include font-size(xxsmall);
-  position: fixed;
+  @include font-size(smaller);
   bottom: 0;
   left: 0;
-  width: rhythm(1.75);
-  padding: 0 rhythm(.25);
-  color: color(lighter, .5);
+  opacity: .25;
+  padding: 0 size(shim);
+  position: fixed;
   text-align: left;
   z-index: 800;
 
-  &:hover { color: color(light); }
+  &:hover { opacity: .5; }
 }

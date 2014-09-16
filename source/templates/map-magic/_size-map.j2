@@ -1,0 +1,21 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Scale <b>Maps</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$base-size: 24px;
+$ratio: 5/4;
+
+$sizes: (
+  normal: modular-scale(0),
+  rhythm: modular-scale(1),
+
+  h1: modular-scale(4),
+  large: modular-scale(2),
+  medium: normal,
+  small: modular-scale(-2),
+  shim: .125em,
+);
+{% endhighlight %}
+{% endblock %}

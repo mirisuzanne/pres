@@ -1,0 +1,18 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Data-Icon <b>Loop</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+[data-icon]:before {
+  @extend %icon;
+  content: attr(data-icon);
+}
+
+@each $name, $glyph in $icons {
+  [data-icon='#{$icon}']:before {
+    content: map-get($icons, $name);
+  }
+}
+{% endhighlight %}
+{% endblock %}

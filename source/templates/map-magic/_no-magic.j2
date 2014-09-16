@@ -1,0 +1,59 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>No</b> Magic{% endblock %}
+{% block h2 %}Hipsters used maps <b>before Sass existed</b>.{% endblock %}
+
+{% block slidebody %}
+<div class="samples">
+<div class="s-wrap">
+{% highlight 'ruby' %}
+# Ruby
+phonebook = {
+    'Sally Smart' => '555-9999',
+    'John Doe' => '555-1212',
+}
+{% endhighlight %}
+
+{% highlight 'python' %}
+# Python
+phonebook = {
+  'Sally Smart' : '555-9999',
+  'John Doe' : '555-1212',
+}
+{% endhighlight %}
+
+{% highlight 'yaml' %}
+# YAML
+Sally Smart: 555-9999
+John Doe: 555-1212
+J. Random Hacker: 555-1337
+{% endhighlight %}
+
+{% highlight 'json' %}
+# JSON
+{
+  "Sally Smart": "555-9999",
+  "John Doe": "555-1212",
+}
+{% endhighlight %}
+
+{% highlight 'javascript' %}
+# Javascript
+var myObject = {
+  "Sally Smart"      : "555-9999",
+  "John Doe"         : "555-1212",
+};
+{% endhighlight %}
+
+{% highlight 'php' %}
+# PHP
+$phonebook = [
+  'Sally Smart'      => '555-9999',
+  'John Doe'         => '555-1212',
+];
+{% endhighlight %}
+</div>
+</div>
+
+<cite class="credit">Samples from <a href="http://en.wikipedia.org/wiki/Comparison_of_programming_languages_(mapping)">Wikipedia</a>.</cite>
+{% endblock %}

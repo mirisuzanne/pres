@@ -1,0 +1,15 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Named <b>Presets</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$buttons: (
+  submit: glow round,
+  call-to-action: glow square large block,
+  secondary: submit text outline small,
+  alert: submit stop skull,
+  social: flat pill,
+);
+{% endhighlight %}
+{% endblock %}

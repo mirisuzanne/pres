@@ -1,0 +1,19 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Map <b>Self-Reference</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$icons: (
+  skull: "\e18c",
+  warning: "\e243",
+  checkmark: "\e258",
+
+  // Add self-referential names
+  escher: skull,
+  godel: escher,
+  bach: godel,
+  kevin bacon: bach,
+);
+{% endhighlight %}
+{% endblock %}

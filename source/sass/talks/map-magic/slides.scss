@@ -1,0 +1,293 @@
+// Map Magic Slides
+// ================
+
+@import "../../base/base";
+
+%vertical-center {
+  @include display-flex;
+  @include align-items(center);
+  .slidewrap { width: 100%; }
+}
+
+%default {
+  @extend %vertical-center;
+}
+
+%code {
+  @extend %vertical-center;
+  text-align: center;
+}
+
+%btn-bread {
+  @extend %type;
+  @extend %default;
+  @include font-size(h3);
+  color: color(base (rgba: .5));
+
+  .slidewrap {
+    @include display-flex;
+    @include justify-content(center);
+  }
+
+  .crumb-active {
+    color: color(accent);
+    font-weight: bold;
+  }
+}
+
+@mixin slide(
+  $name,
+  $extends: false
+) {
+  [data-toggle='#{$name}'] {
+    @if $extends {
+      @each $class in $extends {
+        @extend %#{$class};
+      }
+    }
+    @content;
+  }
+}
+
+@mixin is-active($name) {
+  [id="toggle-slide-#{$name}"]:checked + & {
+    @content;
+  }
+}
+
+
+// Common
+// ------
+
+$default:
+  'title',
+  'sourcemaps',
+  'intro-map',
+  'no-magic',
+  'intro-css',
+  'intro-mapcss',
+  'intro-mundane',
+  'intro-mundane-maps',
+  'intro-insane',
+  'intro-sane',
+  'buttons-title',
+  'queer',
+  'btn-preview',
+  'btn-preview-options',
+  'basics-title',
+  'maps-empty',
+  'maps-longhand',
+  'maps-merge',
+  'maps-merge-result',
+  'maps-edit',
+  'maps-set',
+  'maps-remove',
+  'maps-get',
+  'maps-more',
+  'maps-loop',
+  'maps-args',
+  'maps-vargs',
+  'simple-keys',
+  'buttons-please',
+  'buttons-please2',
+  'btn-modules',
+  'icons-basic',
+  'icons-placeholder',
+  'icons-long',
+  'icons-map',
+  'icons-loop',
+  'icons-function',
+  'icons-mixin',
+  'icons-data-demo',
+  'icons-mixin-demo',
+  'icons-map-recursive',
+  'icons-function-recursive',
+  'icons-recursive-demo',
+  'icons-content',
+  'colors-variable',
+  'colors-map',
+  'colors-recursive',
+  'colors-error',
+  'colors-adjust',
+  'colors-function',
+  'size-variables',
+  'size-map',
+  'size-ratios',
+  'size-combo',
+  'size-get',
+  'size-function',
+  'display',
+  'display-shorthand',
+  'display-map',
+  'display-parse-goal',
+  'display-parse',
+  'display-btn-mixin',
+  'shapes',
+  'shapes-option',
+  'shapes-function',
+  'combo',
+  'styles',
+  'styles-option',
+  'styles-functions',
+  'styles-custom',
+  'styles-render',
+  'styles-render-demo',
+  'combo-icons',
+  'combo-render',
+  'combo-mixin',
+  'combo-demo',
+  'defaults',
+  'defaults-user',
+  'defaults-function',
+  'presets-intro',
+  'presets',
+  'presets-parse',
+  'omg',
+  'social',
+  'social-demo',
+;
+
+$code: ();
+
+$btn-bread:
+  'btn-bread-icon',
+  'btn-bread-color',
+  'btn-bread-size',
+  'btn-bread-icons',
+  'btn-bread-display',
+  'btn-bread-shapes',
+  'btn-bread-styles',
+  'btn-bread-preset',
+;
+
+
+// Slide Details
+// -------------
+
+.highlight {
+  @include font-size(small);
+
+  .slidebody & {
+    @include font-size(smaller, .75);
+    border: 2px dashed color(border);
+    border-width: 2px 0;
+    padding: size(shim);
+  }
+}
+
+.slide {
+  @include background(image-url('rainish.svg') no-repeat scroll 150% 250%);
+  @include background-size(50% auto);
+}
+
+.two-up {
+  @include align-items(stretch);
+  @include display-flex;
+  background: color(back (rgba: .75));
+  border: 2px dashed color(border);
+  border-width: 2px 0;
+
+  .highlight {
+    @include flex(1);
+    border: 0;
+    overflow: hidden;
+
+    + .highlight {
+      border-left: 1px dotted color(border (rgba: .25));
+    }
+  }
+}
+
+@each $slide in $default {
+  @include slide($slide, 'default');
+}
+
+@each $slide in $code {
+  @include slide($slide, 'code');
+}
+
+@each $slide in $btn-bread {
+  @include slide($slide, 'btn-bread');
+}
+
+
+@include slide(title) {
+  .slidewrap {
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    height: 100%;
+  }
+
+  .slidehead {
+    margin: size(gutter) 0;
+  }
+
+  .slidebody {
+    @include align-items(center);
+    @include display-flex;
+  }
+
+  .logos {
+    @include flex(1 50%);
+    text-align: right;
+    white-space: nowrap;
+
+    [data-icon] {
+      vertical-align: middle;
+    }
+  }
+
+  .logo {
+    #{$link} {
+      @include font-size(h1);
+      color: color('gray');
+      display: inline-block;
+      margin-right: size(shim);
+    }
+
+    #{$focus} {
+      color: color(focus);
+    }
+  }
+
+  .info {
+    @include flex(1 50%);
+    @include font-size(smaller, .75);
+    border-left: 2px dashed color(border);
+    padding: size(shim);
+  }
+
+  .license {
+    color: color('gray');
+
+    strong { font-weight: bold; }
+    a { font-style: italic; }
+  }
+}
+
+@include keyframes(scroll-up) {
+  0% { @include translate3d(0, 0, 0); }
+  100% { @include translate3d(0, - size(gutter) * 19.5, 0); }
+}
+
+@include slide('no-magic') {
+  .samples {
+    border: 2px dashed color(border);
+    border-width: 2px 0;
+    max-height: size(gutter) * 8;
+    overflow: hidden;
+  }
+
+  .s-wrap {
+    position: relative;
+
+    @include is-active('no-magic') {
+      @include animation(scroll-up 5s 600ms ease-in-out both);
+    }
+  }
+
+  .highlight {
+    border: 0;
+  }
+}

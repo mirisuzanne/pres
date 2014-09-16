@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+{% import "map-magic/demo.macros.j2" as demo %}
+
+{% block h1 %}<b>Social</b> Buttons{% endblock %}
+{% block h2 %}Same names for colors <i class="amp">&</i> icons!{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$social: twitter instagram stackoverflow soundcloud dribbble github;
+
+@each $site in $social {
+  .btn--#{$site} {
+    @include button(social $site);
+  }
+}
+{% endhighlight %}
+{% endblock %}

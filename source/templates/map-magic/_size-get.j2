@@ -1,0 +1,23 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Scale <b>Retrieval</b> {% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@function get-size($size) {
+  $size: map-get($sizes, $size) or $size;
+  @if map-has-key($sizes, $size) {
+    $size: get-size($size);
+  }
+  @return $size;
+}
+
+@function get-ratio($ratio: $ratio) {
+  $ratio: map-get($ratio-options, $ratio) or $ratio;
+  @if map-has-key($ratio-options, $ratio) {
+    $ratio: get-ratio($ratio);
+  }
+  @return $ratio;
+}
+{% endhighlight %}
+{% endblock %}

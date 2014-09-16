@@ -1,0 +1,34 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Style <b>Functions</b>{% endblock %}
+
+{% block slidebody %}
+<div class="two-up">
+{% highlight 'scss' %}
+@function btn-flat(
+  $input
+) {
+  $color: color(map-get($input, color));
+  $output: (
+    background: $color,
+    color: contrast($color),
+    border-radius: btn-radius($input),
+  );
+
+  @return $output;
+}
+{% endhighlight %}
+
+{% highlight 'scss' %}
+@function btn-outline($input) {
+  // ...outline logic Here...
+  @return $output;
+}
+
+@function btn-glow($input) {
+  // ...glow logic Here...
+  @return $output;
+}
+{% endhighlight %}
+</div>
+{% endblock %}

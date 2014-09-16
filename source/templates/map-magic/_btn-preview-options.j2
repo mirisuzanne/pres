@@ -1,0 +1,30 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Button <b>Config</b>{% endblock %}
+{% block h2 %}{% highlight 'scss' %}@inlude button(large alert);{% endhighlight %}{% endblock %}
+{% block slidebody %}
+<div class="two-up">
+{% highlight 'scss' %}
+// All the options in one (editable) map
+$button-options: (
+  style: flat glow outline,
+  corners: round square pill,
+  display: inline block inline-block,
+  color: map-keys($colors),
+  icon: map-keys($icons),
+  size: map-keys($sizes),
+  preset: map-keys($buttons),
+);
+{% endhighlight %}
+{% highlight 'scss' %}
+// My styleguide
+$buttons: (
+  submit: glow round,
+  call-to-action: glow square large block,
+  secondary: submit text outline small,
+  alert: submit stop skull,
+  social: flat pill,
+);
+{% endhighlight %}
+</div>
+{% endblock %}

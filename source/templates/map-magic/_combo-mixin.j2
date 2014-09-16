@@ -1,0 +1,25 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<div class="slidebody">
+{% highlight 'scss' %}
+@mixin button($style) {
+  $input: btn-parse($style);
+
+  $output: (
+    display: map-get($input, display),
+    border-radius: btn-shape($input),
+    font-size: map-get($input, size),
+    '&amp;:before': btn-icons($input),
+  );
+
+  $style: map-get($input, style);
+  @if function-exists('btn-#{$style}') {
+    $output: map-merge($output, call('btn-#{$style}', $input));
+  }
+
+  @include render($output);
+}
+{% endhighlight %}
+</div>
+{% endblock %}

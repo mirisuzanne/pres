@@ -1,0 +1,12 @@
+{% extends "slides/_default.j2" %}
+{% import "map-magic/demo.macros.j2" as demo %}
+
+{% block slidebody %}
+<div demo="btn-preview">
+  {{ demo.btn_all() }}
+</div>
+
+<cite class="credit">
+  Kinda ripping off <a href="http://alexwolfe.github.io/Buttons/">Alex Wolfe</a>.
+</cite>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Size <b>Function</b>{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@function size(
+  $size
+) {
+  $size: get-size($size);
+
+  @if unitless($size) {
+    $ratio: get-ratio($ratio);
+    $size: round($base-size * pow($ratio, $size));
+  }
+
+  @return $size;
+}
+{% endhighlight %}
+{% endblock %}

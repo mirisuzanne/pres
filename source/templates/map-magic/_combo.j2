@@ -1,0 +1,22 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Colors, Sizes <b class="amp">&</b> Icons{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+@function btn-parse(
+  $input
+) {
+  // Add color, size, and icon keyword options
+  $options: map-merge($button-options, (
+    color: map-keys($colors),
+    icon: map-keys($icons),
+    size: map-keys($sizes),
+  ));
+
+  $input: parse($input, $options);
+
+  @return $input;
+}
+{% endhighlight %}
+{% endblock %}

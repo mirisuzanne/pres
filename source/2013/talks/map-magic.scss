@@ -1,0 +1,85 @@
+// Susy 2
+// ======
+
+@import "helpers";
+
+
+// Slides
+// ------
+
+$simple-slides:
+  'sourcemaps',
+  'intro-map', 'intro-css', 'intro-scss', 'intro-map2', 'intro-map3'
+;
+
+$simple-code: ();
+
+@each $slide in $simple-slides {
+  @include slide($slide, 'simple-slide');
+}
+
+@each $slide in $simple-code {
+  @include slide($slide, 'simple-code');
+}
+
+.highlight {
+  border: 2px dashed color(lighter);
+  border-width: 2px 0;
+  padding: rhythm(1) 0;
+}
+
+.credit {
+  @include font-size(small);
+  background: color(white, .95);
+  bottom: rhythm(.25);
+  font-weight: bold;
+  padding: rhythm(.125) rhythm(.25);
+  position: absolute;
+  right: rhythm(.25);
+}
+
+
+// Slide Details
+// -------------
+
+@include slide(title) {
+  @extend %title-slide;
+
+  .slidewrap {
+    @include justify-content(space-between);
+  }
+
+  .slidehead {
+    @include rhythm(2);
+  }
+
+  .head { @include font-size(xxlarge); }
+
+  .slidebody {
+    @include font-size(small, .75);
+    @include susy-clearfix;
+  }
+
+  .logo {
+    #{$link} {
+      @include font-size(xxlarge);
+      @include leader(-.25);
+      float: left;
+      margin-right: rhythm(.5);
+    }
+  }
+
+  .info {
+    float: right;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .license {
+    @include font-size(xxsmall, .75);
+
+    strong { font-weight: bold; }
+    a { font-style: italic; }
+  }
+}
+

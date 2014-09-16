@@ -1,0 +1,16 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Keys <b class="amp">&</b> Values{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+// map-has-key(map, key) => True/False
+$has-hello: map-has-key($tonight, hello);
+
+// map-keys(map) => List of Keys
+$keys: map-keys($tonight);
+
+// map-values(map) => List of Values
+$values: map-values($tonight);
+{% endhighlight %}
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "pres.j2" %}
+{% import "slides/_macros.j2" as pres %}
+
+{% block styles %}
+  {{ static.css('../static/css/', ['map-magic/slides.css']) }}
+  {{ static.css('../static/css/', ['map-magic/buttons.css']) }}
+{% endblock %}
+
+{% block data_talk %}map-magic{% endblock %}
+
+{% block pres %}
+  {{ pres.loop(
+    talk='map-magic',
+    slides = [
+      'title',
+      'sourcemaps',
+      'intro-map',
+      'no-magic',
+      'intro-css',
+      'intro-mapcss',
+      'intro-mundane',
+      'intro-mundane-maps',
+      'intro-insane',
+      'intro-sane',
+      'buttons-title',
+      'queer',
+      'btn-preview',
+      'btn-preview-options',
+      'basics-title',
+      'maps-empty',
+      'maps-longhand',
+      'maps-merge',
+      'maps-merge-result',
+      'maps-edit',
+      'maps-set',
+      'maps-remove',
+      'maps-get',
+      'maps-more',
+      'maps-loop',
+      'maps-args',
+      'maps-vargs',
+      'simple-keys',
+      'buttons-please',
+      'buttons-please2',
+      'btn-modules',
+      'btn-bread-icon',
+      'icons-basic',
+      'icons-placeholder',
+      'icons-long',
+      'icons-map',
+      'icons-loop',
+      'icons-function',
+      'icons-mixin',
+      'icons-data-demo',
+      'icons-mixin-demo',
+      'icons-map-recursive',
+      'icons-function-recursive',
+      'icons-recursive-demo',
+      'icons-content',
+      'btn-bread-color',
+      'colors-variable',
+      'colors-map',
+      'colors-recursive',
+      'colors-error',
+      'colors-adjust',
+      'colors-function',
+      'btn-bread-size',
+      'size-variables',
+      'size-map',
+      'size-ratios',
+      'size-combo',
+      'size-get',
+      'size-function',
+      'btn-bread-display',
+      'display',
+      'display-shorthand',
+      'display-parse-goal',
+      'display-map',
+      'display-parse',
+      'display-btn-mixin',
+      'btn-bread-shapes',
+      'shapes',
+      'shapes-option',
+      'shapes-function',
+      'btn-bread-styles',
+      'styles',
+      'styles-option',
+      'combo',
+      'styles-custom',
+      'styles-functions',
+      'styles-render',
+      'styles-render-demo',
+      'combo-icons',
+      'combo-render',
+      'combo-mixin',
+      'combo-demo',
+      'btn-bread-preset',
+      'defaults',
+      'defaults-user',
+      'defaults-function',
+      'presets-intro',
+      'presets',
+      'presets-parse',
+      'omg',
+      'social',
+      'social-demo',
+    ],
+    dev=False
+  ) }}
+{% endblock %}
+
+{% block js %}
+  {{ static.js() }}
+  <script>
+    var saySomething = function(what, where, when) {
+      var also = [
+            "Build toolkits, not frameworks.",
+          ];
+
+      what = what.concat(what, what, what, what, also);
+
+      setInterval(function() {
+        var straw = Math.floor(Math.random() * what.length);
+
+        $(where).append('<p>' + what[straw] + '</p>')
+        $("[data-toggle='queer']").animate({ scrollTop: $(document).height() }, "slow");
+      }, when);
+    };
+
+    var what = [
+          "People are <b>queer</b>.",
+          "The web is <b>queer</b>.",
+          "It's a <b>queer</b> web."
+        ],
+        where = '[data-toggle="queer"] .slidebody',
+        when = {{ assert_time|default(1000) }};
+
+    $('#toggle-slide-queer').on('change', function () {
+      if ($(this).prop('checked')) {
+        saySomething(what, where, when);
+      }
+    });
+  </script>
+{% endblock %}

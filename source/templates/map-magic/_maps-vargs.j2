@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}<b>Variable</b> Arguments{% endblock %}
+{% block h2 %}"<code>...</code>" expands each pair into a keyword argument{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$alert: (
+  style: flat,
+  size: large,
+  color: red,
+);
+
+@mixin $button($style, $color, $size) {/* clever mixin */}
+@include button($alert...);
+{% endhighlight %}
+{% endblock %}

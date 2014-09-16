@@ -1,0 +1,87 @@
+// Type
+// ====
+
+$base-line-height           : font-size(line);
+
+$rhythm-unit                : rem;
+$rem-with-px-fallback       : false;
+
+$relative-font-sizing       : true;
+$round-to-nearest-half-line : true;
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+
+// Links
+// -----
+
+%link {
+  color: color(action);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%link-focus {
+  color: color(focus);
+}
+
+
+// Headers
+// -------
+
+%h1 {
+  @include font-size(h1);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+%h2 { @include font-size(h2); }
+%h3 { @include font-size(h3); }
+%h4 { @include font-size(line); }
+
+%h5, %h6 { font-weight: bold; }
+
+%headers {
+  h1 { @extend %h1; }
+  h2 { @extend %h2; }
+  h3 { @extend %h3; }
+  h4 { @extend %h4; }
+}
+
+
+// Body
+// ----
+
+%body {
+  p, ol, ul {
+    margin-bottom: size(gutter);
+  }
+
+  ol, ul {
+    margin-left: size(gutter);
+  }
+
+  ol {
+    counter-reset: ol;
+
+    li {
+      counter-increment: ol;
+
+      &:before {
+        content: counter(ol, decimal) ". ";
+        font-weight: bold;
+      }
+    }
+  }
+
+  ul { list-style: disc; }
+}
+
+
+// Type
+// ----
+
+%type {
+  @extend %headers;
+  @extend %body;
+}

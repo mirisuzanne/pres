@@ -1,0 +1,17 @@
+{% extends "slides/_default.j2" %}
+
+{% block h1 %}Possible <b>Solution</b>?{% endblock %}
+
+{% block slidebody %}
+{% highlight 'scss' %}
+$colors: (
+  brand: hsl(330, 100%, 50%),
+
+  // Define now
+  accent: brand (adjust-hue: 180deg),
+);
+
+// Calculate later
+a { color: color(accent); }
+{% endhighlight %}
+{% endblock %}
